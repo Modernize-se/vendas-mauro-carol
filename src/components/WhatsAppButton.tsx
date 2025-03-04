@@ -13,7 +13,7 @@ interface WhatsAppButtonProps {
 const WhatsAppButton = ({ 
   link, 
   className, 
-  hasAnimation = false, 
+  hasAnimation = true, 
   size = 'md' 
 }: WhatsAppButtonProps) => {
   const [animated, setAnimated] = useState(false);
@@ -22,7 +22,7 @@ const WhatsAppButton = ({
     if (hasAnimation) {
       const timer = setTimeout(() => {
         setAnimated(true);
-      }, 2000);
+      }, 1500);
       
       return () => clearTimeout(timer);
     }
@@ -47,7 +47,7 @@ const WhatsAppButton = ({
       )}
     >
       <MessageCircle size={size === 'sm' ? 16 : size === 'lg' ? 24 : 20} className="mr-2" />
-      Falar no WhatsApp
+      Perguntar sobre disponibilidade
     </a>
   );
 };
