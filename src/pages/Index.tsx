@@ -4,7 +4,7 @@ import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { WhatsApp } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 
 const Index = () => {
@@ -66,7 +66,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-[#25D366] text-white hover:bg-[#22c55e] transition-colors"
                 >
-                  <WhatsApp size={20} />
+                  <MessageCircle size={20} />
                   Fale conosco
                 </a>
               </div>
@@ -163,7 +163,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
-                  <WhatsApp size={20} />
+                  <MessageCircle size={20} />
                   Fale com um consultor
                 </a>
               </div>
@@ -189,7 +189,7 @@ const Index = () => {
         className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"
         aria-label="Chat on WhatsApp"
       >
-        <WhatsApp size={28} />
+        <MessageCircle size={28} />
       </a>
     </div>
   );
