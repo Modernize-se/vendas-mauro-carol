@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Twitter, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Mail, Phone, MapPin, ArrowRight, Flag } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,11 +8,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div className="md:col-span-1 lg:col-span-1">
-            <Link to="/" className="text-2xl font-display font-medium mb-4 block">
-              Casa <span className="text-primary">Elegante</span>
+            <Link to="/" className="text-2xl font-display font-medium mb-4 flex items-center">
+              Mauro e Carol <span className="text-primary ml-2">em Londres</span>
+              <Flag className="ml-2 text-[#CF142B]" size={20} />
             </Link>
             <p className="text-muted-foreground mb-6">
-              Móveis e decoração de alto padrão com preços acessíveis. Transforme sua casa em um espaço único e sofisticado.
+              Vendendo os itens que escolhemos com carinho para montar nosso primeiro lar. 
+              Cada peça foi selecionada com cuidado e possui histórias e momentos especiais.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -82,30 +84,18 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4">Links Úteis</h3>
+            <h3 className="font-medium text-lg mb-4">Sobre Nossa Mudança</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Início
-                </Link>
-              </li>
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
                   <ArrowRight size={14} className="mr-2" />
-                  Sobre nós
+                  Nossa História
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
                   <ArrowRight size={14} className="mr-2" />
-                  Termos e Condições
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Política de Privacidade
+                  Condições de Venda
                 </Link>
               </li>
               <li>
@@ -123,8 +113,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-3 mt-1 text-primary" />
                 <span className="text-muted-foreground">
-                  Av. Paulista, 1000 - Bela Vista<br />
-                  São Paulo - SP, 01310-100
+                  São Paulo - SP
                 </span>
               </li>
               <li className="flex items-center">
@@ -135,8 +124,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-3 text-primary" />
-                <a href="mailto:contato@casaelegante.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  contato@casaelegante.com
+                <a href="mailto:contato@maurocarolemlondres.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  contato@maurocarolemlondres.com
                 </a>
               </li>
             </ul>
@@ -144,7 +133,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-6 border-t border-border/50 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Casa Elegante. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Mauro e Carol em Londres. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

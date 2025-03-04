@@ -4,7 +4,7 @@ export function generateWhatsAppLink(productName: string): string {
   const phoneNumber = "5511999999999";
   
   const message = encodeURIComponent(
-    `Olá, estou interessado no ${productName} que vi no site! Ainda está disponível?`
+    `Olá, estou interessado no ${productName} que vocês estão vendendo antes da mudança para Londres. Ainda está disponível?`
   );
   
   return `https://wa.me/${phoneNumber}?text=${message}`;

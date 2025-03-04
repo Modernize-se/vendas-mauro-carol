@@ -4,7 +4,7 @@ import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Plane, Home, Heart } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 
 const Index = () => {
@@ -30,7 +30,7 @@ const Index = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1615529151169-7b1ff50dc7f2?q=80&w=2070&auto=format&fit=crop" 
-              alt="Móveis elegantes para sua casa" 
+              alt="Itens cuidadosamente selecionados do nosso lar" 
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/50"></div>
@@ -40,16 +40,16 @@ const Index = () => {
             <div className="max-w-2xl">
               <div className="staggered-item">
                 <span className="inline-block px-3 py-1 text-sm rounded-full bg-primary/10 text-primary mb-4">
-                  Móveis & Decoração de Luxo
+                  Nossa Mudança para Londres
                 </span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item">
-                Transforme sua casa em um espaço sofisticado
+                Peças escolhidas com carinho para nosso primeiro lar
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
-                Encontre móveis elegantes, eletrodomésticos e artigos de decoração com preços especiais para criar o ambiente dos seus sonhos.
+                Estamos vendendo os itens que escolhemos com tanto cuidado para montar nosso lar, pois estamos de mudança para Londres e não podemos levá-los conosco.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 staggered-item">
@@ -74,12 +74,54 @@ const Index = () => {
           </div>
         </section>
         
+        {/* Our Story Section */}
+        <section className="container mx-auto px-4 mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossa História</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Um capítulo se fecha e outro se abre com nossa mudança para Londres.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-secondary/30 p-6 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Home size={28} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Nosso Primeiro Lar</h3>
+              <p className="text-muted-foreground">
+                Cada item que estamos vendendo foi escolhido com carinho para montar nosso primeiro lar juntos. São peças de qualidade que nos acompanharam em momentos especiais.
+              </p>
+            </div>
+            
+            <div className="bg-secondary/30 p-6 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Plane size={28} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Nova Jornada</h3>
+              <p className="text-muted-foreground">
+                Estamos embarcando em uma nova aventura em Londres e, infelizmente, não podemos levar nossos móveis e eletrodomésticos conosco.
+              </p>
+            </div>
+            
+            <div className="bg-secondary/30 p-6 rounded-xl text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart size={28} className="text-primary" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Novo Lar para Nossas Coisas</h3>
+              <p className="text-muted-foreground">
+                Queremos que esses itens encontrem um novo lar onde serão tão amados quanto foram por nós. Cada peça tem sua história e esperamos que continue a criar memórias.
+              </p>
+            </div>
+          </div>
+        </section>
+        
         {/* Categories Section */}
         <section className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Categorias em Destaque</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Categorias</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore nossa variedade de produtos para todos os ambientes da sua casa.
+              Explore os itens da nossa casa por categoria.
             </p>
           </div>
           
@@ -139,7 +181,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossos Produtos</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Confira nossa seleção de móveis, eletrodomésticos e itens de decoração para transformar sua casa.
+              Confira os itens que estamos vendendo antes da nossa mudança para Londres.
             </p>
           </div>
           
@@ -152,10 +194,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-8 relative z-10">
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">
-                  Decoração personalizada para sua casa
+                  Tem interesse em algum item?
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Não encontrou o que procura? Entre em contato conosco para obter ajuda personalizada na escolha dos móveis e decoração ideais para o seu espaço.
+                  Entre em contato conosco para mais informações, agendar uma visita ou fazer uma proposta. Estamos abertos a negociações e podemos responder quaisquer dúvidas sobre os produtos.
                 </p>
                 <a 
                   href="https://wa.me/5511999999999" 
@@ -164,13 +206,13 @@ const Index = () => {
                   className="inline-flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
                 >
                   <MessageCircle size={20} />
-                  Fale com um consultor
+                  Fale conosco
                 </a>
               </div>
               <div className="hidden md:block">
                 <img 
                   src="https://images.unsplash.com/photo-1615529151169-7b1ff50dc7f2?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Decoração personalizada" 
+                  alt="Nosso lar" 
                   className="w-full h-80 object-cover rounded-lg"
                 />
               </div>

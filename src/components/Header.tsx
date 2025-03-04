@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Search } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, Flag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Header = () => {
@@ -49,9 +49,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="text-2xl font-display font-medium transition-opacity hover:opacity-80"
+            className="text-2xl font-display font-medium transition-opacity hover:opacity-80 flex items-center"
           >
-            Casa <span className="text-primary">Elegante</span>
+            Mauro e Carol <span className="text-primary ml-2">em Londres</span>
+            <Flag className="ml-2 text-[#CF142B]" size={20} />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
