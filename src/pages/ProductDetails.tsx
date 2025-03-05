@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, Tag } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Tag, CheckCircle } from 'lucide-react';
 import { products } from '@/data/products';
 import { Product } from '@/types/product';
 import { formatCurrency, calculateDiscount } from '@/utils/format';
@@ -128,7 +128,12 @@ const ProductDetails = () => {
                 )}
               </div>
               
-              {!product.available && (
+              {product.available ? (
+                <div className="bg-[#F2FCE2] text-emerald-700 rounded-lg px-4 py-3 mb-6 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
+                  <CheckCircle size={20} className="mr-2 text-emerald-600" />
+                  <span className="font-medium">Produto disponível para compra imediata</span>
+                </div>
+              ) : (
                 <div className="bg-destructive/10 text-destructive rounded-lg px-4 py-3 mb-6">
                   Produto indisponível no momento
                 </div>
@@ -165,7 +170,7 @@ const ProductDetails = () => {
                 />
                 
                 <p className="text-sm text-muted-foreground mt-4">
-                  Envie uma mensagem para consultar disponibilidade e condições de pagamento.
+                  Envie uma mensagem para consultar condições de pagamento e retirada.
                 </p>
               </div>
             </div>

@@ -47,7 +47,7 @@ const WhatsAppButton = ({
       )}
     >
       <MessageCircle size={size === 'sm' ? 16 : size === 'lg' ? 24 : 20} className="mr-2" />
-      Perguntar sobre disponibilidade
+      Fale conosco para comprar já
     </a>
   );
 };
