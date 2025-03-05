@@ -16,8 +16,16 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/vendas-mauro-carol/",
+  base: "./", // Change from "/vendas-mauro-carol/" to "./"
   build: {
-    outDir: "dist", // Ensures build output is in the correct folder
+    outDir: "dist",
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          console.log("Chunk path:", id);
+          return null;
+        },
+      },
+    },
   },
 }));
