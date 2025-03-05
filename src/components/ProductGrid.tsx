@@ -18,6 +18,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
   });
   const [sort, setSort] = useState<SortOption>("price-asc");
   const [showFilters, setShowFilters] = useState(false);
+  const [showSortMenu, setShowSortMenu] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
   
   useEffect(() => {
@@ -93,14 +94,22 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       onlyAvailable: false,
     });
     setSort('price-asc');
+    setShowFilters(false);
   };
   
   const updateCategory = (category: string | undefined) => {
     setFilters(prev => ({ ...prev, category }));
+    setShowFilters(false);
   };
   
   const updatePriceRange = (minPrice: number | undefined, maxPrice: number | undefined) => {
     setFilters(prev => ({ ...prev, minPrice, maxPrice }));
+    setShowFilters(false);
+  };
+  
+  const updateSort = (newSort: SortOption) => {
+    setSort(newSort);
+    setShowSortMenu(false);
   };
   
   return (
@@ -241,41 +250,44 @@ const ProductGrid = ({ products }: ProductGridProps) => {
           <div className="relative">
             <button
               className="flex items-center space-x-2 px-4 py-2 border border-border rounded-lg hover:bg-secondary/50 transition-colors"
+              onClick={() => setShowSortMenu(!showSortMenu)}
             >
               <span>Ordenar por</span>
               <ChevronDown size={18} />
             </button>
             
-            <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-lg py-2 z-20">
-              <div 
-                className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                onClick={() => setSort('price-asc')}
-              >
-                <span>Menor preço</span>
-                {sort === 'price-asc' && <Check size={16} />}
+            {showSortMenu && (
+              <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-lg py-2 z-20">
+                <div 
+                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                  onClick={() => updateSort('price-asc')}
+                >
+                  <span>Menor preço</span>
+                  {sort === 'price-asc' && <Check size={16} />}
+                </div>
+                <div 
+                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                  onClick={() => updateSort('price-desc')}
+                >
+                  <span>Maior preço</span>
+                  {sort === 'price-desc' && <Check size={16} />}
+                </div>
+                <div 
+                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                  onClick={() => updateSort('name-asc')}
+                >
+                  <span>Nome (A-Z)</span>
+                  {sort === 'name-asc' && <Check size={16} />}
+                </div>
+                <div 
+                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                  onClick={() => updateSort('name-desc')}
+                >
+                  <span>Nome (Z-A)</span>
+                  {sort === 'name-desc' && <Check size={16} />}
+                </div>
               </div>
-              <div 
-                className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                onClick={() => setSort('price-desc')}
-              >
-                <span>Maior preço</span>
-                {sort === 'price-desc' && <Check size={16} />}
-              </div>
-              <div 
-                className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                onClick={() => setSort('name-asc')}
-              >
-                <span>Nome (A-Z)</span>
-                {sort === 'name-asc' && <Check size={16} />}
-              </div>
-              <div 
-                className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                onClick={() => setSort('name-desc')}
-              >
-                <span>Nome (Z-A)</span>
-                {sort === 'name-desc' && <Check size={16} />}
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
