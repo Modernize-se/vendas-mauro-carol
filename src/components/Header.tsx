@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Search, Flag } from 'lucide-react';
+import { Menu, X, Flag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
   
   useEffect(() => {
@@ -25,13 +23,7 @@ const Header = () => {
   
   useEffect(() => {
     setMobileMenuOpen(false);
-    setSearchOpen(false);
   }, [location]);
-  
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.location.href = `/?search=${encodeURIComponent(searchQuery)}`;
-  };
   
   return (
     <header 
@@ -64,22 +56,7 @@ const Header = () => {
             </a>
           </nav>
           
-          <div className="flex items-center space-x-4">
-            <button 
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 rounded-full hover:bg-secondary transition-colors"
-              aria-label="Search"
-            >
-              <Search size={20} />
-            </button>
-            <Link 
-              to="/"
-              className="p-2 rounded-full hover:bg-secondary transition-colors"
-              aria-label="Shopping bag"
-            >
-              <ShoppingBag size={20} />
-            </Link>
-            
+          <div className="flex items-center">
             <button 
               className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -89,28 +66,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-        
-        {searchOpen && (
-          <div className="absolute left-0 right-0 top-full mt-1 px-4 py-3 bg-background/95 backdrop-blur-md shadow-md rounded-b-lg animate-slide-in">
-            <form onSubmit={handleSearch} className="flex items-center">
-              <input
-                type="text"
-                placeholder="Buscar produtos..."
-                className="w-full bg-transparent border-b border-border/50 py-2 px-0 focus:outline-none focus:border-primary"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                autoFocus
-              />
-              <button 
-                type="submit" 
-                className="ml-2 p-2 rounded-full hover:bg-secondary transition-colors"
-                aria-label="Submit search"
-              >
-                <Search size={18} />
-              </button>
-            </form>
-          </div>
-        )}
       </div>
       
       {mobileMenuOpen && (
@@ -125,22 +80,6 @@ const Header = () => {
             <a href="#products" className="text-xl font-medium pb-4 border-b border-border/30">
               Produtos
             </a>
-            <form onSubmit={handleSearch} className="mt-6 flex items-center">
-              <input
-                type="text"
-                placeholder="Buscar produtos..."
-                className="w-full bg-transparent border-b border-primary/50 py-2 px-0 focus:outline-none focus:border-primary"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button 
-                type="submit" 
-                className="ml-2 p-2 rounded-full hover:bg-secondary transition-colors"
-                aria-label="Submit search"
-              >
-                <Search size={18} />
-              </button>
-            </form>
           </nav>
         </div>
       )}
