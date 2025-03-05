@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="mt-4 rounded-lg overflow-hidden border border-ukblue/20">
               <AspectRatio ratio={4/3} className="bg-muted">
                 <img 
-                  src="/placeholder.svg" 
+                  src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
                   alt="Mauro e Carol" 
                   className="object-cover w-full h-full"
                 />
