@@ -1,10 +1,9 @@
-
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, ArrowRight } from 'lucide-react';
+import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, ArrowRight, Clock } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -92,7 +91,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-medium mb-3">Nosso Primeiro Lar</h3>
               <p className="text-muted-foreground">
-                Cada item que estamos vendendo foi escolhido com carinho para montar nosso primeiro lar juntos. São peças de qualidade que nos acompanharam em momentos especiais.
+                Em abril de 2023, montamos nosso primeiro lar juntos. Cada item que estamos vendendo foi escolhido com carinho para esse momento especial. São peças de qualidade que nos acompanharam em momentos inesquecíveis.
               </p>
             </div>
             
@@ -102,17 +101,17 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-medium mb-3">Nova Jornada</h3>
               <p className="text-muted-foreground">
-                Estamos embarcando em uma nova aventura em Londres e, infelizmente, não podemos levar nossos móveis e eletrodomésticos conosco.
+                Em abril de 2025, embarcaremos em uma nova aventura em Londres e, infelizmente, não podemos levar nossos móveis e eletrodomésticos conosco. Nossa mudança está se aproximando rapidamente!
               </p>
             </div>
             
             <div className="bg-secondary/30 p-6 rounded-xl text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart size={28} className="text-primary" />
+                <Clock size={28} className="text-primary" />
               </div>
-              <h3 className="text-xl font-medium mb-3">Novo Lar para Nossas Coisas</h3>
+              <h3 className="text-xl font-medium mb-3">Tempo Limitado</h3>
               <p className="text-muted-foreground">
-                Queremos que esses itens encontrem um novo lar onde serão tão amados quanto foram por nós. Cada peça tem sua história e esperamos que continue a criar memórias.
+                Você tem uma oportunidade única e por tempo limitado de adquirir itens de qualidade com preços especiais. Não perca a chance de levar peças que foram escolhidas com muito cuidado e carinho!
               </p>
             </div>
           </div>
