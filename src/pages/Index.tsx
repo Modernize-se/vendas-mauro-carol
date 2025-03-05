@@ -146,61 +146,10 @@ const Index = () => {
           <ProductGrid products={products} />
         </section>
         
-        {/* How it Works Section (linking to conditions) */}
-        <section className="container mx-auto px-4 mb-24">
-          <div className="text-center mb-12">
-            <h2 id="how-it-works-title" className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Entenda como funciona o processo de compra dos nossos itens antes da mudança para Londres.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-secondary/30 p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Info size={28} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-medium mb-3">Escolha seus Itens</h3>
-              <p className="text-muted-foreground mb-4">
-                Navegue pela nossa seleção de produtos e escolha os itens que deseja adquirir.
-              </p>
-              <a href="#how-it-works" className="inline-flex items-center text-primary hover:underline">
-                Ver detalhes <ArrowRight size={16} className="ml-1" />
-              </a>
-            </div>
-            
-            <div className="bg-secondary/30 p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle size={28} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-medium mb-3">Entre em Contato</h3>
-              <p className="text-muted-foreground mb-4">
-                Fale conosco pelo WhatsApp para confirmar a disponibilidade e combinar os detalhes.
-              </p>
-              <a href={generateWhatsAppLink("Informações Gerais")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:underline">
-                Falar agora <ArrowRight size={16} className="ml-1" />
-              </a>
-            </div>
-            
-            <div className="bg-secondary/30 p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin size={28} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-medium mb-3">Retire no Local</h3>
-              <p className="text-muted-foreground mb-4">
-                Após a confirmação, você poderá retirar os itens em nosso apartamento no Morumbi.
-              </p>
-              <a href="#how-it-works" className="inline-flex items-center text-primary hover:underline">
-                Ver endereço <ArrowRight size={16} className="ml-1" />
-              </a>
-            </div>
-          </div>
-        </section>
-        
         {/* How it Works Details Section (renamed from Sales Conditions) */}
         <section id="how-it-works" className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
+            <h2 id="how-it-works-title" className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Informações importantes sobre a compra dos nossos itens.
             </p>
