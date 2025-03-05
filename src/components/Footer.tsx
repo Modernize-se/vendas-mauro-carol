@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Twitter, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, MapPin, ArrowRight } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 // UK Flag SVG component
@@ -56,29 +56,6 @@ const Footer = () => {
               Vendendo os itens que escolhemos com carinho para montar nosso primeiro lar. 
               Cada peça foi selecionada com cuidado e possui histórias e momentos especiais.
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-ukblue hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a 
-                href="#" 
-                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-ukblue hover:text-white transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a 
-                href="#" 
-                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-ukblue hover:text-white transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-            </div>
           </div>
           
           {/* Column 3: About Our Move */}
