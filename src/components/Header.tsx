@@ -51,6 +51,21 @@ const Header = () => {
     setMobileMenuOpen(false);
   }, [location]);
   
+  const handleSmoothScroll = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 100; // Offset to account for fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
   return (
     <header 
       className={cn(
@@ -74,13 +89,25 @@ const Header = () => {
             <Link to="/" className="text-foreground/80 hover:text-ukblue transition-colors">
               Início
             </Link>
-            <a href="#story" className="text-foreground/80 hover:text-ukblue transition-colors">
+            <a 
+              href="#story" 
+              className="text-foreground/80 hover:text-ukblue transition-colors"
+              onClick={handleSmoothScroll('story')}
+            >
               Nossa História
             </a>
-            <a href="#products" className="text-foreground/80 hover:text-ukblue transition-colors">
+            <a 
+              href="#products" 
+              className="text-foreground/80 hover:text-ukblue transition-colors"
+              onClick={handleSmoothScroll('products')}
+            >
               Produtos
             </a>
-            <a href="#how-it-works" className="text-foreground/80 hover:text-ukblue transition-colors">
+            <a 
+              href="#how-it-works-title" 
+              className="text-foreground/80 hover:text-ukblue transition-colors"
+              onClick={handleSmoothScroll('how-it-works-title')}
+            >
               Como Funciona
             </a>
           </nav>
@@ -103,13 +130,25 @@ const Header = () => {
             <Link to="/" className="text-xl font-medium pb-4 border-b border-border/30">
               Início
             </Link>
-            <a href="#story" className="text-xl font-medium pb-4 border-b border-border/30">
+            <a 
+              href="#story" 
+              className="text-xl font-medium pb-4 border-b border-border/30"
+              onClick={handleSmoothScroll('story')}
+            >
               Nossa História
             </a>
-            <a href="#products" className="text-xl font-medium pb-4 border-b border-border/30">
+            <a 
+              href="#products" 
+              className="text-xl font-medium pb-4 border-b border-border/30"
+              onClick={handleSmoothScroll('products')}
+            >
               Produtos
             </a>
-            <a href="#how-it-works" className="text-xl font-medium pb-4 border-b border-border/30">
+            <a 
+              href="#how-it-works-title" 
+              className="text-xl font-medium pb-4 border-b border-border/30"
+              onClick={handleSmoothScroll('how-it-works-title')}
+            >
               Como Funciona
             </a>
           </nav>

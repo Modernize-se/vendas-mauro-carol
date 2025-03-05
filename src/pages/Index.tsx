@@ -133,7 +133,7 @@ const Index = () => {
         {/* How it Works Section (linking to conditions) */}
         <section className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
+            <h2 id="how-it-works-title" className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Entenda como funciona o processo de compra dos nossos itens antes da mudança para Londres.
             </p>
