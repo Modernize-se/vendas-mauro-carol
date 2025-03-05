@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
@@ -50,6 +49,22 @@ const Index = () => {
                 Peças escolhidas com carinho para nosso primeiro lar
               </h1>
               
+              {/* Couple Photo - Only visible on mobile */}
+              <div className="md:hidden flex justify-center my-6">
+                <div className="relative rounded-full w-40 h-40 flex items-center justify-center staggered-item">
+                  {/* Frame border */}
+                  <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
+                  {/* Photo */}
+                  <div className="rounded-full overflow-hidden w-[calc(100%-16px)] h-[calc(100%-16px)]">
+                    <img 
+                      src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
+                      alt="Casal em Londres" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+              
               <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
                 Estamos vendendo os itens que escolhemos com tanto cuidado para montar nosso lar, pois estamos de mudança para Londres e não podemos levá-los conosco.
               </p>
@@ -74,8 +89,8 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Larger Rounded Couple Photo with Frame - visible on all devices */}
-            <div className="flex justify-center md:justify-end items-center w-full md:w-auto md:ml-auto mb-8 md:mb-0">
+            {/* Larger Rounded Couple Photo with Frame - only visible on desktop */}
+            <div className="hidden md:flex justify-center md:justify-end items-center w-full md:w-auto md:ml-auto">
               <div className="relative rounded-full w-72 h-72 md:w-96 md:h-96 flex items-center justify-center staggered-item">
                 {/* Frame border */}
                 <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
