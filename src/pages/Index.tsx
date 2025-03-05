@@ -51,7 +51,7 @@ const Index = () => {
               
               {/* Couple Photo - Only visible on mobile */}
               <div className="md:hidden flex justify-center my-6">
-                <div className="relative rounded-full w-40 h-40 flex items-center justify-center staggered-item">
+                <div className="relative rounded-full w-[90%] max-w-xs h-auto aspect-square flex items-center justify-center staggered-item">
                   {/* Frame border */}
                   <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
                   {/* Photo */}
@@ -161,7 +161,7 @@ const Index = () => {
           <ProductGrid products={products} />
         </section>
         
-        {/* How it Works Details Section (renamed from Sales Conditions) */}
+        {/* How it Works Details Section */}
         <section id="how-it-works" className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
             <h2 id="how-it-works-title" className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
