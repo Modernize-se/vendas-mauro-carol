@@ -1,10 +1,9 @@
-
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, AlertTriangle } from 'lucide-react';
+import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -168,43 +167,6 @@ const Index = () => {
               <p className="text-muted-foreground">
                 Os produtos foram escolhidos com muito carinho e cuidado para nosso lar.
               </p>
-            </div>
-            
-            <div className="bg-secondary/30 p-8 rounded-xl md:col-span-2">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                  <Info size={24} className="text-primary" />
-                </div>
-                <h3 className="text-xl font-medium">Processo de Compra Simplificado</h3>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                <div className="bg-background/50 p-5 rounded-lg">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-primary font-medium">1</span>
-                  </div>
-                  <h4 className="font-medium mb-2">Agendamento via WhatsApp</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Entre em contato conosco pelo WhatsApp para tirar suas dúvidas, verificar disponibilidade e agendar a retirada do produto.
-                  </p>
-                </div>
-                
-                <div className="bg-background/50 p-5 rounded-lg">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-primary font-medium">2</span>
-                  </div>
-                  <h4 className="font-medium mb-2">Pagamento e Retirada</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Após confirmar seu interesse, realize o pagamento e venha buscar o produto em nosso endereço. Aceitamos Pix, transferência bancária ou dinheiro em espécie.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-primary/10 p-4 rounded-lg flex items-start mt-6">
-                <MessageCircle size={20} className="text-primary mr-3 mt-0.5 flex-shrink-0" />
-                <p className="text-sm">
-                  <span className="font-medium">Dica:</span> Recomendamos que traga alguém para ajudar no transporte dos itens maiores. Estamos à disposição para responder qualquer dúvida pelo WhatsApp.
-                </p>
-              </div>
             </div>
           </div>
         </section>
