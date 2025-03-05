@@ -73,6 +73,22 @@ const Index = () => {
                 </a>
               </div>
             </div>
+            
+            {/* Rounded Couple Photo with Frame */}
+            <div className="hidden md:flex justify-end items-center ml-auto">
+              <div className="relative rounded-full w-64 h-64 flex items-center justify-center staggered-item">
+                {/* Frame border */}
+                <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
+                {/* Photo */}
+                <div className="rounded-full overflow-hidden w-[calc(100%-16px)] h-[calc(100%-16px)]">
+                  <img 
+                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1080&auto=format&fit=crop" 
+                    alt="Casal em Londres" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         
