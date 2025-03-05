@@ -42,48 +42,6 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-medium text-lg mb-4">Categorias</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/?category=Sala%20de%20Estar" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Sala de Estar
-                </Link>
-              </li>
-              <li>
-                <Link to="/?category=Sala%20de%20Jantar" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Sala de Jantar
-                </Link>
-              </li>
-              <li>
-                <Link to="/?category=Quarto" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Quarto
-                </Link>
-              </li>
-              <li>
-                <Link to="/?category=Eletrodomésticos" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Eletrodomésticos
-                </Link>
-              </li>
-              <li>
-                <Link to="/?category=Iluminação" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Iluminação
-                </Link>
-              </li>
-              <li>
-                <Link to="/?category=Decoração" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
-                  Decoração
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
             <h3 className="font-medium text-lg mb-4">Sobre Nossa Mudança</h3>
             <ul className="space-y-3">
               <li>
@@ -113,13 +71,13 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-3 mt-1 text-primary" />
                 <span className="text-muted-foreground">
-                  São Paulo - SP
+                  São Paulo - SP, próximo ao estádio do Morumbi
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-3 text-primary" />
-                <a href="tel:+551199999999" className="text-muted-foreground hover:text-primary transition-colors">
-                  (11) 99999-9999
+                <a href="tel:+5511995132003" className="text-muted-foreground hover:text-primary transition-colors">
+                  (11) 99513-2003
                 </a>
               </li>
               <li className="flex items-center">

@@ -4,8 +4,9 @@ import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Plane, Home, Heart } from 'lucide-react';
+import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, AlertTriangle } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
+import { generateWhatsAppLink } from '@/utils/whatsapp';
 
 const Index = () => {
   useEffect(() => {
@@ -61,7 +62,7 @@ const Index = () => {
                 </a>
                 
                 <a 
-                  href="https://wa.me/5511999999999" 
+                  href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-[#25D366] text-white hover:bg-[#22c55e] transition-colors"
@@ -128,6 +129,95 @@ const Index = () => {
           <ProductGrid products={products} />
         </section>
         
+        {/* Sales Conditions Section */}
+        <section id="conditions" className="container mx-auto px-4 mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Condições de Venda</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Informações importantes sobre a compra dos nossos itens.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-secondary/30 p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <MapPin size={24} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-medium">Retirada no Local</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Todos os itens deverão ser retirados em nosso apartamento, que fica na região do Morumbi, próximo ao estádio, em São Paulo - SP.
+              </p>
+              <p className="text-muted-foreground">
+                O endereço exato será compartilhado via WhatsApp após confirmação da compra. Não realizamos entregas.
+              </p>
+            </div>
+            
+            <div className="bg-secondary/30 p-8 rounded-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <ShoppingBag size={24} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-medium">Estado dos Produtos</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Todos os itens estão em perfeito estado de conservação, com menos de 2 anos de uso e acompanhados de nota fiscal original.
+              </p>
+              <p className="text-muted-foreground">
+                Você pode verificar o estado de cada produto pessoalmente antes de finalizar a compra.
+              </p>
+            </div>
+            
+            <div className="bg-secondary/30 p-8 rounded-xl md:col-span-2">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <Info size={24} className="text-primary" />
+                </div>
+                <h3 className="text-xl font-medium">Processo de Compra</h3>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                <div className="bg-background/50 p-5 rounded-lg">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-primary font-medium">1</span>
+                  </div>
+                  <h4 className="font-medium mb-2">Contato via WhatsApp</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Entre em contato conosco pelo WhatsApp para verificar a disponibilidade do produto e agendar uma visita.
+                  </p>
+                </div>
+                
+                <div className="bg-background/50 p-5 rounded-lg">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-primary font-medium">2</span>
+                  </div>
+                  <h4 className="font-medium mb-2">Visita e Verificação</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Visite nosso apartamento para verificar o estado do produto e confirmar seu interesse.
+                  </p>
+                </div>
+                
+                <div className="bg-background/50 p-5 rounded-lg">
+                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-primary font-medium">3</span>
+                  </div>
+                  <h4 className="font-medium mb-2">Pagamento e Retirada</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Realize o pagamento e retire o produto. Aceitamos Pix, transferência bancária ou dinheiro em espécie.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-primary/10 p-4 rounded-lg flex items-start mt-6">
+                <AlertTriangle size={20} className="text-primary mr-3 mt-0.5 flex-shrink-0" />
+                <p className="text-sm">
+                  <span className="font-medium">Importante:</span> Combinamos todas as etapas via WhatsApp. Recomendamos que traga alguém para ajudar no transporte dos itens maiores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* CTA Section */}
         <section className="container mx-auto px-4 mb-24">
           <div className="glass-panel p-8 md:p-12 relative overflow-hidden">
@@ -140,7 +230,7 @@ const Index = () => {
                   Entre em contato conosco para mais informações, agendar uma visita ou fazer uma proposta. Estamos abertos a negociações e podemos responder quaisquer dúvidas sobre os produtos.
                 </p>
                 <a 
-                  href="https://wa.me/5511999999999" 
+                  href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
@@ -165,7 +255,7 @@ const Index = () => {
       
       {/* Fixed WhatsApp Button */}
       <a 
-        href="https://wa.me/5511999999999" 
+        href={generateWhatsAppLink("Informações Gerais")} 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"
