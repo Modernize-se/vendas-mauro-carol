@@ -55,6 +55,9 @@ const Header = () => {
             <a href="#products" className="text-foreground/80 hover:text-ukblue transition-colors">
               Produtos
             </a>
+            <a href="#how-it-works" className="text-foreground/80 hover:text-ukblue transition-colors">
+              Como Funciona
+            </a>
           </nav>
           
           <div className="flex items-center">
@@ -80,6 +83,9 @@ const Header = () => {
             </a>
             <a href="#products" className="text-xl font-medium pb-4 border-b border-border/30">
               Produtos
+            </a>
+            <a href="#how-it-works" className="text-xl font-medium pb-4 border-b border-border/30">
+              Como Funciona
             </a>
           </nav>
         </div>
