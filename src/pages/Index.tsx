@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
@@ -260,6 +261,8 @@ const Index = () => {
       {/* Fixed WhatsApp Button */}
       <WhatsAppButton 
         link={generateWhatsAppLink("Informações Gerais")} 
+        fixed={true}
+        size="md"
       />
     </div>
   );
