@@ -125,7 +125,7 @@ const Header = () => {
       </div>
       
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[72px] bg-background/95 backdrop-blur-md z-40 animate-fade-in">
+        <div className="fixed inset-0 top-[72px] bg-background shadow-lg z-40 animate-fade-in">
           <nav className="container mx-auto py-8 px-6 flex flex-col space-y-6">
             <Link to="/" className="text-xl font-medium pb-4 border-b border-border/30">
               Início
