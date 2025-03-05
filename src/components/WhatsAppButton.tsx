@@ -40,7 +40,7 @@ const WhatsAppButton = ({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center bg-ukred hover:bg-ukred/90 text-white rounded-lg font-medium transition-all",
+        "inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium transition-all",
         sizeClasses[size],
         hasAnimation && animated && "animate-pulse",
         className
