@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/vendas-mauro-carol",
+  base: "/vendas-mauro-carol/",
   build: {
     outDir: "dist", // Ensures build output is in the correct folder
   },
