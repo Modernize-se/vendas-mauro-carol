@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
@@ -69,7 +70,7 @@ const Index = () => {
                 Estamos vendendo os itens que escolhemos com tanto cuidado para montar nosso lar, pois estamos de mudança para Londres e não podemos levá-los conosco.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 staggered-item">
+              <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-16 sm:mb-0">
                 <a 
                   href="#products" 
                   className="glass-button font-medium rounded-lg px-6 py-3 text-center"
@@ -108,7 +109,7 @@ const Index = () => {
         </section>
         
         {/* Our Story Section */}
-        <section id="story" className="container mx-auto px-4 mb-24">
+        <section id="story" className="container mx-auto px-4 mb-24 pt-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossa História</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
