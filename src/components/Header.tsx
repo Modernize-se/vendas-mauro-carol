@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingBag, Menu, X, Search, Flag } from 'lucide-react';
@@ -31,8 +30,6 @@ const Header = () => {
   
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // You could implement search functionality here
-    // For now, let's just redirect to home with search parameter
     window.location.href = `/?search=${encodeURIComponent(searchQuery)}`;
   };
   
@@ -59,18 +56,12 @@ const Header = () => {
             <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">
               Início
             </Link>
-            <Link to="/?category=Sala%20de%20Estar" className="text-foreground/80 hover:text-foreground transition-colors">
-              Sala de Estar
-            </Link>
-            <Link to="/?category=Quarto" className="text-foreground/80 hover:text-foreground transition-colors">
-              Quarto
-            </Link>
-            <Link to="/?category=Eletrodomésticos" className="text-foreground/80 hover:text-foreground transition-colors">
-              Eletrodomésticos
-            </Link>
-            <Link to="/?category=Decoração" className="text-foreground/80 hover:text-foreground transition-colors">
-              Decoração
-            </Link>
+            <a href="#story" className="text-foreground/80 hover:text-foreground transition-colors">
+              Nossa História
+            </a>
+            <a href="#products" className="text-foreground/80 hover:text-foreground transition-colors">
+              Produtos
+            </a>
           </nav>
           
           <div className="flex items-center space-x-4">
@@ -99,7 +90,6 @@ const Header = () => {
           </div>
         </div>
         
-        {/* Search Bar */}
         {searchOpen && (
           <div className="absolute left-0 right-0 top-full mt-1 px-4 py-3 bg-background/95 backdrop-blur-md shadow-md rounded-b-lg animate-slide-in">
             <form onSubmit={handleSearch} className="flex items-center">
@@ -123,25 +113,18 @@ const Header = () => {
         )}
       </div>
       
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-[72px] bg-background/95 backdrop-blur-md z-40 animate-fade-in">
           <nav className="container mx-auto py-8 px-6 flex flex-col space-y-6">
             <Link to="/" className="text-xl font-medium pb-4 border-b border-border/30">
               Início
             </Link>
-            <Link to="/?category=Sala%20de%20Estar" className="text-xl font-medium pb-4 border-b border-border/30">
-              Sala de Estar
-            </Link>
-            <Link to="/?category=Quarto" className="text-xl font-medium pb-4 border-b border-border/30">
-              Quarto
-            </Link>
-            <Link to="/?category=Eletrodomésticos" className="text-xl font-medium pb-4 border-b border-border/30">
-              Eletrodomésticos
-            </Link>
-            <Link to="/?category=Decoração" className="text-xl font-medium pb-4 border-b border-border/30">
-              Decoração
-            </Link>
+            <a href="#story" className="text-xl font-medium pb-4 border-b border-border/30">
+              Nossa História
+            </a>
+            <a href="#products" className="text-xl font-medium pb-4 border-b border-border/30">
+              Produtos
+            </a>
             <form onSubmit={handleSearch} className="mt-6 flex items-center">
               <input
                 type="text"
