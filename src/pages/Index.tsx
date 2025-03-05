@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
@@ -7,6 +6,7 @@ import Footer from '@/components/Footer';
 import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, AlertTriangle } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   useEffect(() => {
@@ -165,7 +165,7 @@ const Index = () => {
                 Todos os itens estão em perfeito estado de conservação, com menos de 2 anos de uso e acompanhados de nota fiscal original.
               </p>
               <p className="text-muted-foreground">
-                Você pode verificar o estado de cada produto pessoalmente antes de finalizar a compra.
+                Os produtos foram escolhidos com muito carinho e cuidado para nosso lar.
               </p>
             </div>
             
@@ -174,16 +174,16 @@ const Index = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
                   <Info size={24} className="text-primary" />
                 </div>
-                <h3 className="text-xl font-medium">Processo de Compra</h3>
+                <h3 className="text-xl font-medium">Processo de Compra Simplificado</h3>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                 <div className="bg-background/50 p-5 rounded-lg">
                   <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
                     <span className="text-primary font-medium">1</span>
                   </div>
-                  <h4 className="font-medium mb-2">Contato via WhatsApp</h4>
+                  <h4 className="font-medium mb-2">Agendamento via WhatsApp</h4>
                   <p className="text-sm text-muted-foreground">
-                    Entre em contato conosco pelo WhatsApp para verificar a disponibilidade do produto e agendar uma visita.
+                    Entre em contato conosco pelo WhatsApp para tirar suas dúvidas, verificar disponibilidade e agendar a retirada do produto.
                   </p>
                 </div>
                 
@@ -191,27 +191,17 @@ const Index = () => {
                   <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
                     <span className="text-primary font-medium">2</span>
                   </div>
-                  <h4 className="font-medium mb-2">Visita e Verificação</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Visite nosso apartamento para verificar o estado do produto e confirmar seu interesse.
-                  </p>
-                </div>
-                
-                <div className="bg-background/50 p-5 rounded-lg">
-                  <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-primary font-medium">3</span>
-                  </div>
                   <h4 className="font-medium mb-2">Pagamento e Retirada</h4>
                   <p className="text-sm text-muted-foreground">
-                    Realize o pagamento e retire o produto. Aceitamos Pix, transferência bancária ou dinheiro em espécie.
+                    Após confirmar seu interesse, realize o pagamento e venha buscar o produto em nosso endereço. Aceitamos Pix, transferência bancária ou dinheiro em espécie.
                   </p>
                 </div>
               </div>
               
               <div className="bg-primary/10 p-4 rounded-lg flex items-start mt-6">
-                <AlertTriangle size={20} className="text-primary mr-3 mt-0.5 flex-shrink-0" />
+                <MessageCircle size={20} className="text-primary mr-3 mt-0.5 flex-shrink-0" />
                 <p className="text-sm">
-                  <span className="font-medium">Importante:</span> Combinamos todas as etapas via WhatsApp. Recomendamos que traga alguém para ajudar no transporte dos itens maiores.
+                  <span className="font-medium">Dica:</span> Recomendamos que traga alguém para ajudar no transporte dos itens maiores. Estamos à disposição para responder qualquer dúvida pelo WhatsApp.
                 </p>
               </div>
             </div>
@@ -254,15 +244,7 @@ const Index = () => {
       <Footer />
       
       {/* Fixed WhatsApp Button */}
-      <a 
-        href={generateWhatsAppLink("Informações Gerais")} 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"
-        aria-label="Chat on WhatsApp"
-      >
-        <MessageCircle size={28} />
-      </a>
+      <WhatsAppButton />
     </div>
   );
 };
