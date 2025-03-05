@@ -1,9 +1,10 @@
+
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, ArrowRight, Clock } from 'lucide-react';
+import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, ArrowRight } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -107,11 +108,11 @@ const Index = () => {
             
             <div className="bg-secondary/30 p-6 rounded-xl text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock size={28} className="text-primary" />
+                <Heart size={28} className="text-primary" />
               </div>
-              <h3 className="text-xl font-medium mb-3">Tempo Limitado</h3>
+              <h3 className="text-xl font-medium mb-3">Novo Lar para Nossas Coisas</h3>
               <p className="text-muted-foreground">
-                Você tem uma oportunidade única e por tempo limitado de adquirir itens de qualidade com preços especiais. Não perca a chance de levar peças que foram escolhidas com muito cuidado e carinho!
+                Queremos que esses itens encontrem um novo lar onde serão tão amados quanto foram por nós. Cada peça tem sua história e esperamos que continue a criar memórias.
               </p>
             </div>
           </div>
