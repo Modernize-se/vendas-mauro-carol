@@ -75,7 +75,7 @@ const Index = () => {
         </section>
         
         {/* Our Story Section */}
-        <section className="container mx-auto px-4 mb-24">
+        <section id="story" className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossa História</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -113,66 +113,6 @@ const Index = () => {
                 Queremos que esses itens encontrem um novo lar onde serão tão amados quanto foram por nós. Cada peça tem sua história e esperamos que continue a criar memórias.
               </p>
             </div>
-          </div>
-        </section>
-        
-        {/* Categories Section */}
-        <section className="container mx-auto px-4 mb-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Categorias</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore os itens da nossa casa por categoria.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            <a href="/?category=Sala%20de%20Estar" className="group relative rounded-xl overflow-hidden aspect-square">
-              <img 
-                src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1470&auto=format&fit=crop" 
-                alt="Sala de Estar" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-xl font-medium">Sala de Estar</h3>
-              </div>
-            </a>
-            
-            <a href="/?category=Sala%20de%20Jantar" className="group relative rounded-xl overflow-hidden aspect-square">
-              <img 
-                src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=1470&auto=format&fit=crop" 
-                alt="Sala de Jantar" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-xl font-medium">Sala de Jantar</h3>
-              </div>
-            </a>
-            
-            <a href="/?category=Quarto" className="group relative rounded-xl overflow-hidden aspect-square">
-              <img 
-                src="https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=1470&auto=format&fit=crop" 
-                alt="Quarto" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-xl font-medium">Quarto</h3>
-              </div>
-            </a>
-            
-            <a href="/?category=Eletrodomésticos" className="group relative rounded-xl overflow-hidden aspect-square">
-              <img 
-                src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=1587&auto=format&fit=crop" 
-                alt="Eletrodomésticos" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-xl font-medium">Eletrodomésticos</h3>
-              </div>
-            </a>
           </div>
         </section>
         
