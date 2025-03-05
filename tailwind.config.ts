@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,7 +65,9 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				ukblue: '#00247D',  // UK flag blue
+				ukred: '#CF142B',   // UK flag red
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

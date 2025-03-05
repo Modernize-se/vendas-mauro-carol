@@ -11,10 +11,10 @@ const Footer = () => {
           {/* Column 1: Logo/Title and Image */}
           <div>
             <Link to="/" className="text-2xl font-display font-medium mb-6 flex items-center">
-              Mauro e Carol <span className="text-primary ml-2">em Londres</span>
-              <Flag className="ml-2 text-[#CF142B]" size={20} />
+              Mauro e Carol <span className="text-ukred ml-2">em Londres</span>
+              <Flag className="ml-2 text-ukred" size={20} />
             </Link>
-            <div className="mt-4 rounded-lg overflow-hidden">
+            <div className="mt-4 rounded-lg overflow-hidden border border-ukblue/20">
               <AspectRatio ratio={4/3} className="bg-muted">
                 <img 
                   src="/placeholder.svg" 
@@ -34,21 +34,21 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-ukblue hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-ukblue hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
               </a>
               <a 
                 href="#" 
-                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="w-9 h-9 bg-background rounded-full flex items-center justify-center hover:bg-ukblue hover:text-white transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter size={18} />
@@ -61,20 +61,20 @@ const Footer = () => {
             <h3 className="font-medium text-lg mb-5">Sobre Nossa Mudança</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
+                <Link to="/about" className="text-muted-foreground hover:text-ukblue transition-colors flex items-center">
+                  <ArrowRight size={14} className="mr-2 text-ukred" />
                   Nossa História
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
+                <Link to="/terms" className="text-muted-foreground hover:text-ukblue transition-colors flex items-center">
+                  <ArrowRight size={14} className="mr-2 text-ukred" />
                   Condições de Venda
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2" />
+                <Link to="/contact" className="text-muted-foreground hover:text-ukblue transition-colors flex items-center">
+                  <ArrowRight size={14} className="mr-2 text-ukred" />
                   Contato
                 </Link>
               </li>
@@ -86,14 +86,14 @@ const Footer = () => {
             <h3 className="font-medium text-lg mb-5">Contato</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <MapPin size={18} className="mr-3 mt-1 text-primary" />
+                <MapPin size={18} className="mr-3 mt-1 text-ukred" />
                 <span className="text-muted-foreground">
                   São Paulo - SP, próximo ao estádio do Morumbi
                 </span>
               </li>
               <li className="flex items-center">
-                <Phone size={18} className="mr-3 text-primary" />
-                <a href="tel:+5511995132003" className="text-muted-foreground hover:text-primary transition-colors">
+                <Phone size={18} className="mr-3 text-ukred" />
+                <a href="tel:+5511995132003" className="text-muted-foreground hover:text-ukblue transition-colors">
                   (11) 99513-2003
                 </a>
               </li>

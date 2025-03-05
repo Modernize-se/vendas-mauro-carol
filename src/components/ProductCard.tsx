@@ -37,7 +37,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
           />
           
           {discount > 0 && (
-            <div className="absolute top-3 right-3 bg-primary text-primary-foreground text-sm px-2 py-1 rounded-full font-medium flex items-center">
+            <div className="absolute top-3 right-3 bg-ukred text-white text-sm px-2 py-1 rounded-full font-medium flex items-center">
               <Tag size={14} className="mr-1" />
               {discount}% OFF
             </div>
@@ -51,7 +51,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         </div>
         
         <div className="p-4">
-          <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-ukblue transition-colors">
             {product.name}
           </h3>
           

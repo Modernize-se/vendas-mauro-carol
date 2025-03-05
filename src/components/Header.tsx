@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Flag } from 'lucide-react';
@@ -30,7 +31,7 @@ const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 md:px-8",
         isScrolled 
-          ? "bg-background/80 backdrop-blur-md shadow-sm" 
+          ? "bg-background/80 backdrop-blur-md shadow-sm border-b border-ukblue/10" 
           : "bg-transparent"
       )}
     >
@@ -40,18 +41,18 @@ const Header = () => {
             to="/" 
             className="text-2xl font-display font-medium transition-opacity hover:opacity-80 flex items-center"
           >
-            Mauro e Carol <span className="text-primary ml-2">em Londres</span>
-            <Flag className="ml-2 text-[#CF142B]" size={20} />
+            Mauro e Carol <span className="text-ukred ml-2">em Londres</span>
+            <Flag className="ml-2 text-ukred" size={20} />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground/80 hover:text-foreground transition-colors">
+            <Link to="/" className="text-foreground/80 hover:text-ukblue transition-colors">
               Início
             </Link>
-            <a href="#story" className="text-foreground/80 hover:text-foreground transition-colors">
+            <a href="#story" className="text-foreground/80 hover:text-ukblue transition-colors">
               Nossa História
             </a>
-            <a href="#products" className="text-foreground/80 hover:text-foreground transition-colors">
+            <a href="#products" className="text-foreground/80 hover:text-ukblue transition-colors">
               Produtos
             </a>
           </nav>
