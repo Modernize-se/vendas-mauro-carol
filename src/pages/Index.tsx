@@ -38,8 +38,8 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/50"></div>
           </div>
           
-          <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-            <div className="max-w-2xl">
+          <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
+            <div className="max-w-2xl mb-8 md:mb-0">
               <div className="staggered-item">
                 <span className="inline-block px-3 py-1 text-sm rounded-full bg-primary/10 text-primary mb-4">
                   Nossa Mudança para Londres
@@ -74,15 +74,15 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Rounded Couple Photo with Frame */}
-            <div className="hidden md:flex justify-end items-center ml-auto">
-              <div className="relative rounded-full w-64 h-64 flex items-center justify-center staggered-item">
+            {/* Larger Rounded Couple Photo with Frame - visible on all devices */}
+            <div className="flex justify-center md:justify-end items-center w-full md:w-auto md:ml-auto mb-8 md:mb-0">
+              <div className="relative rounded-full w-72 h-72 md:w-96 md:h-96 flex items-center justify-center staggered-item">
                 {/* Frame border */}
                 <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
                 {/* Photo */}
                 <div className="rounded-full overflow-hidden w-[calc(100%-16px)] h-[calc(100%-16px)]">
                   <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1080&auto=format&fit=crop" 
+                    src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
                     alt="Casal em Londres" 
                     className="w-full h-full object-cover"
                   />
