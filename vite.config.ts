@@ -17,5 +17,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === "production" ? "/vendas-mauro-carol/" : "/", // ✅ Only for production
+  base: "/vendas-mauro-carol/",
 }));
