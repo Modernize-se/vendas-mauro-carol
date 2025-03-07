@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ChevronRight, Tag, CheckCircle } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Tag, CheckCircle, AlertCircle } from 'lucide-react';
 import { products } from '@/data/products';
 import { Product } from '@/types/product';
 import { formatCurrency, calculateDiscount } from '@/utils/format';
@@ -66,7 +66,7 @@ const ProductDetails = () => {
             </p>
             <Link 
               to="/" 
-              className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-lg font-medium transition-colors hover:bg-primary/90 px-6 py-3"
+              className="industrial-button inline-flex items-center justify-center"
             >
               <ArrowLeft size={20} className="mr-2" />
               Voltar para a página inicial
@@ -109,7 +109,7 @@ const ProductDetails = () => {
             </div>
             
             <div className="flex flex-col animate-slide-in">
-              <h1 className="text-2xl md:text-3xl font-display font-medium mb-2">{product.name}</h1>
+              <h1 className="text-2xl md:text-3xl font-display font-medium mb-2 tracking-tight">{product.name}</h1>
               
               <div className="flex items-baseline mb-4">
                 <span className="text-3xl font-medium mr-3">{formatCurrency(product.salePrice)}</span>
@@ -120,7 +120,7 @@ const ProductDetails = () => {
                       {formatCurrency(product.referencePrice)}
                     </span>
                     
-                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium flex items-center">
+                    <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
                       <Tag size={14} className="mr-1" />
                       {discount}% OFF
                     </span>
@@ -129,13 +129,14 @@ const ProductDetails = () => {
               </div>
               
               {product.available ? (
-                <div className="bg-[#F2FCE2] text-emerald-700 rounded-lg px-4 py-3 mb-6 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
+                <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
                   <CheckCircle size={20} className="mr-2 text-emerald-600" />
                   <span className="font-medium">Produto disponível para compra imediata</span>
                 </div>
               ) : (
-                <div className="bg-destructive/10 text-destructive rounded-lg px-4 py-3 mb-6">
-                  Produto indisponível no momento
+                <div className="bg-destructive/10 text-destructive rounded-md px-4 py-3 mb-6 flex items-center">
+                  <AlertCircle size={20} className="mr-2" />
+                  <span className="font-medium">Produto indisponível no momento</span>
                 </div>
               )}
               
@@ -145,7 +146,7 @@ const ProductDetails = () => {
               {product.specifications && Object.keys(product.specifications).length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-lg font-medium mb-3">Especificações</h3>
-                  <div className="rounded-lg overflow-hidden border border-border">
+                  <div className="rounded-md overflow-hidden border border-border">
                     <table className="w-full">
                       <tbody>
                         {Object.entries(product.specifications).map(([key, value]) => (
@@ -185,10 +186,10 @@ const ProductDetails = () => {
                 {relatedProducts.map((relatedProduct, index) => (
                   <div 
                     key={relatedProduct.id}
-                    className="group card-hover rounded-xl overflow-hidden bg-background border border-border/40 staggered-item"
+                    className="group industrial-card rounded-md overflow-hidden staggered-item"
                   >
                     <Link to={`/product/${relatedProduct.id}`} className="block h-full">
-                      <div className="relative overflow-hidden aspect-[4/5]">
+                      <div className="relative overflow-hidden aspect-square">
                         <img
                           src={relatedProduct.imageUrls[0]}
                           alt={relatedProduct.name}
@@ -196,15 +197,22 @@ const ProductDetails = () => {
                         />
                         
                         {calculateDiscount(relatedProduct.salePrice, relatedProduct.referencePrice) > 0 && (
-                          <div className="absolute top-3 right-3 bg-primary text-primary-foreground text-sm px-2 py-1 rounded-full font-medium flex items-center">
+                          <div className="absolute top-3 right-3 bg-accent text-accent-foreground text-sm px-2 py-1 rounded-md font-medium flex items-center">
                             <Tag size={14} className="mr-1" />
                             {calculateDiscount(relatedProduct.salePrice, relatedProduct.referencePrice)}% OFF
+                          </div>
+                        )}
+                        
+                        {relatedProduct.available && (
+                          <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm text-sm px-2 py-1 rounded-md font-medium flex items-center">
+                            <CheckCircle size={14} className="mr-1 text-emerald-600" />
+                            <span className="text-foreground">Disponível</span>
                           </div>
                         )}
                       </div>
                       
                       <div className="p-4">
-                        <h3 className="font-medium mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                        <h3 className="font-medium mb-2 line-clamp-2 group-hover:text-industrial-steel transition-colors">
                           {relatedProduct.name}
                         </h3>
                         

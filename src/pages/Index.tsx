@@ -1,9 +1,10 @@
+
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Plane, Home, Heart, Info, MapPin, ShoppingBag, ArrowRight } from 'lucide-react';
+import { MessageCircle, Home, Tools, ShoppingBag, Info, ArrowRight, Filter } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -26,54 +27,50 @@ const Index = () => {
       <Header />
       
       <main className="flex-grow pt-24">
-        {/* Hero Section */}
-        <section className="relative h-[80vh] md:h-[90vh] mb-16">
+        {/* Hero Section - More industrial, less boho */}
+        <section className="relative h-[70vh] md:h-[80vh] mb-16">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1615529151169-7b1ff50dc7f2?q=80&w=2070&auto=format&fit=crop" 
-              alt="Itens cuidadosamente selecionados do nosso lar" 
-              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?q=80&w=2000&auto=format&fit=crop" 
+              alt="Móveis de alta qualidade com design industrial" 
+              className="w-full h-full object-cover brightness-95"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/50"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/60"></div>
           </div>
           
           <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
             <div className="max-w-2xl mb-8 md:mb-0">
               <div className="staggered-item">
-                <span className="inline-block px-3 py-1 text-sm rounded-full bg-primary/10 text-primary mb-4">
-                  Nossa Mudança para Londres
+                <span className="inline-block px-3 py-1 text-sm rounded-md bg-industrial-charcoal/10 text-industrial-charcoal mb-4 uppercase tracking-wide font-medium">
+                  Itens premium em promoção
                 </span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item">
-                Peças escolhidas com carinho para nosso primeiro lar
+              <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
+                Peças de qualidade com <span className="text-industrial-steel">design industrial</span>
               </h1>
               
               {/* Couple Photo - Only visible on mobile */}
               <div className="md:hidden flex justify-center my-6">
-                <div className="relative rounded-full w-[90%] max-w-xs h-auto aspect-square flex items-center justify-center staggered-item">
-                  {/* Frame border */}
-                  <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
-                  {/* Photo */}
-                  <div className="rounded-full overflow-hidden w-[calc(100%-16px)] h-[calc(100%-16px)]">
-                    <img 
-                      src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
-                      alt="Casal em Londres" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="rounded-md overflow-hidden w-full max-w-xs shadow-md staggered-item">
+                  <img 
+                    src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
+                    alt="Casal em Londres" 
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
               
               <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
-                Estamos vendendo os itens que escolhemos com tanto cuidado para montar nosso lar, pois estamos de mudança para Londres e não podemos levá-los conosco.
+                Móveis e eletrodomésticos cuidadosamente selecionados, com design contemporâneo e excelente estado de conservação para complementar seu lar.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-24 sm:mb-0">
                 <a 
                   href="#products" 
-                  className="glass-button font-medium rounded-lg px-6 py-3 text-center"
+                  className="industrial-button flex items-center justify-center gap-2"
                 >
+                  <ShoppingBag size={18} />
                   Ver produtos
                 </a>
                 
@@ -81,84 +78,79 @@ const Index = () => {
                   href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-[#25D366] text-white hover:bg-[#22c55e] transition-colors"
+                  className="flex items-center justify-center gap-2 font-medium rounded-md px-6 py-3 bg-[#25D366] text-white hover:bg-[#22c55e] transition-colors"
                 >
-                  <MessageCircle size={20} />
+                  <MessageCircle size={18} />
                   Fale conosco
                 </a>
               </div>
             </div>
             
-            {/* Larger Rounded Couple Photo with Frame - only visible on desktop */}
+            {/* Larger Photo with industrial frame - only visible on desktop */}
             <div className="hidden md:flex justify-center md:justify-end items-center w-full md:w-auto md:ml-auto">
-              <div className="relative rounded-full w-72 h-72 md:w-96 md:h-96 flex items-center justify-center staggered-item">
-                {/* Frame border */}
-                <div className="absolute inset-0 rounded-full border-8 border-[#9F9EA1] shadow-lg"></div>
-                {/* Photo */}
-                <div className="rounded-full overflow-hidden w-[calc(100%-16px)] h-[calc(100%-16px)]">
-                  <img 
-                    src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
-                    alt="Casal em Londres" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="relative rounded-md overflow-hidden w-72 h-72 md:w-96 md:h-96 staggered-item shadow-lg border-4 border-industrial-metal/20">
+                <img 
+                  src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
+                  alt="Casal em Londres" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
         </section>
         
-        {/* Our Story Section */}
-        <section id="story" className="container mx-auto px-4 mb-24 pt-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossa História</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Um capítulo se fecha e outro se abre com nossa mudança para Londres.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-secondary/30 p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Home size={28} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-medium mb-3">Nosso Primeiro Lar</h3>
-              <p className="text-muted-foreground">
-                Em abril de 2023, montamos nosso primeiro lar juntos. Cada item que estamos vendendo foi escolhido com carinho para esse momento especial. São peças de qualidade que nos acompanharam em momentos inesquecíveis.
-              </p>
-            </div>
-            
-            <div className="bg-secondary/30 p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Plane size={28} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-medium mb-3">Nova Jornada</h3>
-              <p className="text-muted-foreground">
-                Em abril de 2025, embarcaremos em uma nova aventura em Londres e, infelizmente, não podemos levar nossos móveis e eletrodomésticos conosco. Nossa mudança está se aproximando rapidamente!
-              </p>
-            </div>
-            
-            <div className="bg-secondary/30 p-6 rounded-xl text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart size={28} className="text-primary" />
-              </div>
-              <h3 className="text-xl font-medium mb-3">Novo Lar para Nossas Coisas</h3>
-              <p className="text-muted-foreground">
-                Queremos que esses itens encontrem um novo lar onde serão tão amados quanto foram por nós. Cada peça tem sua história e esperamos que continue a criar memórias.
-              </p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Products Section */}
+        {/* Products Section - Moved up to emphasize products */}
         <section id="products" className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossos Produtos</h2>
+            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Catálogo de Produtos</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Confira os itens que estamos vendendo antes da nossa mudança para Londres.
+              Peças de alta qualidade com design contemporâneo para complementar seu lar.
             </p>
           </div>
           
           <ProductGrid products={products} />
+        </section>
+        
+        {/* Our Approach Section - Replacing "Our Story" with focus on quality */}
+        <section id="story" className="container mx-auto px-4 mb-24 pt-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Nossa Seleção</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Oferecemos itens cuidadosamente escolhidos e bem conservados para seu lar.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="industrial-card rounded-md p-6 text-center">
+              <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Home size={28} className="text-industrial-steel" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Qualidade Premium</h3>
+              <p className="text-muted-foreground">
+                Todos os itens à venda foram escolhidos com atenção aos detalhes, materiais duráveis e design atemporal. São produtos de marcas reconhecidas que mantêm sua qualidade ao longo do tempo.
+              </p>
+            </div>
+            
+            <div className="industrial-card rounded-md p-6 text-center">
+              <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Tools size={28} className="text-industrial-steel" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Excelente Conservação</h3>
+              <p className="text-muted-foreground">
+                Todos os itens estão em ótimo estado de conservação, com menos de 2 anos de uso e acompanhados de nota fiscal original. Cuidamos de cada peça com atenção e dedicação.
+              </p>
+            </div>
+            
+            <div className="industrial-card rounded-md p-6 text-center">
+              <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Info size={28} className="text-industrial-steel" />
+              </div>
+              <h3 className="text-xl font-medium mb-3">Oportunidade Exclusiva</h3>
+              <p className="text-muted-foreground">
+                Em função de nossa mudança para Londres, oferecemos estas peças de alta qualidade a preços extremamente atraentes. Uma oportunidade única para investir em peças duráveis com excelente custo-benefício.
+              </p>
+            </div>
+          </div>
         </section>
         
         {/* How it Works Details Section */}
@@ -166,15 +158,15 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 id="how-it-works-title" className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Informações importantes sobre a compra dos nossos itens.
+              Informações importantes sobre a aquisição dos produtos.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-secondary/30 p-8 rounded-xl">
+            <div className="industrial-card rounded-md p-8">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                  <MapPin size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-industrial-steel/10 rounded-full flex items-center justify-center mr-4">
+                  <Home size={24} className="text-industrial-steel" />
                 </div>
                 <h3 className="text-xl font-medium">Retirada no Local</h3>
               </div>
@@ -186,10 +178,10 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-secondary/30 p-8 rounded-xl">
+            <div className="industrial-card rounded-md p-8">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                  <ShoppingBag size={24} className="text-primary" />
+                <div className="w-12 h-12 bg-industrial-steel/10 rounded-full flex items-center justify-center mr-4">
+                  <ShoppingBag size={24} className="text-industrial-steel" />
                 </div>
                 <h3 className="text-xl font-medium">Estado dos Produtos</h3>
               </div>
@@ -197,7 +189,7 @@ const Index = () => {
                 Todos os itens estão em perfeito estado de conservação, com menos de 2 anos de uso e acompanhados de nota fiscal original.
               </p>
               <p className="text-muted-foreground">
-                Os produtos foram escolhidos com muito carinho e cuidado para nosso lar.
+                Os produtos foram escolhidos com atenção aos detalhes, garantindo durabilidade e qualidade.
               </p>
             </div>
           </div>
@@ -218,7 +210,7 @@ const Index = () => {
                   href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 font-medium rounded-lg px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                  className="industrial-button inline-flex items-center justify-center gap-2"
                 >
                   <MessageCircle size={20} />
                   Fale conosco
@@ -226,9 +218,9 @@ const Index = () => {
               </div>
               <div className="hidden md:block">
                 <img 
-                  src="https://images.unsplash.com/photo-1615529151169-7b1ff50dc7f2?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg" 
                   alt="Nosso lar" 
-                  className="w-full h-80 object-cover rounded-lg"
+                  className="w-full h-80 object-cover rounded-md shadow-md"
                 />
               </div>
             </div>

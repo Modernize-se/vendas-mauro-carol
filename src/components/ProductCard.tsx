@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '@/types/product';
 import { formatCurrency, calculateDiscount } from '@/utils/format';
-import { Tag } from 'lucide-react';
+import { Tag, CheckCircle } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -26,10 +26,10 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
   return (
     <div 
       ref={cardRef}
-      className="group card-hover rounded-xl overflow-hidden bg-background border border-border/40"
+      className="group industrial-card rounded-md overflow-hidden"
     >
       <Link to={`/product/${product.id}`} className="block relative h-full">
-        <div className="relative overflow-hidden aspect-[4/5]">
+        <div className="relative overflow-hidden aspect-square">
           <img
             src={product.imageUrls[0]}
             alt={product.name}
@@ -37,9 +37,16 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
           />
           
           {discount > 0 && (
-            <div className="absolute top-3 right-3 bg-ukred text-white text-sm px-2 py-1 rounded-full font-medium flex items-center">
+            <div className="absolute top-3 right-3 bg-accent text-white text-sm px-2 py-1 rounded-md font-medium flex items-center">
               <Tag size={14} className="mr-1" />
               {discount}% OFF
+            </div>
+          )}
+          
+          {product.available && (
+            <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm text-sm px-2 py-1 rounded-md font-medium flex items-center">
+              <CheckCircle size={14} className="mr-1 text-emerald-600" />
+              <span className="text-foreground">Disponível</span>
             </div>
           )}
           
@@ -51,7 +58,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
         </div>
         
         <div className="p-4">
-          <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-ukblue transition-colors">
+          <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-industrial-steel transition-colors">
             {product.name}
           </h3>
           

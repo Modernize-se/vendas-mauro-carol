@@ -10,6 +10,7 @@ export interface Product {
   available: boolean;
   specifications?: Record<string, string>;
   whatsappLink?: string;
+  material?: string; // Added material property
 }
 
 export type ProductFilter = {
@@ -18,6 +19,7 @@ export type ProductFilter = {
   maxPrice?: number;
   onlyAvailable?: boolean;
   searchQuery?: string;
+  material?: string; // Added material filter
 };
 
 export type SortOption = "price-asc" | "price-desc" | "name-asc" | "name-desc";

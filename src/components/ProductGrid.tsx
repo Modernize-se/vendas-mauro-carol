@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import { Product, ProductFilter, SortOption } from '@/types/product';
-import { ChevronDown, SlidersHorizontal, Check } from 'lucide-react';
+import { ChevronDown, SlidersHorizontal, Check, Search, Tag, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ProductGridProps {
@@ -20,22 +20,33 @@ const ProductGrid = ({ products }: ProductGridProps) => {
   const [showFilters, setShowFilters] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
+  const [materials, setMaterials] = useState<string[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
   
   useEffect(() => {
-    // Extract unique categories
+    // Extract unique categories and materials
     const uniqueCategories = [...new Set(products.map(p => p.category))];
     setCategories(uniqueCategories);
     
+    const uniqueMaterials = [...new Set(products.map(p => p.material).filter(Boolean))];
+    setMaterials(uniqueMaterials as string[]);
+    
     // Initialize filters from URL parameters
     const categoryParam = searchParams.get('category');
-    const searchQuery = searchParams.get('search');
+    const searchParam = searchParams.get('search');
+    const materialParam = searchParams.get('material');
     
-    if (categoryParam || searchQuery) {
+    if (categoryParam || searchParam || materialParam) {
       setFilters(prevFilters => ({
         ...prevFilters,
         category: categoryParam || undefined,
-        searchQuery: searchQuery || undefined,
+        searchQuery: searchParam || undefined,
+        material: materialParam || undefined,
       }));
+      
+      if (searchParam) {
+        setSearchQuery(searchParam);
+      }
     }
   }, [products, searchParams]);
   
@@ -45,6 +56,11 @@ const ProductGrid = ({ products }: ProductGridProps) => {
     // Apply category filter
     if (filters.category) {
       result = result.filter(p => p.category === filters.category);
+    }
+    
+    // Apply material filter
+    if (filters.material) {
+      result = result.filter(p => p.material === filters.material);
     }
     
     // Apply price filter
@@ -66,7 +82,8 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       result = result.filter(p => 
         p.name.toLowerCase().includes(query) || 
         p.description.toLowerCase().includes(query) ||
-        p.category.toLowerCase().includes(query)
+        p.category.toLowerCase().includes(query) ||
+        (p.material && p.material.toLowerCase().includes(query))
       );
     }
     
@@ -94,11 +111,17 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       onlyAvailable: false,
     });
     setSort('price-asc');
+    setSearchQuery('');
     setShowFilters(false);
   };
   
   const updateCategory = (category: string | undefined) => {
     setFilters(prev => ({ ...prev, category }));
+    setShowFilters(false);
+  };
+  
+  const updateMaterial = (material: string | undefined) => {
+    setFilters(prev => ({ ...prev, material }));
     setShowFilters(false);
   };
   
@@ -112,184 +135,349 @@ const ProductGrid = ({ products }: ProductGridProps) => {
     setShowSortMenu(false);
   };
   
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    setFilters(prev => ({ ...prev, searchQuery: searchQuery || undefined }));
+  };
+  
   return (
     <div className="w-full">
-      <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h2 className="text-xl md:text-2xl font-medium">
-            {filters.category ? filters.category : "Todos os Produtos"}
-            {filters.searchQuery && (
-              <span className="ml-2 font-normal text-lg text-muted-foreground">
-                Resultados para "{filters.searchQuery}"
-              </span>
-            )}
-          </h2>
-          <p className="text-muted-foreground">
-            {filteredProducts.length} {filteredProducts.length === 1 ? 'produto' : 'produtos'} encontrados
-          </p>
-        </div>
-        
-        <div className="flex items-center space-x-4">
-          <div className="relative">
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center space-x-2 px-4 py-2 border border-border rounded-lg hover:bg-secondary/50 transition-colors"
+      <div className="mb-8 flex flex-col gap-4">
+        {/* Search and Filter Bar */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <form 
+            onSubmit={handleSearch}
+            className="relative flex-grow max-w-md"
+          >
+            <input 
+              type="text" 
+              placeholder="Buscar produtos..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-4 pr-12 py-2.5 rounded-md border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
+            />
+            <button 
+              type="submit"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors"
             >
-              <SlidersHorizontal size={18} />
-              <span>Filtros</span>
+              <Search size={18} />
             </button>
-            
-            {showFilters && (
-              <div className="absolute right-0 top-full mt-2 w-72 bg-background glass-panel shadow-lg rounded-lg p-4 z-20 animate-fade-in">
-                <div className="mb-4">
-                  <h3 className="font-medium mb-2">Categoria</h3>
-                  <div className="space-y-2">
-                    <div 
-                      className={cn(
-                        "flex items-center space-x-2 cursor-pointer hover:text-primary",
-                        !filters.category && "text-primary font-medium"
+          </form>
+          
+          <div className="flex items-center space-x-3">
+            <div className="relative">
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors"
+              >
+                <SlidersHorizontal size={18} />
+                <span>Filtros</span>
+              </button>
+              
+              {showFilters && (
+                <div className="absolute right-0 top-full mt-2 w-80 bg-background glass-panel shadow-lg rounded-md p-4 z-20 animate-fade-in">
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-medium">Categoria</h3>
+                      {filters.category && (
+                        <button 
+                          onClick={() => updateCategory(undefined)}
+                          className="text-xs text-muted-foreground hover:text-foreground px-1.5 py-0.5 rounded hover:bg-secondary/60 transition-colors"
+                        >
+                          Limpar
+                        </button>
                       )}
-                      onClick={() => updateCategory(undefined)}
-                    >
-                      <div className="w-4 h-4">
-                        {!filters.category && <Check size={16} />}
-                      </div>
-                      <span>Todas as categorias</span>
                     </div>
-                    
-                    {categories.map(category => (
+                    <div className="space-y-2 max-h-48 overflow-y-auto scrollbar-thin pr-1">
                       <div 
-                        key={category}
                         className={cn(
                           "flex items-center space-x-2 cursor-pointer hover:text-primary",
-                          filters.category === category && "text-primary font-medium"
+                          !filters.category && "text-primary font-medium"
                         )}
-                        onClick={() => updateCategory(category)}
+                        onClick={() => updateCategory(undefined)}
                       >
                         <div className="w-4 h-4">
-                          {filters.category === category && <Check size={16} />}
+                          {!filters.category && <Check size={16} />}
                         </div>
-                        <span>{category}</span>
+                        <span>Todas as categorias</span>
                       </div>
-                    ))}
+                      
+                      {categories.map(category => (
+                        <div 
+                          key={category}
+                          className={cn(
+                            "flex items-center space-x-2 cursor-pointer hover:text-primary",
+                            filters.category === category && "text-primary font-medium"
+                          )}
+                          onClick={() => updateCategory(category)}
+                        >
+                          <div className="w-4 h-4">
+                            {filters.category === category && <Check size={16} />}
+                          </div>
+                          <span>{category}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {materials.length > 0 && (
+                    <div className="mb-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="font-medium">Material</h3>
+                        {filters.material && (
+                          <button 
+                            onClick={() => updateMaterial(undefined)}
+                            className="text-xs text-muted-foreground hover:text-foreground px-1.5 py-0.5 rounded hover:bg-secondary/60 transition-colors"
+                          >
+                            Limpar
+                          </button>
+                        )}
+                      </div>
+                      <div className="space-y-2 max-h-32 overflow-y-auto scrollbar-thin pr-1">
+                        <div 
+                          className={cn(
+                            "flex items-center space-x-2 cursor-pointer hover:text-primary",
+                            !filters.material && "text-primary font-medium"
+                          )}
+                          onClick={() => updateMaterial(undefined)}
+                        >
+                          <div className="w-4 h-4">
+                            {!filters.material && <Check size={16} />}
+                          </div>
+                          <span>Todos os materiais</span>
+                        </div>
+                        
+                        {materials.map(material => (
+                          <div 
+                            key={material}
+                            className={cn(
+                              "flex items-center space-x-2 cursor-pointer hover:text-primary",
+                              filters.material === material && "text-primary font-medium"
+                            )}
+                            onClick={() => updateMaterial(material)}
+                          >
+                            <div className="w-4 h-4">
+                              {filters.material === material && <Check size={16} />}
+                            </div>
+                            <span>{material}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="mb-4">
+                    <h3 className="font-medium mb-2">Preço</h3>
+                    <div className="grid grid-cols-2 gap-2">
+                      <button 
+                        className={cn(
+                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
+                          (!filters.minPrice && !filters.maxPrice) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                        )}
+                        onClick={() => updatePriceRange(undefined, undefined)}
+                      >
+                        Todos os preços
+                      </button>
+                      <button 
+                        className={cn(
+                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
+                          (filters.maxPrice === 1000) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                        )}
+                        onClick={() => updatePriceRange(0, 1000)}
+                      >
+                        Até R$ 1.000
+                      </button>
+                      <button 
+                        className={cn(
+                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
+                          (filters.minPrice === 1000 && filters.maxPrice === 3000) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                        )}
+                        onClick={() => updatePriceRange(1000, 3000)}
+                      >
+                        R$ 1.000 - R$ 3.000
+                      </button>
+                      <button 
+                        className={cn(
+                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
+                          (filters.minPrice === 3000) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                        )}
+                        onClick={() => updatePriceRange(3000, undefined)}
+                      >
+                        Acima de R$ 3.000
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <label className="flex items-center space-x-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={filters.onlyAvailable}
+                        onChange={() => setFilters(prev => ({ ...prev, onlyAvailable: !prev.onlyAvailable }))}
+                        className="rounded border-gray-300 text-primary focus:ring-primary"
+                      />
+                      <span>Mostrar apenas disponíveis</span>
+                    </label>
+                  </div>
+                  
+                  <div className="flex justify-between pt-2 border-t border-border">
+                    <button
+                      onClick={clearFilters}
+                      className="text-sm text-muted-foreground hover:text-foreground"
+                    >
+                      Limpar filtros
+                    </button>
+                    <button
+                      onClick={() => setShowFilters(false)}
+                      className="text-sm text-primary hover:text-primary/80"
+                    >
+                      Aplicar filtros
+                    </button>
                   </div>
                 </div>
-                
-                <div className="mb-4">
-                  <h3 className="font-medium mb-2">Preço</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <button 
-                      className={cn(
-                        "px-3 py-1.5 text-sm border border-border rounded-lg hover:bg-secondary/50 transition-colors",
-                        (!filters.minPrice && !filters.maxPrice) && "bg-primary text-primary-foreground hover:bg-primary/90"
-                      )}
-                      onClick={() => updatePriceRange(undefined, undefined)}
-                    >
-                      Todos os preços
-                    </button>
-                    <button 
-                      className={cn(
-                        "px-3 py-1.5 text-sm border border-border rounded-lg hover:bg-secondary/50 transition-colors",
-                        (filters.maxPrice === 1000) && "bg-primary text-primary-foreground hover:bg-primary/90"
-                      )}
-                      onClick={() => updatePriceRange(0, 1000)}
-                    >
-                      Até R$ 1.000
-                    </button>
-                    <button 
-                      className={cn(
-                        "px-3 py-1.5 text-sm border border-border rounded-lg hover:bg-secondary/50 transition-colors",
-                        (filters.minPrice === 1000 && filters.maxPrice === 3000) && "bg-primary text-primary-foreground hover:bg-primary/90"
-                      )}
-                      onClick={() => updatePriceRange(1000, 3000)}
-                    >
-                      R$ 1.000 - R$ 3.000
-                    </button>
-                    <button 
-                      className={cn(
-                        "px-3 py-1.5 text-sm border border-border rounded-lg hover:bg-secondary/50 transition-colors",
-                        (filters.minPrice === 3000) && "bg-primary text-primary-foreground hover:bg-primary/90"
-                      )}
-                      onClick={() => updatePriceRange(3000, undefined)}
-                    >
-                      Acima de R$ 3.000
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <label className="flex items-center space-x-2 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={filters.onlyAvailable}
-                      onChange={() => setFilters(prev => ({ ...prev, onlyAvailable: !prev.onlyAvailable }))}
-                      className="rounded border-gray-300 text-primary focus:ring-primary"
-                    />
-                    <span>Mostrar apenas disponíveis</span>
-                  </label>
-                </div>
-                
-                <div className="flex justify-between pt-2 border-t border-border">
-                  <button
-                    onClick={clearFilters}
-                    className="text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    Limpar filtros
-                  </button>
-                  <button
-                    onClick={() => setShowFilters(false)}
-                    className="text-sm text-primary hover:text-primary/80"
-                  >
-                    Aplicar filtros
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-          
-          <div className="relative">
-            <button
-              className="flex items-center space-x-2 px-4 py-2 border border-border rounded-lg hover:bg-secondary/50 transition-colors"
-              onClick={() => setShowSortMenu(!showSortMenu)}
-            >
-              <span>Ordenar por</span>
-              <ChevronDown size={18} />
-            </button>
+              )}
+            </div>
             
-            {showSortMenu && (
-              <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-lg py-2 z-20">
-                <div 
-                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                  onClick={() => updateSort('price-asc')}
-                >
-                  <span>Menor preço</span>
-                  {sort === 'price-asc' && <Check size={16} />}
+            <div className="relative">
+              <button
+                className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors"
+                onClick={() => setShowSortMenu(!showSortMenu)}
+              >
+                <span>Ordenar</span>
+                <ChevronDown size={18} />
+              </button>
+              
+              {showSortMenu && (
+                <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-md py-2 z-20">
+                  <div 
+                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                    onClick={() => updateSort('price-asc')}
+                  >
+                    <span>Menor preço</span>
+                    {sort === 'price-asc' && <Check size={16} />}
+                  </div>
+                  <div 
+                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                    onClick={() => updateSort('price-desc')}
+                  >
+                    <span>Maior preço</span>
+                    {sort === 'price-desc' && <Check size={16} />}
+                  </div>
+                  <div 
+                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                    onClick={() => updateSort('name-asc')}
+                  >
+                    <span>Nome (A-Z)</span>
+                    {sort === 'name-asc' && <Check size={16} />}
+                  </div>
+                  <div 
+                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                    onClick={() => updateSort('name-desc')}
+                  >
+                    <span>Nome (Z-A)</span>
+                    {sort === 'name-desc' && <Check size={16} />}
+                  </div>
                 </div>
-                <div 
-                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                  onClick={() => updateSort('price-desc')}
-                >
-                  <span>Maior preço</span>
-                  {sort === 'price-desc' && <Check size={16} />}
-                </div>
-                <div 
-                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                  onClick={() => updateSort('name-asc')}
-                >
-                  <span>Nome (A-Z)</span>
-                  {sort === 'name-asc' && <Check size={16} />}
-                </div>
-                <div 
-                  className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                  onClick={() => updateSort('name-desc')}
-                >
-                  <span>Nome (Z-A)</span>
-                  {sort === 'name-desc' && <Check size={16} />}
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
+        
+        {/* Active Filters */}
+        {(filters.category || filters.material || filters.minPrice || filters.maxPrice || filters.searchQuery || filters.onlyAvailable) && (
+          <div className="flex flex-wrap items-center gap-2 mt-2">
+            <span className="text-sm text-muted-foreground">Filtros ativos:</span>
+            
+            {filters.category && (
+              <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
+                <span className="mr-1">Categoria: {filters.category}</span>
+                <button 
+                  onClick={() => setFilters(prev => ({ ...prev, category: undefined }))}
+                  className="ml-1 hover:text-primary"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            )}
+            
+            {filters.material && (
+              <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
+                <span className="mr-1">Material: {filters.material}</span>
+                <button 
+                  onClick={() => setFilters(prev => ({ ...prev, material: undefined }))}
+                  className="ml-1 hover:text-primary"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            )}
+            
+            {(filters.minPrice !== undefined || filters.maxPrice !== undefined) && (
+              <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
+                <span className="mr-1">
+                  Preço: 
+                  {filters.minPrice === undefined ? ' Até ' : filters.maxPrice === undefined ? ' Acima de ' : ' Entre '}
+                  {filters.minPrice !== undefined && `R$ ${filters.minPrice}`}
+                  {filters.minPrice !== undefined && filters.maxPrice !== undefined && ' e '}
+                  {filters.maxPrice !== undefined && `R$ ${filters.maxPrice}`}
+                </span>
+                <button 
+                  onClick={() => setFilters(prev => ({ ...prev, minPrice: undefined, maxPrice: undefined }))}
+                  className="ml-1 hover:text-primary"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            )}
+            
+            {filters.searchQuery && (
+              <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
+                <span className="mr-1">Busca: "{filters.searchQuery}"</span>
+                <button 
+                  onClick={() => {
+                    setFilters(prev => ({ ...prev, searchQuery: undefined }));
+                    setSearchQuery('');
+                  }}
+                  className="ml-1 hover:text-primary"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            )}
+            
+            {filters.onlyAvailable && (
+              <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
+                <span className="mr-1">Apenas disponíveis</span>
+                <button 
+                  onClick={() => setFilters(prev => ({ ...prev, onlyAvailable: false }))}
+                  className="ml-1 hover:text-primary"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            )}
+            
+            <button 
+              onClick={clearFilters}
+              className="text-xs text-primary hover:text-primary/80 underline underline-offset-2"
+            >
+              Limpar todos
+            </button>
+          </div>
+        )}
+      </div>
+      
+      {/* Results summary */}
+      <div className="mb-6">
+        <h2 className="text-xl md:text-2xl font-medium">
+          {filters.category ? filters.category : "Todos os Produtos"}
+          {filters.material && (
+            <span className="font-normal"> • {filters.material}</span>
+          )}
+        </h2>
+        <p className="text-muted-foreground">
+          {filteredProducts.length} {filteredProducts.length === 1 ? 'produto' : 'produtos'} encontrados
+        </p>
       </div>
       
       {filteredProducts.length === 0 ? (
@@ -300,7 +488,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
           </p>
           <button
             onClick={clearFilters}
-            className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+            className="mt-4 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
           >
             Limpar filtros
           </button>

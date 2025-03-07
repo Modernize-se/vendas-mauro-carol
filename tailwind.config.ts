@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,7 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Playfair Display', 'serif'],
+				display: ['Archivo', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -66,8 +67,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				ukblue: '#00247D',  // UK flag blue
-				ukred: '#CF142B',   // UK flag red
+				industrial: {
+					steel: '#505A6B',    // Steel blue
+					metal: '#8A8D91',    // Metal gray
+					iron: '#403E43',     // Dark iron
+					charcoal: '#222222', // Charcoal 
+					wood: '#A67F5D',     // Wood brown accent
+					concrete: '#E0E0E0', // Light concrete
+				},
+				ukblue: '#394C73',  // More muted UK flag blue
+				ukred: '#A13D44',   // More muted UK flag red
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
