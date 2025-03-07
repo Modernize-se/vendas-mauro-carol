@@ -56,12 +56,12 @@ const Index = () => {
           
           <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
             <div className="max-w-2xl mb-8 md:mb-0">
-              {/* Updated title with red highlight instead of gray */}
+              {/* Updated title with a more personal touch and wine-red highlight */}
               <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
-                Móveis sofisticados para um <span className="text-[#ea384c]">lar único</span>
+                Nosso primeiro lar em <span className="text-ukred">peças especiais</span>
               </h1>
               
-              {/* Added new personal text below title */}
+              {/* Added personal text below title */}
               <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
                 Vendendo os itens que escolhemos com carinho para montar nosso primeiro lar. Cada peça foi selecionada com cuidado e possui histórias e momentos especiais.
               </p>
@@ -77,9 +77,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
-                Móveis e eletrodomésticos cuidadosamente selecionados, com design contemporâneo e excelente estado de conservação para complementar seu lar.
-              </p>
+              {/* Removed the unnecessary text as requested */}
               
               <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-24 sm:mb-0">
                 <a 
@@ -91,12 +89,12 @@ const Index = () => {
                   Ver produtos
                 </a>
                 
-                {/* Changed button color to red */}
+                {/* Changed button color to darker red (ukred) */}
                 <a 
                   href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 font-medium rounded-md px-6 py-3 bg-[#ea384c] text-white hover:bg-[#ea384c]/90 transition-colors"
+                  className="flex items-center justify-center gap-2 font-medium rounded-md px-6 py-3 bg-ukred text-white hover:bg-ukred/90 transition-colors"
                 >
                   <MessageCircle size={18} />
                   Fale conosco
@@ -226,7 +224,7 @@ const Index = () => {
                   href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="industrial-button inline-flex items-center justify-center gap-2"
+                  className="industrial-button inline-flex items-center justify-center gap-2 bg-ukred hover:bg-ukred/90"
                 >
                   <MessageCircle size={20} />
                   Fale conosco

@@ -66,6 +66,15 @@ const Header = () => {
     }
   };
   
+  // Function to scroll to top when clicking "Início"
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
   return (
     <header 
       className={cn(
@@ -86,9 +95,13 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground/80 hover:text-ukblue transition-colors">
+            <a 
+              href="#" 
+              className="text-foreground/80 hover:text-ukblue transition-colors"
+              onClick={scrollToTop}
+            >
               Início
-            </Link>
+            </a>
             <a 
               href="#story" 
               className="text-foreground/80 hover:text-ukblue transition-colors"
@@ -127,9 +140,13 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-[72px] bg-background shadow-lg z-40 animate-fade-in">
           <nav className="container mx-auto py-8 px-6 flex flex-col space-y-6 bg-white">
-            <Link to="/" className="text-xl font-medium pb-4 border-b border-border/30">
+            <a 
+              href="#" 
+              className="text-xl font-medium pb-4 border-b border-border/30"
+              onClick={scrollToTop}
+            >
               Início
-            </Link>
+            </a>
             <a 
               href="#story" 
               className="text-xl font-medium pb-4 border-b border-border/30"

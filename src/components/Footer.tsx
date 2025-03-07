@@ -29,6 +29,22 @@ const UKFlag = ({ className, size = 20 }: { className?: string, size?: number })
 );
 
 const Footer = () => {
+  // Function to handle smooth scrolling to sections
+  const handleSmoothScroll = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 100; // Offset to account for fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <footer className="bg-secondary/50 border-t border-border/50 py-12 mt-24">
       <div className="container mx-auto px-4">
@@ -58,28 +74,31 @@ const Footer = () => {
             </p>
           </div>
           
-          {/* Column 3: About Our Move */}
+          {/* Column 3: About Our Move - Updated with functional links */}
           <div>
             <h3 className="font-medium text-lg mb-5">Sobre Nossa Mudança</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-ukblue transition-colors flex items-center">
+                <a 
+                  href="#story" 
+                  className="text-muted-foreground hover:text-ukblue transition-colors flex items-center"
+                  onClick={handleSmoothScroll('story')}
+                >
                   <ArrowRight size={14} className="mr-2 text-ukred" />
                   Nossa História
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-ukblue transition-colors flex items-center">
+                <a 
+                  href="#how-it-works" 
+                  className="text-muted-foreground hover:text-ukblue transition-colors flex items-center"
+                  onClick={handleSmoothScroll('how-it-works')}
+                >
                   <ArrowRight size={14} className="mr-2 text-ukred" />
-                  Condições de Venda
-                </Link>
+                  Como Funciona
+                </a>
               </li>
-              <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-ukblue transition-colors flex items-center">
-                  <ArrowRight size={14} className="mr-2 text-ukred" />
-                  Contato
-                </Link>
-              </li>
+              {/* Removed "Contato" link as requested */}
             </ul>
           </div>
           
