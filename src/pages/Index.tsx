@@ -3,16 +3,7 @@ import ProductGrid from "@/components/ProductGrid";
 import { products } from "@/data/products";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  MessageCircle,
-  Home,
-  Wrench,
-  ShoppingBag,
-  Info,
-  ArrowRight,
-  Filter,
-  Heart,
-} from "lucide-react";
+import { MessageCircle, Home, Wrench, ShoppingBag, Heart } from "lucide-react";
 import { setupLazyLoading } from "@/utils/image-lazy-loading";
 import { generateWhatsAppLink } from "@/utils/whatsapp";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -74,8 +65,9 @@ const Index = () => {
 
               {/* Added personal text below title */}
               <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
-                Vendendo os itens que escolhemos com carinho para montar nosso
-                lar. Cada peça foi selecionada com cuidado e possui qualidade,
+                Estamos nos mudando para Londres e por isso estamos vendendo os
+                itens que escolhemos com carinho para montar nosso primeiro lar.
+                Cada peça foi selecionada com cuidado e possui qualidade,
                 histórias e momentos especiais.
               </p>
 
