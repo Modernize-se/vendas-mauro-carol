@@ -254,13 +254,8 @@ const ProductDetails = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <ReferencePrices references={product.references} />
-            {product.ownerComments && (
-              <Testimonials
-                testimonials={[
-                  { ownerComment: product.ownerComments, username: "Mauro" },
-                  { ownerComment: product.ownerComments, username: "Carol" },
-                ]}
-              />
+            {product.testimonials && product.testimonials.length > 0 && (
+              <Testimonials testimonials={product.testimonials} />
             )}
           </div>
 

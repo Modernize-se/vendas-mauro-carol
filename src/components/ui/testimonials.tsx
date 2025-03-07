@@ -2,11 +2,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-
-interface Testimonial {
-  ownerComment: string;
-  username: "Mauro" | "Carol";
-}
+import { Testimonial } from "@/types/product";
 
 interface TestimonialsProps {
   testimonials: Testimonial[];

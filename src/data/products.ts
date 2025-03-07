@@ -32,8 +32,13 @@ export const products: Product[] = [
       Tecnologia: "SmartThings (Wi-Fi)",
       "Programas de Lavagem": "12 programas",
     },
-    ownerComments:
-      "Esta máquina é excelente. O aplicativo do Samsung Smart Things ajuda a controlar o setup de lavagem de qualquer tipo de roupa. As lavagens são rápidas e o aplicativo ajuda em tudo.",
+    testimonials: [
+      {
+        ownerComment:
+          "Esta máquina é excelente. O aplicativo do Samsung Smart Things ajuda a controlar o setup de lavagem de qualquer tipo de roupa. As lavagens são rápidas e o aplicativo ajuda em tudo.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "pe12g-electrolux",
@@ -65,8 +70,13 @@ export const products: Product[] = [
       "Temperatura da Água": "Natural, Fria e Gelada",
       Tecnologia: "Peltier (sem compressor)",
     },
-    ownerComments:
-      "Este filtro é excelente. Silencioso, compacto e a água gelada é realmente gelada. Também é bom que a água sai bem forte, então dá pra encher uma garrafa em poucos segundos.",
+    testimonials: [
+      {
+        ownerComment:
+          "Este filtro é excelente. Silencioso, compacto e a água gelada é realmente gelada. Também é bom que a água sai bem forte, então dá pra encher uma garrafa em poucos segundos.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "cafeteira-oster-flavor-vermelha",
@@ -100,8 +110,13 @@ export const products: Product[] = [
       "Filtro Permanente": "Sim",
       "Display Digital": "Sim",
     },
-    ownerComments:
-      "Gostamos muito desta cafeteira porque dá pra programar pro café sair quentinho na hora que acordamos. E o café fica ótimo",
+    testimonials: [
+      {
+        ownerComment:
+          "Gostamos muito desta cafeteira porque dá pra programar pro café sair quentinho na hora que acordamos. E o café fica ótimo",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "microondas-lg-solo-30l-preto",
@@ -132,8 +147,13 @@ export const products: Product[] = [
       Funções:
         "16 programas, descongelamento automático, trava de segurança, display digital",
     },
-    ownerComments:
-      "Microondas muito bom, fácil de usar e espaçoso. Está em perfeito estado e esquenta rapidinho a comida.",
+    testimonials: [
+      {
+        ownerComment:
+          "Microondas muito bom, fácil de usar e espaçoso. Está em perfeito estado e esquenta rapidinho a comida.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "5",
@@ -158,7 +178,12 @@ export const products: Product[] = [
       Modules: "2 x 1.20m",
       Armrest: "2 x 15cm",
     },
-    ownerComments: "Comfortable and stylish, perfect for any living room.",
+    testimonials: [
+      {
+        ownerComment: "Comfortable and stylish, perfect for any living room.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "6",
@@ -183,7 +208,12 @@ export const products: Product[] = [
       "Cor do Tampo": "Off White",
       "Material dos Pés": "Madeira Natural",
     },
-    ownerComments: "Mesa em ótimo estado, sem arranhões ou marcas de uso.",
+    testimonials: [
+      {
+        ownerComment: "Mesa em ótimo estado, sem arranhões ou marcas de uso.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "7",
@@ -209,7 +239,12 @@ export const products: Product[] = [
       "Material dos Pés": "Madeira Maciça",
       "Cor dos Pés": "Natural",
     },
-    ownerComments: "Cadeiras confortáveis e bem conservadas.",
+    testimonials: [
+      {
+        ownerComment: "Cadeiras confortáveis e bem conservadas.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "8",
@@ -235,7 +270,12 @@ export const products: Product[] = [
       "Número de Portas": "4",
       Material: "MDF",
     },
-    ownerComments: "Buffet espaçoso e em excelente estado.",
+    testimonials: [
+      {
+        ownerComment: "Buffet espaçoso e em excelente estado.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "9",
@@ -262,7 +302,13 @@ export const products: Product[] = [
       Cor: "Off White/Natural",
       Material: "MDF",
     },
-    ownerComments: "Produto em perfeito estado, acompanha manual de montagem.",
+    testimonials: [
+      {
+        ownerComment:
+          "Produto em perfeito estado, acompanha manual de montagem.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "10",
@@ -289,7 +335,12 @@ export const products: Product[] = [
       Cor: "Carvalho",
       Material: "MDF",
     },
-    ownerComments: "Mesa espaçosa e bem conservada, ideal para home office.",
+    testimonials: [
+      {
+        ownerComment: "Mesa espaçosa e bem conservada, ideal para home office.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "11",
@@ -316,8 +367,13 @@ export const products: Product[] = [
       "Norma Regulamentadora": "NR17",
       Ajustes: "Altura e Inclinação",
     },
-    ownerComments:
-      "Cadeira confortável e em ótimo estado, ideal para longas horas de trabalho.",
+    testimonials: [
+      {
+        ownerComment:
+          "Cadeira confortável e em ótimo estado, ideal para longas horas de trabalho.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "12",
@@ -344,7 +400,12 @@ export const products: Product[] = [
       Conexões: "DisplayPort, DVI, VGA",
       Ajustes: "Altura, Inclinação, Rotação",
     },
-    ownerComments: "Monitor em perfeito funcionamento, sem dead pixels.",
+    testimonials: [
+      {
+        ownerComment: "Monitor em perfeito funcionamento, sem dead pixels.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "13",
@@ -370,7 +431,12 @@ export const products: Product[] = [
       Cor: "Cinza Noturno",
       Uso: "Banqueta, Puff Decorativo",
     },
-    ownerComments: "Puff em excelente estado, sem manchas ou rasgos.",
+    testimonials: [
+      {
+        ownerComment: "Puff em excelente estado, sem manchas ou rasgos.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "14",
@@ -397,8 +463,13 @@ export const products: Product[] = [
       Mecanismo: "Pistão Blindado",
       Material: "Linho Cinza",
     },
-    ownerComments:
-      "Cama box em ótimo estado, com amplo espaço de armazenamento.",
+    testimonials: [
+      {
+        ownerComment:
+          "Cama box em ótimo estado, com amplo espaço de armazenamento.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "15",
@@ -425,7 +496,12 @@ export const products: Product[] = [
       Marca: "Stearns Foster",
       Dimensões: "1,58 x 1,98 m",
     },
-    ownerComments: "Colchão firme e confortável, pouco uso.",
+    testimonials: [
+      {
+        ownerComment: "Colchão firme e confortável, pouco uso.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "16",
@@ -452,8 +528,13 @@ export const products: Product[] = [
       "Recursos Adicionais": "Comando de voz, Alexa integrada",
       Entradas: "3 HDMI, 2 USB",
     },
-    ownerComments:
-      "Televisão em perfeito estado, com imagem nítida e som de qualidade.",
+    testimonials: [
+      {
+        ownerComment:
+          "Televisão em perfeito estado, com imagem nítida e som de qualidade.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "17",
@@ -480,8 +561,13 @@ export const products: Product[] = [
       "Recursos Adicionais": "Google Assistente integrado",
       Entradas: "2 HDMI, 1 USB",
     },
-    ownerComments:
-      "Ótima opção para quartos ou cozinhas, com acesso a aplicativos de streaming.",
+    testimonials: [
+      {
+        ownerComment:
+          "Ótima opção para quartos ou cozinhas, com acesso a aplicativos de streaming.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "18",
@@ -507,7 +593,13 @@ export const products: Product[] = [
       "Itens Inclusos":
         "Porta-sabonete líquido, porta-escovas, saboneteira, dois potes multiuso, lixeira",
     },
-    ownerComments: "Kit elegante e funcional, ideal para organizar o banheiro.",
+    testimonials: [
+      {
+        ownerComment:
+          "Kit elegante e funcional, ideal para organizar o banheiro.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "19",
@@ -530,8 +622,13 @@ export const products: Product[] = [
       "Itens Inclusos":
         "Porta-sabonete líquido, porta-escovas, saboneteira, dois potes multiuso",
     },
-    ownerComments:
-      "Conjunto sofisticado, adiciona um toque de elegância ao banheiro.",
+    testimonials: [
+      {
+        ownerComment:
+          "Conjunto sofisticado, adiciona um toque de elegância ao banheiro.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "20",
@@ -555,8 +652,13 @@ export const products: Product[] = [
       "Itens Inclusos":
         "Porta-sabonete líquido, porta-escovas, saboneteira, lixeira",
     },
-    ownerComments:
-      "Design clean e moderno, perfeito para banheiros contemporâneos.",
+    testimonials: [
+      {
+        ownerComment:
+          "Design clean e moderno, perfeito para banheiros contemporâneos.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "aspirador-robo-multilaser-ho041",
@@ -584,9 +686,13 @@ export const products: Product[] = [
       Dimensões: "11,5 cm (A) x 38,2 cm (L) x 30,7 cm (P)",
       Peso: "1,5 kg",
     },
-    ownerComments:
-      "Perfeito para manter a casa limpa sem esforço. Funciona bem em pisos frios, madeira e tapetes de baixa espessura.",
-    whatsAppLink: "",
+    testimonials: [
+      {
+        ownerComment:
+          "Perfeito para manter a casa limpa sem esforço. Funciona bem em pisos frios, madeira e tapetes de baixa espessura.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "aspirador-wap-acqua-mob",
@@ -613,9 +719,13 @@ export const products: Product[] = [
       "Tempo de Carregamento": "3 a 4 horas",
       Peso: "1,3 kg",
     },
-    ownerComments:
-      "Ótimo para limpezas rápidas e diárias. A função sem fio proporciona maior mobilidade.",
-    whatsAppLink: "",
+    testimonials: [
+      {
+        ownerComment:
+          "Ótimo para limpezas rápidas e diárias. A função sem fio proporciona maior mobilidade.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "banqueta-giratoria-milano-cinza",
@@ -640,9 +750,13 @@ export const products: Product[] = [
       Base: "Cromada com apoio para os pés",
       "Peso Suportado": "Até 120 kg",
     },
-    ownerComments:
-      "Confortável e elegante, perfeita para complementar a decoração da cozinha.",
-    whatsAppLink: "",
+    testimonials: [
+      {
+        ownerComment:
+          "Confortável e elegante, perfeita para complementar a decoração da cozinha.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "liquidificador-oster-myblend",
@@ -667,9 +781,13 @@ export const products: Product[] = [
       "Material das Lâminas": "Aço inoxidável",
       Acessórios: "2 jarras portáteis com tampa",
     },
-    ownerComments:
-      "Prático para o dia a dia, especialmente para quem prepara shakes pós-treino.",
-    whatsAppLink: "",
+    testimonials: [
+      {
+        ownerComment:
+          "Prático para o dia a dia, especialmente para quem prepara shakes pós-treino.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "piano-digital-casio-cdp-s110",
@@ -694,9 +812,13 @@ export const products: Product[] = [
       Conectividade: "USB para host, entrada para pedal",
       Acessórios: "Suporte dedicado, pedal de sustain",
     },
-    ownerComments:
-      "Excelente qualidade de som e toque. O suporte incluído oferece estabilidade durante a performance.",
-    whatsAppLink: "",
+    testimonials: [
+      {
+        ownerComment:
+          "Excelente qualidade de som e toque. O suporte incluído oferece estabilidade durante a performance.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "26",
@@ -722,8 +844,13 @@ export const products: Product[] = [
       "Peso Suportado": "120 kg",
       Cor: "Cinza",
     },
-    ownerComments:
-      "Banqueta confortável e elegante, perfeita para bancadas e ilhas de cozinha.",
+    testimonials: [
+      {
+        ownerComment:
+          "Banqueta confortável e elegante, perfeita para bancadas e ilhas de cozinha.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "27",
@@ -749,8 +876,13 @@ export const products: Product[] = [
       Voltagem: "110V",
       Acessórios: "2 jarras portáteis com tampa",
     },
-    ownerComments:
-      "Liquidificador portátil ideal para preparar shakes e smoothies de maneira prática.",
+    testimonials: [
+      {
+        ownerComment:
+          "Liquidificador portátil ideal para preparar shakes e smoothies de maneira prática.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "28",
@@ -776,8 +908,13 @@ export const products: Product[] = [
       Timbres: "10 sons integrados",
       Conectividade: "USB tipo B, entrada para pedal",
     },
-    ownerComments:
-      "Piano digital compacto e de alta qualidade, perfeito para estudantes e profissionais.",
+    testimonials: [
+      {
+        ownerComment:
+          "Piano digital compacto e de alta qualidade, perfeito para estudantes e profissionais.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "29",
@@ -803,8 +940,13 @@ export const products: Product[] = [
       Dimensões: "29 cm x 15 cm x 9 cm cada",
       Cor: "Transparente/Branco",
     },
-    ownerComments:
-      "Organizadores ideais para manter a geladeira arrumada e otimizar espaço.",
+    testimonials: [
+      {
+        ownerComment:
+          "Organizadores ideais para manter a geladeira arrumada e otimizar espaço.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "30",
@@ -828,8 +970,13 @@ export const products: Product[] = [
       Velocidades: "4 níveis",
       Funções: "Smoothie, Triturar Gelo, Autolimpeza",
     },
-    ownerComments:
-      "Liquidificador potente e versátil, ideal para diversas preparações na cozinha.",
+    testimonials: [
+      {
+        ownerComment:
+          "Liquidificador potente e versátil, ideal para diversas preparações na cozinha.",
+        username: "Mauro",
+      },
+    ],
   },
   {
     id: "31",
@@ -853,8 +1000,13 @@ export const products: Product[] = [
       "Eficiência Energética": "Classe A++",
       "Nível de Ruído": "44 dB",
     },
-    ownerComments:
-      "Máquina de lavar-louças espaçosa e silenciosa, garantindo louças limpas com economia de energia.",
+    testimonials: [
+      {
+        ownerComment:
+          "Máquina de lavar-louças espaçosa e silenciosa, garantindo louças limpas com economia de energia.",
+        username: "Mauro",
+      },
+    ],
   },
 ];
 

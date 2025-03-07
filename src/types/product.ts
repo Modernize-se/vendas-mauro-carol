@@ -1,3 +1,8 @@
+export interface Testimonial {
+  ownerComment: string;
+  username: "Mauro" | "Carol";
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -12,7 +17,7 @@ export interface Product {
   category: string;
   availability: "sold" | "reserved" | "available";
   specifications?: Record<string, string>;
-  ownerComments?: string;
+  testimonials?: Testimonial[];
   whatsAppLink?: string;
 }
 
