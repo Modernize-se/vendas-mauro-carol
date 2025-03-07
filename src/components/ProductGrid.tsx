@@ -1,10 +1,16 @@
-
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import ProductCard from './ProductCard';
-import { Product, ProductFilter, SortOption } from '@/types/product';
-import { ChevronDown, SlidersHorizontal, Check, Search, Tag, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import ProductCard from "./ProductCard";
+import { Product, ProductFilter, SortOption } from "@/types/product";
+import {
+  ChevronDown,
+  SlidersHorizontal,
+  Check,
+  Search,
+  Tag,
+  X,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ProductGridProps {
   products: Product[];
@@ -20,150 +26,143 @@ const ProductGrid = ({ products }: ProductGridProps) => {
   const [showFilters, setShowFilters] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
-  const [materials, setMaterials] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
   useEffect(() => {
     // Extract unique categories and materials
-    const uniqueCategories = [...new Set(products.map(p => p.category))];
+    const uniqueCategories = [...new Set(products.map((p) => p.category))];
     setCategories(uniqueCategories);
-    
-    const uniqueMaterials = [...new Set(products.map(p => p.material).filter(Boolean))];
-    setMaterials(uniqueMaterials as string[]);
-    
+
     // Initialize filters from URL parameters
-    const categoryParam = searchParams.get('category');
-    const searchParam = searchParams.get('search');
-    const materialParam = searchParams.get('material');
-    
+    const categoryParam = searchParams.get("category");
+    const searchParam = searchParams.get("search");
+    const materialParam = searchParams.get("material");
+
     if (categoryParam || searchParam || materialParam) {
-      setFilters(prevFilters => ({
+      setFilters((prevFilters) => ({
         ...prevFilters,
         category: categoryParam || undefined,
         searchQuery: searchParam || undefined,
         material: materialParam || undefined,
       }));
-      
+
       if (searchParam) {
         setSearchQuery(searchParam);
       }
     }
   }, [products, searchParams]);
-  
+
   useEffect(() => {
     let result = [...products];
-    
+
     // Apply category filter
     if (filters.category) {
-      result = result.filter(p => p.category === filters.category);
+      result = result.filter((p) => p.category === filters.category);
     }
-    
-    // Apply material filter
-    if (filters.material) {
-      result = result.filter(p => p.material === filters.material);
-    }
-    
+
     // Apply price filter
     if (filters.minPrice !== undefined) {
-      result = result.filter(p => p.salePrice >= (filters.minPrice || 0));
+      result = result.filter((p) => p.salePrice >= (filters.minPrice || 0));
     }
     if (filters.maxPrice !== undefined) {
-      result = result.filter(p => p.salePrice <= (filters.maxPrice || Infinity));
+      result = result.filter(
+        (p) => p.salePrice <= (filters.maxPrice || Infinity)
+      );
     }
-    
+
     // Apply availability filter
     if (filters.onlyAvailable) {
-      result = result.filter(p => p.available);
+      result = result.filter((p) => p.availability === "available");
     }
-    
+
     // Apply search query
     if (filters.searchQuery) {
       const query = filters.searchQuery.toLowerCase();
-      result = result.filter(p => 
-        p.name.toLowerCase().includes(query) || 
-        p.description.toLowerCase().includes(query) ||
-        p.category.toLowerCase().includes(query) ||
-        (p.material && p.material.toLowerCase().includes(query))
+      result = result.filter(
+        (p) =>
+          p.name.toLowerCase().includes(query) ||
+          p.description.toLowerCase().includes(query) ||
+          p.category.toLowerCase().includes(query)
       );
     }
-    
+
     // Apply sorting
     result.sort((a, b) => {
       switch (sort) {
-        case 'price-asc':
+        case "price-asc":
           return a.salePrice - b.salePrice;
-        case 'price-desc':
+        case "price-desc":
           return b.salePrice - a.salePrice;
-        case 'name-asc':
+        case "name-asc":
           return a.name.localeCompare(b.name);
-        case 'name-desc':
+        case "name-desc":
           return b.name.localeCompare(a.name);
         default:
           return 0;
       }
     });
-    
+
     setFilteredProducts(result);
   }, [products, filters, sort]);
-  
+
   const clearFilters = () => {
     setFilters({
       onlyAvailable: false,
     });
-    setSort('price-asc');
-    setSearchQuery('');
+    setSort("price-asc");
+    setSearchQuery("");
     setShowFilters(false);
   };
-  
+
   const updateCategory = (category: string | undefined) => {
-    setFilters(prev => ({ ...prev, category }));
+    setFilters((prev) => ({ ...prev, category }));
     setShowFilters(false);
   };
-  
+
   const updateMaterial = (material: string | undefined) => {
-    setFilters(prev => ({ ...prev, material }));
+    setFilters((prev) => ({ ...prev, material }));
     setShowFilters(false);
   };
-  
-  const updatePriceRange = (minPrice: number | undefined, maxPrice: number | undefined) => {
-    setFilters(prev => ({ ...prev, minPrice, maxPrice }));
+
+  const updatePriceRange = (
+    minPrice: number | undefined,
+    maxPrice: number | undefined
+  ) => {
+    setFilters((prev) => ({ ...prev, minPrice, maxPrice }));
     setShowFilters(false);
   };
-  
+
   const updateSort = (newSort: SortOption) => {
     setSort(newSort);
     setShowSortMenu(false);
   };
-  
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    setFilters(prev => ({ ...prev, searchQuery: searchQuery || undefined }));
+    setFilters((prev) => ({ ...prev, searchQuery: searchQuery || undefined }));
   };
-  
+
   return (
     <div className="w-full">
       <div className="mb-8 flex flex-col gap-4">
         {/* Search and Filter Bar */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <form 
-            onSubmit={handleSearch}
-            className="relative flex-grow max-w-md"
-          >
-            <input 
-              type="text" 
+          <form onSubmit={handleSearch} className="relative flex-grow max-w-md">
+            <input
+              type="text"
               placeholder="Buscar produtos..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-4 pr-12 py-2.5 rounded-md border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
             />
-            <button 
+            <button
               type="submit"
               className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors"
             >
               <Search size={18} />
             </button>
           </form>
-          
+
           <div className="flex items-center space-x-3">
             <div className="relative">
               <button
@@ -173,14 +172,14 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                 <SlidersHorizontal size={18} />
                 <span>Filtros</span>
               </button>
-              
+
               {showFilters && (
                 <div className="absolute right-0 top-full mt-2 w-80 bg-background glass-panel shadow-lg rounded-md p-4 z-20 animate-fade-in">
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-medium">Categoria</h3>
                       {filters.category && (
-                        <button 
+                        <button
                           onClick={() => updateCategory(undefined)}
                           className="text-xs text-muted-foreground hover:text-foreground px-1.5 py-0.5 rounded hover:bg-secondary/60 transition-colors"
                         >
@@ -189,7 +188,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                       )}
                     </div>
                     <div className="space-y-2 max-h-48 overflow-y-auto scrollbar-thin pr-1">
-                      <div 
+                      <div
                         className={cn(
                           "flex items-center space-x-2 cursor-pointer hover:text-primary",
                           !filters.category && "text-primary font-medium"
@@ -201,105 +200,68 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                         </div>
                         <span>Todas as categorias</span>
                       </div>
-                      
-                      {categories.map(category => (
-                        <div 
+
+                      {categories.map((category) => (
+                        <div
                           key={category}
                           className={cn(
                             "flex items-center space-x-2 cursor-pointer hover:text-primary",
-                            filters.category === category && "text-primary font-medium"
+                            filters.category === category &&
+                              "text-primary font-medium"
                           )}
                           onClick={() => updateCategory(category)}
                         >
                           <div className="w-4 h-4">
-                            {filters.category === category && <Check size={16} />}
+                            {filters.category === category && (
+                              <Check size={16} />
+                            )}
                           </div>
                           <span>{category}</span>
                         </div>
                       ))}
                     </div>
                   </div>
-                  
-                  {materials.length > 0 && (
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-medium">Material</h3>
-                        {filters.material && (
-                          <button 
-                            onClick={() => updateMaterial(undefined)}
-                            className="text-xs text-muted-foreground hover:text-foreground px-1.5 py-0.5 rounded hover:bg-secondary/60 transition-colors"
-                          >
-                            Limpar
-                          </button>
-                        )}
-                      </div>
-                      <div className="space-y-2 max-h-32 overflow-y-auto scrollbar-thin pr-1">
-                        <div 
-                          className={cn(
-                            "flex items-center space-x-2 cursor-pointer hover:text-primary",
-                            !filters.material && "text-primary font-medium"
-                          )}
-                          onClick={() => updateMaterial(undefined)}
-                        >
-                          <div className="w-4 h-4">
-                            {!filters.material && <Check size={16} />}
-                          </div>
-                          <span>Todos os materiais</span>
-                        </div>
-                        
-                        {materials.map(material => (
-                          <div 
-                            key={material}
-                            className={cn(
-                              "flex items-center space-x-2 cursor-pointer hover:text-primary",
-                              filters.material === material && "text-primary font-medium"
-                            )}
-                            onClick={() => updateMaterial(material)}
-                          >
-                            <div className="w-4 h-4">
-                              {filters.material === material && <Check size={16} />}
-                            </div>
-                            <span>{material}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  
+
                   <div className="mb-4">
                     <h3 className="font-medium mb-2">Preço</h3>
                     <div className="grid grid-cols-2 gap-2">
-                      <button 
+                      <button
                         className={cn(
                           "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          (!filters.minPrice && !filters.maxPrice) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                          !filters.minPrice &&
+                            !filters.maxPrice &&
+                            "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                         onClick={() => updatePriceRange(undefined, undefined)}
                       >
                         Todos os preços
                       </button>
-                      <button 
+                      <button
                         className={cn(
                           "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          (filters.maxPrice === 1000) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                          filters.maxPrice === 1000 &&
+                            "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                         onClick={() => updatePriceRange(0, 1000)}
                       >
                         Até R$ 1.000
                       </button>
-                      <button 
+                      <button
                         className={cn(
                           "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          (filters.minPrice === 1000 && filters.maxPrice === 3000) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                          filters.minPrice === 1000 &&
+                            filters.maxPrice === 3000 &&
+                            "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                         onClick={() => updatePriceRange(1000, 3000)}
                       >
                         R$ 1.000 - R$ 3.000
                       </button>
-                      <button 
+                      <button
                         className={cn(
                           "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          (filters.minPrice === 3000) && "bg-primary text-primary-foreground hover:bg-primary/90"
+                          filters.minPrice === 3000 &&
+                            "bg-primary text-primary-foreground hover:bg-primary/90"
                         )}
                         onClick={() => updatePriceRange(3000, undefined)}
                       >
@@ -307,19 +269,24 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                       </button>
                     </div>
                   </div>
-                  
+
                   <div className="mb-4">
                     <label className="flex items-center space-x-2 cursor-pointer">
                       <input
                         type="checkbox"
                         checked={filters.onlyAvailable}
-                        onChange={() => setFilters(prev => ({ ...prev, onlyAvailable: !prev.onlyAvailable }))}
+                        onChange={() =>
+                          setFilters((prev) => ({
+                            ...prev,
+                            onlyAvailable: !prev.onlyAvailable,
+                          }))
+                        }
                         className="rounded border-gray-300 text-primary focus:ring-primary"
                       />
                       <span>Mostrar apenas disponíveis</span>
                     </label>
                   </div>
-                  
+
                   <div className="flex justify-between pt-2 border-t border-border">
                     <button
                       onClick={clearFilters}
@@ -337,7 +304,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                 </div>
               )}
             </div>
-            
+
             <div className="relative">
               <button
                 className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors"
@@ -346,97 +313,121 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                 <span>Ordenar</span>
                 <ChevronDown size={18} />
               </button>
-              
+
               {showSortMenu && (
                 <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-md py-2 z-20">
-                  <div 
+                  <div
                     className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                    onClick={() => updateSort('price-asc')}
+                    onClick={() => updateSort("price-asc")}
                   >
                     <span>Menor preço</span>
-                    {sort === 'price-asc' && <Check size={16} />}
+                    {sort === "price-asc" && <Check size={16} />}
                   </div>
-                  <div 
+                  <div
                     className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                    onClick={() => updateSort('price-desc')}
+                    onClick={() => updateSort("price-desc")}
                   >
                     <span>Maior preço</span>
-                    {sort === 'price-desc' && <Check size={16} />}
+                    {sort === "price-desc" && <Check size={16} />}
                   </div>
-                  <div 
+                  <div
                     className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                    onClick={() => updateSort('name-asc')}
+                    onClick={() => updateSort("name-asc")}
                   >
                     <span>Nome (A-Z)</span>
-                    {sort === 'name-asc' && <Check size={16} />}
+                    {sort === "name-asc" && <Check size={16} />}
                   </div>
-                  <div 
+                  <div
                     className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                    onClick={() => updateSort('name-desc')}
+                    onClick={() => updateSort("name-desc")}
                   >
                     <span>Nome (Z-A)</span>
-                    {sort === 'name-desc' && <Check size={16} />}
+                    {sort === "name-desc" && <Check size={16} />}
                   </div>
                 </div>
               )}
             </div>
           </div>
         </div>
-        
+
         {/* Active Filters */}
-        {(filters.category || filters.material || filters.minPrice || filters.maxPrice || filters.searchQuery || filters.onlyAvailable) && (
+        {(filters.category ||
+          filters.material ||
+          filters.minPrice ||
+          filters.maxPrice ||
+          filters.searchQuery ||
+          filters.onlyAvailable) && (
           <div className="flex flex-wrap items-center gap-2 mt-2">
-            <span className="text-sm text-muted-foreground">Filtros ativos:</span>
-            
+            <span className="text-sm text-muted-foreground">
+              Filtros ativos:
+            </span>
+
             {filters.category && (
               <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
                 <span className="mr-1">Categoria: {filters.category}</span>
-                <button 
-                  onClick={() => setFilters(prev => ({ ...prev, category: undefined }))}
+                <button
+                  onClick={() =>
+                    setFilters((prev) => ({ ...prev, category: undefined }))
+                  }
                   className="ml-1 hover:text-primary"
                 >
                   <X size={14} />
                 </button>
               </div>
             )}
-            
+
             {filters.material && (
               <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
                 <span className="mr-1">Material: {filters.material}</span>
-                <button 
-                  onClick={() => setFilters(prev => ({ ...prev, material: undefined }))}
+                <button
+                  onClick={() =>
+                    setFilters((prev) => ({ ...prev, material: undefined }))
+                  }
                   className="ml-1 hover:text-primary"
                 >
                   <X size={14} />
                 </button>
               </div>
             )}
-            
-            {(filters.minPrice !== undefined || filters.maxPrice !== undefined) && (
+
+            {(filters.minPrice !== undefined ||
+              filters.maxPrice !== undefined) && (
               <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
                 <span className="mr-1">
-                  Preço: 
-                  {filters.minPrice === undefined ? ' Até ' : filters.maxPrice === undefined ? ' Acima de ' : ' Entre '}
+                  Preço:
+                  {filters.minPrice === undefined
+                    ? " Até "
+                    : filters.maxPrice === undefined
+                    ? " Acima de "
+                    : " Entre "}
                   {filters.minPrice !== undefined && `R$ ${filters.minPrice}`}
-                  {filters.minPrice !== undefined && filters.maxPrice !== undefined && ' e '}
+                  {filters.minPrice !== undefined &&
+                    filters.maxPrice !== undefined &&
+                    " e "}
                   {filters.maxPrice !== undefined && `R$ ${filters.maxPrice}`}
                 </span>
-                <button 
-                  onClick={() => setFilters(prev => ({ ...prev, minPrice: undefined, maxPrice: undefined }))}
+                <button
+                  onClick={() =>
+                    setFilters((prev) => ({
+                      ...prev,
+                      minPrice: undefined,
+                      maxPrice: undefined,
+                    }))
+                  }
                   className="ml-1 hover:text-primary"
                 >
                   <X size={14} />
                 </button>
               </div>
             )}
-            
+
             {filters.searchQuery && (
               <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
                 <span className="mr-1">Busca: "{filters.searchQuery}"</span>
-                <button 
+                <button
                   onClick={() => {
-                    setFilters(prev => ({ ...prev, searchQuery: undefined }));
-                    setSearchQuery('');
+                    setFilters((prev) => ({ ...prev, searchQuery: undefined }));
+                    setSearchQuery("");
                   }}
                   className="ml-1 hover:text-primary"
                 >
@@ -444,20 +435,22 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                 </button>
               </div>
             )}
-            
+
             {filters.onlyAvailable && (
               <div className="flex items-center bg-secondary text-foreground text-sm px-2 py-1 rounded-md">
                 <span className="mr-1">Apenas disponíveis</span>
-                <button 
-                  onClick={() => setFilters(prev => ({ ...prev, onlyAvailable: false }))}
+                <button
+                  onClick={() =>
+                    setFilters((prev) => ({ ...prev, onlyAvailable: false }))
+                  }
                   className="ml-1 hover:text-primary"
                 >
                   <X size={14} />
                 </button>
               </div>
             )}
-            
-            <button 
+
+            <button
               onClick={clearFilters}
               className="text-xs text-primary hover:text-primary/80 underline underline-offset-2"
             >
@@ -466,7 +459,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
           </div>
         )}
       </div>
-      
+
       {/* Results summary */}
       <div className="mb-6">
         <h2 className="text-xl md:text-2xl font-medium">
@@ -476,13 +469,16 @@ const ProductGrid = ({ products }: ProductGridProps) => {
           )}
         </h2>
         <p className="text-muted-foreground">
-          {filteredProducts.length} {filteredProducts.length === 1 ? 'produto' : 'produtos'} encontrados
+          {filteredProducts.length}{" "}
+          {filteredProducts.length === 1 ? "produto" : "produtos"} encontrados
         </p>
       </div>
-      
+
       {filteredProducts.length === 0 ? (
         <div className="py-12 text-center">
-          <h3 className="text-xl font-medium mb-2">Nenhum produto encontrado</h3>
+          <h3 className="text-xl font-medium mb-2">
+            Nenhum produto encontrado
+          </h3>
           <p className="text-muted-foreground">
             Tente ajustar seus filtros ou busque por outros termos.
           </p>

@@ -201,7 +201,6 @@ const ProductDetails = () => {
                   link={product.whatsAppLink || ""}
                   className="w-full md:w-auto"
                   size="lg"
-                  hasAnimation={true}
                 />
 
                 <p className="text-sm text-muted-foreground mt-4">
@@ -211,6 +210,15 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
+
+          {product.ownerComments && (
+            <div className="mt-2 mb-14">
+              <h3 className="text-lg font-medium ">Comentários do Mauro:</h3>
+              <h3 className="text-lg font-medium text-muted-foreground">
+                "{product.ownerComments}"
+              </h3>
+            </div>
+          )}
 
           {/* Related Products */}
           {relatedProducts.length > 0 && (
@@ -295,7 +303,6 @@ const ProductDetails = () => {
         link={product.whatsAppLink || ""}
         className="fixed bottom-6 right-6 z-40 shadow-lg"
         size="md"
-        hasAnimation={true}
       />
     </div>
   );
