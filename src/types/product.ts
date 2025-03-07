@@ -3,13 +3,17 @@ export interface Product {
   name: string;
   description: string;
   salePrice: number;
-  referencePrice: number;
+  references: {
+    price: number;
+    link: string;
+    storeName?: string;
+  }[];
   imageUrls: string[];
   category: string;
-  available: boolean;
+  availability: "sold" | "reserved" | "available";
   specifications?: Record<string, string>;
+  ownerComments?: string;
   whatsAppLink?: string;
-  material?: string; // Added material property
 }
 
 export type ProductFilter = {

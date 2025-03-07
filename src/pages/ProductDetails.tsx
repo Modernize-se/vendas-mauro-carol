@@ -15,6 +15,7 @@ import Footer from "@/components/Footer";
 import ImageGallery from "@/components/ImageGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { setupLazyLoading } from "@/utils/image-lazy-loading";
+import { maxBy } from "lodash";
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -89,7 +90,8 @@ const ProductDetails = () => {
     );
   }
 
-  const discount = calculateDiscount(product.salePrice, product.referencePrice);
+  const maxPrice = maxBy(product.references)?.price;
+  const discount = calculateDiscount(product.salePrice, maxPrice);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -135,7 +137,7 @@ const ProductDetails = () => {
                 {discount > 0 && (
                   <>
                     <span className="text-lg text-muted-foreground line-through mr-2">
-                      {formatCurrency(product.referencePrice)}
+                      {formatCurrency(maxPrice)}
                     </span>
 
                     <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
@@ -146,7 +148,7 @@ const ProductDetails = () => {
                 )}
               </div>
 
-              {product.available ? (
+              {product.availability === "available" ? (
                 <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
                   <CheckCircle size={20} className="mr-2 text-emerald-600" />
                   <span className="font-medium">
@@ -234,21 +236,19 @@ const ProductDetails = () => {
                           className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                         />
 
-                        {calculateDiscount(
-                          relatedProduct.salePrice,
-                          relatedProduct.referencePrice
-                        ) > 0 && (
+                        {calculateDiscount(relatedProduct.salePrice, maxPrice) >
+                          0 && (
                           <div className="absolute top-3 right-3 bg-accent text-accent-foreground text-sm px-2 py-1 rounded-md font-medium flex items-center">
                             <Tag size={14} className="mr-1" />
                             {calculateDiscount(
                               relatedProduct.salePrice,
-                              relatedProduct.referencePrice
+                              maxPrice
                             )}
                             % OFF
                           </div>
                         )}
 
-                        {relatedProduct.available && (
+                        {relatedProduct.availability === "available" && (
                           <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm text-sm px-2 py-1 rounded-md font-medium flex items-center">
                             <CheckCircle
                               size={14}
@@ -271,10 +271,10 @@ const ProductDetails = () => {
 
                           {calculateDiscount(
                             relatedProduct.salePrice,
-                            relatedProduct.referencePrice
+                            maxPrice
                           ) > 0 && (
                             <span className="ml-2 text-muted-foreground line-through text-sm">
-                              {formatCurrency(relatedProduct.referencePrice)}
+                              {formatCurrency(maxPrice)}
                             </span>
                           )}
                         </div>

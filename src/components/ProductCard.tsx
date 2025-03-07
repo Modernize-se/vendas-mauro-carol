@@ -1,9 +1,9 @@
-
-import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { Product } from '@/types/product';
-import { formatCurrency, calculateDiscount } from '@/utils/format';
-import { Tag, CheckCircle } from 'lucide-react';
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { Product } from "@/types/product";
+import { formatCurrency, calculateDiscount } from "@/utils/format";
+import { Tag, CheckCircle } from "lucide-react";
+import { maxBy } from "lodash";
 
 interface ProductCardProps {
   product: Product;
@@ -12,19 +12,20 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, index }: ProductCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     if (cardRef.current) {
       const delay = 100 + (index % 8) * 50; // Stagger animation based on index
       cardRef.current.style.animationDelay = `${delay}ms`;
-      cardRef.current.classList.add('staggered-item');
+      cardRef.current.classList.add("staggered-item");
     }
   }, [index]);
 
-  const discount = calculateDiscount(product.salePrice, product.referencePrice);
-  
+  const maxPrice = maxBy(product.references)?.price;
+  const discount = calculateDiscount(product.salePrice, maxPrice);
+
   return (
-    <div 
+    <div
       ref={cardRef}
       className="group industrial-card rounded-md overflow-hidden"
     >
@@ -35,45 +36,47 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
             alt={product.name}
             className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
           />
-          
+
           {discount > 0 && (
             <div className="absolute top-3 right-3 bg-accent text-white text-sm px-2 py-1 rounded-md font-medium flex items-center">
               <Tag size={14} className="mr-1" />
               {discount}% OFF
             </div>
           )}
-          
-          {product.available && (
+
+          {product.availability === "available" && (
             <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm text-sm px-2 py-1 rounded-md font-medium flex items-center">
               <CheckCircle size={14} className="mr-1 text-emerald-600" />
               <span className="text-foreground">Disponível</span>
             </div>
           )}
-          
-          {!product.available && (
+
+          {product.availability !== "available" && (
             <div className="absolute inset-0 bg-background/70 backdrop-blur-sm flex items-center justify-center">
-              <p className="text-lg font-medium text-foreground/90">Indisponível</p>
+              <p className="text-lg font-medium text-foreground/90">
+                Indisponível
+              </p>
             </div>
           )}
         </div>
-        
+
         <div className="p-4">
           <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-industrial-steel transition-colors">
             {product.name}
           </h3>
-          
+
           <div className="mt-2">
             <span className="text-foreground font-medium text-lg">
               {formatCurrency(product.salePrice)}
             </span>
-            
+
             {discount > 0 && (
               <span className="ml-2 text-muted-foreground line-through text-sm">
-                {formatCurrency(product.referencePrice)}
+                {formatCurrency(maxPrice)}
               </span>
             )}
           </div>
-          
+
           <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
             {product.category}
           </p>
