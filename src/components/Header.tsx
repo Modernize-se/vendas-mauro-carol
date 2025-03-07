@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 // UK Flag SVG component
 const UKFlag = ({
@@ -43,6 +44,48 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  const navigate = useNavigate();
+
+  const handleNavigation =
+    (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+
+      if (location.pathname !== "/") {
+        // If not on the homepage, navigate first
+        navigate("/");
+
+        // Wait for navigation, then scroll smoothly
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+        }, 300); // Delay to ensure the page has loaded
+      } else {
+        // If already on homepage, just scroll
+        const element = document.getElementById(id);
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,41 +143,44 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="text-2xl font-display font-medium transition-opacity hover:opacity-80 flex items-center"
+            className="text-3xl font-display font-bold tracking-wide transition-opacity hover:opacity-80 flex items-center space-x-3"
           >
-            Mauro e Carol <span className="text-ukred ml-2">em Londres</span>
-            <UKFlag className="ml-2" />
+            <div className="flex flex-col text-center">
+              <span className="text-3xl drop-shadow-md">Mauro e Carol</span>
+              <span className="text-ukred text-3xl">em Londres</span>
+            </div>
+            <UKFlag className="w-20 h-20 drop-shadow-lg" />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-foreground/80 hover:text-ukblue transition-colors"
-              onClick={scrollToTop}
+              onClick={handleNavigation("")}
             >
               Início
-            </a>
-            <a
-              href="#products"
+            </Link>
+            <Link
+              to="/"
               className="text-foreground/80 hover:text-ukblue transition-colors"
-              onClick={handleSmoothScroll("products")}
+              onClick={handleNavigation("products")}
             >
               Produtos
-            </a>
-            <a
-              href="#story"
+            </Link>
+            <Link
+              to="/"
               className="text-foreground/80 hover:text-ukblue transition-colors"
-              onClick={handleSmoothScroll("story")}
+              onClick={handleNavigation("story")}
             >
               Nossa História
-            </a>
-            <a
-              href="#how-it-works"
+            </Link>
+            <Link
+              to="/"
               className="text-foreground/80 hover:text-ukblue transition-colors"
-              onClick={handleSmoothScroll("how-it-works")}
+              onClick={handleNavigation("how-it-works")}
             >
               Como Funciona
-            </a>
+            </Link>
           </nav>
 
           <div className="flex items-center">

@@ -59,7 +59,8 @@ const Index = () => {
             <div className="max-w-2xl mb-8 md:mb-0">
               {/* Updated title with a more personal touch and wine-red highlight */}
               <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
-                <span className="text-ukred">Peças especiais</span> do nosso
+                Estamos vendendo{" "}
+                <span className="text-ukred">peças especiais</span> do nosso
                 primeiro lar
               </h1>
 
@@ -152,7 +153,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-medium mb-3">Qualidade</h3>
               <p className="text-muted-foreground">
-                Todos os itens à venda foram escolhidos com atenção aos detalhes
+                Todos os itens à venda foram escolhidos com atenção à qualidade
                 e muito carinho para compor nosso primeiro lar. Materiais
                 duráveis e design atemporal. São produtos de marcas reconhecidas
                 que mantêm sua qualidade ao longo do tempo.
@@ -166,8 +167,8 @@ const Index = () => {
               <h3 className="text-xl font-medium mb-3">Conservação</h3>
               <p className="text-muted-foreground">
                 Todos os itens estão cuidadosamente descritos e fidedignos à
-                realidade. Com menos de 2 anos de uso e a maioria acompanhados
-                de nota fiscal original.
+                realidade. Todos com menos de 2 anos de uso e a maioria
+                acompanhados de nota fiscal original.
               </p>
             </div>
 
@@ -177,11 +178,11 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-medium mb-3">Motivação</h3>
               <p className="text-muted-foreground">
-                Em função de nossa mudança para Londres, infelizmente não
-                poderemos levar conosco todos os nossos itens. Por isso, estamos
+                Infelizmente não poderemos levar conosco todos os nossos itens,
+                e não temos espaço suficiente para guardá-los. Por isso, estamos
                 oferecendo essas peças de qualidade a preços atraentes. Essa é
-                uma oportunidade única para adquirir móveis e eletrodomésticos
-                que aliam sofisticação e excelente custo-benefício.
+                uma oportunidade ótima para adquirir móveis e eletrodomésticos
+                que aliam qualidade, durabilidade e excelente custo-benefício.
               </p>
             </div>
           </div>
@@ -201,42 +202,24 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="industrial-card rounded-md p-8">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-industrial-steel/10 rounded-full flex items-center justify-center mr-4">
-                  <Home size={24} className="text-industrial-steel" />
-                </div>
-                <h3 className="text-xl font-medium">Retirada no Local</h3>
+          <div className="industrial-card rounded-md p-8">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-industrial-steel/10 rounded-full flex items-center justify-center mr-4">
+                <Home size={24} className="text-industrial-steel" />
               </div>
-              <p className="text-muted-foreground mb-4">
-                Todos os itens deverão ser retirados em nosso apartamento, que
-                fica na região do Morumbi, próximo ao estádio, em São Paulo -
-                SP, ou a combinar.
-              </p>
-              <p className="text-muted-foreground">
-                O endereço exato será compartilhado via WhatsApp após
-                confirmação da compra. Não realizamos entregas.
-              </p>
+              <h3 className="text-xl font-medium">Retirada no Local</h3>
             </div>
-
-            <div className="industrial-card rounded-md p-8">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-industrial-steel/10 rounded-full flex items-center justify-center mr-4">
-                  <ShoppingBag size={24} className="text-industrial-steel" />
-                </div>
-                <h3 className="text-xl font-medium">Estado dos Produtos</h3>
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Todos os itens estão em perfeito estado de conservação, com
-                menos de 2 anos de uso e acompanhados de nota fiscal original.
-                Mais informações poderão ser passadas via WhatsApp.
-              </p>
-              <p className="text-muted-foreground">
-                Os produtos foram escolhidos com atenção aos detalhes,
-                garantindo durabilidade e qualidade.
-              </p>
-            </div>
+            <p className="text-muted-foreground mb-4">
+              Todos os itens deverão ser retirados em nosso apartamento, que
+              fica na região do Morumbi, próximo ao estádio, em São Paulo - SP,
+              ou a combinar.
+            </p>
+            <p className="text-muted-foreground">
+              Vamos passar todas as informações e tirar qualquer dúvida via
+              WhatsApp após confirmação do interesse de compra. Não temos como
+              realizar entregas mas podemos combinar a melhor maneira de
+              entregar o produto.
+            </p>
           </div>
         </section>
 

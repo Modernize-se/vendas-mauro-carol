@@ -52,7 +52,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
           <img
             src={product.imageUrls[0]}
             alt={product.name}
-            className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+            className="w-full h-full object-contain transition-all duration-500 group-hover:scale-105"
           />
 
           {discount > 0 && (

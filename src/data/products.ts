@@ -76,7 +76,7 @@ export const products: Product[] = [
     salePrice: 200,
     references: [
       {
-        price: 299,
+        price: 389.8,
         link: "https://www.oster.com.br/cafeteira-oster-flavor-vermelha-programavel/p?idsku=492",
         storeName: "Oster",
       },

@@ -6,6 +6,7 @@ import {
   Tag,
   CheckCircle,
   AlertCircle,
+  Globe,
 } from "lucide-react";
 import { products } from "@/data/products";
 import { Product } from "@/types/product";
@@ -16,6 +17,39 @@ import ImageGallery from "@/components/ImageGallery";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { setupLazyLoading } from "@/utils/image-lazy-loading";
 import { maxBy } from "lodash";
+import { Testimonials } from "@/components/ui/testimonials";
+import ProductCard from "@/components/ProductCard";
+
+const ReferencePrices = ({
+  references,
+}: {
+  references: Product["references"];
+}) => (
+  <div className="mb-8 p-6 bg-secondary rounded-xl shadow-md">
+    <h3 className="text-lg font-medium mb-4">
+      Compare os preços em marketplaces
+    </h3>
+    <ul className="space-y-3">
+      {references.map((ref, index) => (
+        <li
+          key={index}
+          className="flex items-center justify-between border-b pb-2 last:border-0"
+        >
+          <a
+            href={ref.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-blue-600 hover:underline"
+          >
+            <Globe size={16} className="mr-2" />{" "}
+            {ref.storeName || "Marketplace"}
+          </a>
+          <span className="font-medium">{formatCurrency(ref.price)}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -151,9 +185,7 @@ const ProductDetails = () => {
               {product.availability === "available" ? (
                 <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
                   <CheckCircle size={20} className="mr-2 text-emerald-600" />
-                  <span className="font-medium">
-                    Produto disponível para compra imediata
-                  </span>
+                  <span className="font-medium">Produto disponível</span>
                 </div>
               ) : (
                 <div className="bg-destructive/10 text-destructive rounded-md px-4 py-3 mb-6 flex items-center">
@@ -211,14 +243,17 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          {product.ownerComments && (
-            <div className="mt-2 mb-14">
-              <h3 className="text-lg font-medium ">Comentários do Mauro:</h3>
-              <h3 className="text-lg font-medium text-muted-foreground">
-                "{product.ownerComments}"
-              </h3>
-            </div>
-          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <ReferencePrices references={product.references} />
+            {product.ownerComments && (
+              <Testimonials
+                testimonials={[
+                  { ownerComment: product.ownerComments, username: "Mauro" },
+                  { ownerComment: product.ownerComments, username: "Carol" },
+                ]}
+              />
+            )}
+          </div>
 
           {/* Related Products */}
           {relatedProducts.length > 0 && (
@@ -227,68 +262,13 @@ const ProductDetails = () => {
                 Produtos Relacionados
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {relatedProducts.map((relatedProduct, index) => (
-                  <div
-                    key={relatedProduct.id}
-                    className="group industrial-card rounded-md overflow-hidden staggered-item"
-                  >
-                    <Link
-                      to={`/product/${relatedProduct.id}`}
-                      className="block h-full"
-                    >
-                      <div className="relative overflow-hidden aspect-square">
-                        <img
-                          src={relatedProduct.imageUrls[0]}
-                          alt={relatedProduct.name}
-                          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                        />
-
-                        {calculateDiscount(relatedProduct.salePrice, maxPrice) >
-                          0 && (
-                          <div className="absolute top-3 right-3 bg-accent text-accent-foreground text-sm px-2 py-1 rounded-md font-medium flex items-center">
-                            <Tag size={14} className="mr-1" />
-                            {calculateDiscount(
-                              relatedProduct.salePrice,
-                              maxPrice
-                            )}
-                            % OFF
-                          </div>
-                        )}
-
-                        {relatedProduct.availability === "available" && (
-                          <div className="absolute bottom-3 left-3 bg-background/80 backdrop-blur-sm text-sm px-2 py-1 rounded-md font-medium flex items-center">
-                            <CheckCircle
-                              size={14}
-                              className="mr-1 text-emerald-600"
-                            />
-                            <span className="text-foreground">Disponível</span>
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="p-4">
-                        <h3 className="font-medium mb-2 line-clamp-2 group-hover:text-industrial-steel transition-colors">
-                          {relatedProduct.name}
-                        </h3>
-
-                        <div>
-                          <span className="text-foreground font-medium">
-                            {formatCurrency(relatedProduct.salePrice)}
-                          </span>
-
-                          {calculateDiscount(
-                            relatedProduct.salePrice,
-                            maxPrice
-                          ) > 0 && (
-                            <span className="ml-2 text-muted-foreground line-through text-sm">
-                              {formatCurrency(maxPrice)}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                  </div>
+                  <ProductCard
+                    key={index}
+                    product={relatedProduct}
+                    index={index}
+                  />
                 ))}
               </div>
             </div>

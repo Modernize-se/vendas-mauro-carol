@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 interface WhatsAppButtonProps {
   link: string;
   className?: string;
-  hasAnimation?: boolean;
   size?: "sm" | "md" | "lg";
   fixed?: boolean;
   isProductAvailable?: boolean;
