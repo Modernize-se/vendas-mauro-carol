@@ -1,5 +1,5 @@
 import { Product } from "../types/product";
-import { generateWhatsAppLink } from "../utils/whatsapp";
+import { generateWhatsAppLink } from "../utils/whatsApp";
 
 // Products based on the spreadsheet data
 export const products: Product[] = [
@@ -631,5 +631,5 @@ export const products: Product[] = [
 
 // Add WhatsApp links to all products
 products.forEach((product) => {
-  product.whatsappLink = generateWhatsAppLink(product.name);
+  product.whatsAppLink = generateWhatsAppLink({ productName: product.name });
 });

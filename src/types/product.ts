@@ -1,4 +1,3 @@
-
 export interface Product {
   id: string;
   name: string;
@@ -9,7 +8,7 @@ export interface Product {
   category: string;
   available: boolean;
   specifications?: Record<string, string>;
-  whatsappLink?: string;
+  whatsAppLink?: string;
   material?: string; // Added material property
 }
 
