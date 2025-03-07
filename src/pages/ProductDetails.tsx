@@ -187,11 +187,19 @@ const ProductDetails = () => {
                   <CheckCircle size={20} className="mr-2 text-emerald-600" />
                   <span className="font-medium">Produto disponível</span>
                 </div>
-              ) : (
-                <div className="bg-destructive/10 text-destructive rounded-md px-4 py-3 mb-6 flex items-center">
-                  <AlertCircle size={20} className="mr-2" />
+              ) : product.availability === "reserved" ? (
+                <div className="bg-yellow-100 text-yellow-800 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-yellow-300 animate-fade-in">
+                  <AlertCircle size={20} className="mr-2 text-yellow-700" />
                   <span className="font-medium">
-                    Produto indisponível no momento
+                    Este produto já está reservado e pode não estar mais
+                    disponível
+                  </span>
+                </div>
+              ) : (
+                <div className="bg-red-100 text-red-800 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-red-300 animate-fade-in">
+                  <AlertCircle size={20} className="mr-2 text-red-700" />
+                  <span className="font-medium">
+                    Que pena! Este produto já foi vendido
                   </span>
                 </div>
               )}
@@ -231,6 +239,7 @@ const ProductDetails = () => {
               <div className="mt-auto pt-4">
                 <WhatsAppButton
                   link={product.whatsAppLink || ""}
+                  isProductAvailable={product.availability === "available"}
                   className="w-full md:w-auto"
                   size="lg"
                 />
@@ -281,6 +290,7 @@ const ProductDetails = () => {
       {/* Fixed WhatsApp Button */}
       <WhatsAppButton
         link={product.whatsAppLink || ""}
+        isProductAvailable={product.availability === "available"}
         className="fixed bottom-6 right-6 z-40 shadow-lg"
         size="md"
       />

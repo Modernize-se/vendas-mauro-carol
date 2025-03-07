@@ -22,14 +22,21 @@ const WhatsAppButton = ({
     lg: "text-lg px-6 py-3",
   };
 
+  const buttonColors = isProductAvailable
+    ? "bg-emerald-600 hover:bg-emerald-700" // 🟢 Produto disponível
+    : "bg-yellow-500 hover:bg-yellow-600"; // 🟡 Reservado por padrão
+
+  const soldColors = "bg-red-500 hover:bg-red-600"; // 🔴 Vendido
+
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium transition-all",
+        "inline-flex items-center justify-center text-white rounded-lg font-medium transition-all",
         sizeClasses[size],
+        isProductAvailable ? buttonColors : soldColors, // Aplica as cores certas
         fixed && "fixed bottom-6 right-6 shadow-lg z-40",
         className
       )}
