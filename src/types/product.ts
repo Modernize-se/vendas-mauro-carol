@@ -1,15 +1,19 @@
-
 export interface Product {
   id: string;
   name: string;
   description: string;
   salePrice: number;
-  referencePrice: number;
+  reference: {
+    price: number;
+    link: string;
+    storeName?: string;
+  };
   imageUrls: string[];
   category: string;
-  available: boolean;
+  availability: "sold" | "reserved" | "available";
   specifications?: Record<string, string>;
-  whatsappLink?: string;
+  ownerComments?: string;
+  whatsAppLink?: string;
 }
 
 export type ProductFilter = {
