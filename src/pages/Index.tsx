@@ -1,9 +1,10 @@
+
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Home, Wrench, ShoppingBag, Info, ArrowRight, Filter } from 'lucide-react';
+import { MessageCircle, Home, Wrench, ShoppingBag, Info, ArrowRight, Filter, Heart } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -39,14 +40,10 @@ const Index = () => {
           
           <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
             <div className="max-w-2xl mb-8 md:mb-0">
-              <div className="staggered-item">
-                <span className="inline-block px-3 py-1 text-sm rounded-md bg-industrial-charcoal/10 text-industrial-charcoal mb-4 uppercase tracking-wide font-medium">
-                  Itens premium em promoção
-                </span>
-              </div>
+              {/* Removed Premium Items Tag as requested */}
               
               <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
-                Peças de qualidade com <span className="text-industrial-steel">design industrial</span>
+                Móveis sofisticados para um <span className="text-industrial-steel">lar único</span>
               </h1>
               
               {/* Couple Photo - Only visible on mobile */}
@@ -102,9 +99,7 @@ const Index = () => {
         <section id="products" className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">Catálogo de Produtos</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Peças de alta qualidade com design contemporâneo para complementar seu lar.
-            </p>
+            {/* Removed repeating text below catalog title as requested */}
           </div>
           
           <ProductGrid products={products} />
@@ -124,9 +119,9 @@ const Index = () => {
               <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Home size={28} className="text-industrial-steel" />
               </div>
-              <h3 className="text-xl font-medium mb-3">Qualidade Premium</h3>
+              <h3 className="text-xl font-medium mb-3">Qualidade</h3>
               <p className="text-muted-foreground">
-                Todos os itens à venda foram escolhidos com atenção aos detalhes, materiais duráveis e design atemporal. São produtos de marcas reconhecidas que mantêm sua qualidade ao longo do tempo.
+                Todos os itens à venda foram escolhidos com atenção aos detalhes e muito carinho para compor nosso primeiro lar. Materiais duráveis e design atemporal. São produtos de marcas reconhecidas que mantêm sua qualidade ao longo do tempo.
               </p>
             </div>
             
@@ -134,19 +129,19 @@ const Index = () => {
               <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Wrench size={28} className="text-industrial-steel" />
               </div>
-              <h3 className="text-xl font-medium mb-3">Excelente Conservação</h3>
+              <h3 className="text-xl font-medium mb-3">Conservação</h3>
               <p className="text-muted-foreground">
-                Todos os itens estão em ótimo estado de conservação, com menos de 2 anos de uso e acompanhados de nota fiscal original. Cuidamos de cada peça com atenção e dedicação.
+                Todos os itens estão cuidadosamente descritos e fidedignos à realidade. Com menos de 2 anos de uso e a maioria acompanhados de nota fiscal original.
               </p>
             </div>
             
             <div className="industrial-card rounded-md p-6 text-center">
               <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Info size={28} className="text-industrial-steel" />
+                <Heart size={28} className="text-industrial-steel" />
               </div>
-              <h3 className="text-xl font-medium mb-3">Oportunidade Exclusiva</h3>
+              <h3 className="text-xl font-medium mb-3">Motivação</h3>
               <p className="text-muted-foreground">
-                Em função de nossa mudança para Londres, oferecemos estas peças de alta qualidade a preços extremamente atraentes. Uma oportunidade única para investir em peças duráveis com excelente custo-benefício.
+                Em função de nossa mudança para Londres, infelizmente não poderemos levar conosco todos os nossos itens. Por isso, estamos oferecendo essas peças de qualidade a preços atraentes. Essa é uma oportunidade única para investir em móveis e eletrodomésticos que aliam sofisticação e excelente custo-benefício.
               </p>
             </div>
           </div>
