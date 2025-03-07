@@ -1,10 +1,9 @@
-
 import { useEffect } from 'react';
 import ProductGrid from '@/components/ProductGrid';
 import { products } from '@/data/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { MessageCircle, Home, Tools, ShoppingBag, Info, ArrowRight, Filter } from 'lucide-react';
+import { MessageCircle, Home, Wrench, ShoppingBag, Info, ArrowRight, Filter } from 'lucide-react';
 import { setupLazyLoading } from '@/utils/image-lazy-loading';
 import { generateWhatsAppLink } from '@/utils/whatsapp';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -133,7 +132,7 @@ const Index = () => {
             
             <div className="industrial-card rounded-md p-6 text-center">
               <div className="w-16 h-16 bg-industrial-steel/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Tools size={28} className="text-industrial-steel" />
+                <Wrench size={28} className="text-industrial-steel" />
               </div>
               <h3 className="text-xl font-medium mb-3">Excelente Conservação</h3>
               <p className="text-muted-foreground">
