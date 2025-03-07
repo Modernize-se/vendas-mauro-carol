@@ -104,9 +104,9 @@ const Header = () => {
               Produtos
             </a>
             <a 
-              href="#how-it-works-title" 
+              href="#how-it-works" 
               className="text-foreground/80 hover:text-ukblue transition-colors"
-              onClick={handleSmoothScroll('how-it-works-title')}
+              onClick={handleSmoothScroll('how-it-works')}
             >
               Como Funciona
             </a>
@@ -126,7 +126,7 @@ const Header = () => {
       
       {mobileMenuOpen && (
         <div className="fixed inset-0 top-[72px] bg-background shadow-lg z-40 animate-fade-in">
-          <nav className="container mx-auto py-8 px-6 flex flex-col space-y-6">
+          <nav className="container mx-auto py-8 px-6 flex flex-col space-y-6 bg-white">
             <Link to="/" className="text-xl font-medium pb-4 border-b border-border/30">
               Início
             </Link>
@@ -145,9 +145,9 @@ const Header = () => {
               Produtos
             </a>
             <a 
-              href="#how-it-works-title" 
+              href="#how-it-works" 
               className="text-xl font-medium pb-4 border-b border-border/30"
-              onClick={handleSmoothScroll('how-it-works-title')}
+              onClick={handleSmoothScroll('how-it-works')}
             >
               Como Funciona
             </a>

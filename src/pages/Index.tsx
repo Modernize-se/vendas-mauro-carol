@@ -22,6 +22,22 @@ const Index = () => {
     });
   }, []);
   
+  // Function to handle smooth scrolling to sections
+  const handleSmoothScroll = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 100; // Offset to account for fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -40,11 +56,15 @@ const Index = () => {
           
           <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
             <div className="max-w-2xl mb-8 md:mb-0">
-              {/* Removed Premium Items Tag as requested */}
-              
+              {/* Updated title with red highlight instead of gray */}
               <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
-                Móveis sofisticados para um <span className="text-industrial-steel">lar único</span>
+                Móveis sofisticados para um <span className="text-[#ea384c]">lar único</span>
               </h1>
+              
+              {/* Added new personal text below title */}
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
+                Vendendo os itens que escolhemos com carinho para montar nosso primeiro lar. Cada peça foi selecionada com cuidado e possui histórias e momentos especiais.
+              </p>
               
               {/* Couple Photo - Only visible on mobile */}
               <div className="md:hidden flex justify-center my-6">
@@ -65,16 +85,18 @@ const Index = () => {
                 <a 
                   href="#products" 
                   className="industrial-button flex items-center justify-center gap-2"
+                  onClick={handleSmoothScroll('products')}
                 >
                   <ShoppingBag size={18} />
                   Ver produtos
                 </a>
                 
+                {/* Changed button color to red */}
                 <a 
                   href={generateWhatsAppLink("Informações Gerais")} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 font-medium rounded-md px-6 py-3 bg-[#25D366] text-white hover:bg-[#22c55e] transition-colors"
+                  className="flex items-center justify-center gap-2 font-medium rounded-md px-6 py-3 bg-[#ea384c] text-white hover:bg-[#ea384c]/90 transition-colors"
                 >
                   <MessageCircle size={18} />
                   Fale conosco
@@ -147,7 +169,7 @@ const Index = () => {
           </div>
         </section>
         
-        {/* How it Works Details Section */}
+        {/* Changed "Condições de Venda" to "Como Funciona" and removed "Contato" button */}
         <section id="how-it-works" className="container mx-auto px-4 mb-24">
           <div className="text-center mb-12">
             <h2 id="how-it-works-title" className="text-3xl md:text-4xl font-display font-medium mb-4">Como Funciona</h2>
