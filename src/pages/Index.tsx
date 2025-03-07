@@ -14,7 +14,7 @@ import {
   Heart,
 } from "lucide-react";
 import { setupLazyLoading } from "@/utils/image-lazy-loading";
-import { generateWhatsAppLink } from "@/utils/whatsApp";
+import { generateWhatsAppLink } from "@/utils/whatsapp";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
