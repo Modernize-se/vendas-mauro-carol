@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import ProductGrid from "@/components/ProductGrid";
 import { products } from "@/data/products";
@@ -60,8 +61,7 @@ const Index = () => {
               {/* Updated title with a more personal touch and wine-red highlight */}
               <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
                 Estamos vendendo{" "}
-                <span className="text-ukred">peças especiais</span> do nosso
-                primeiro lar
+                <span className="text-ukred">peças especiais</span>
               </h1>
 
               {/* Added personal text below title */}
