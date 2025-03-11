@@ -5,9 +5,9 @@ import { generateWhatsAppLink } from "../utils/whatsapp";
 export const products: Product[] = [
   {
     id: "1",
-    name: "Lava e Seca Samsung 11 Kg SmartThings Inox Look WD11T504DBX",
+    name: "Lava e Seca Samsung 11 Kg ",
     description:
-      "Lava e seca Samsung de 11 Kg, acabamento inox look, conectividade SmartThings com 12 programas de lavagem.",
+      "Lava e seca Samsung de 11 Kg SmartThings Inox Look WD11T504DBX, acabamento inox look, conectividade SmartThings com 12 programas de lavagem.",
     salePrice: 3000,
     references: [
       {
@@ -42,9 +42,9 @@ export const products: Product[] = [
   },
   {
     id: "2",
-    name: "Purificador de Água Electrolux PE12G Bivolt",
+    name: "Purificador de Água Electrolux ",
     description:
-      "Purificador de água Electrolux modelo PE12G, super compacto, tecnologia Peltier (super silencioso pois é sem compressor), água natural, fria e gelada, bivolt.",
+      "Purificador de água Electrolux modelo PE12G Bivolt, super compacto, tecnologia Peltier (silencioso pois é sem compressor), água natural, fria e gelada.",
     salePrice: 500,
     references: [
       {
@@ -80,9 +80,9 @@ export const products: Product[] = [
   },
   {
     id: "3",
-    name: "Cafeteira Oster Flavor Vermelha Programável",
+    name: "Cafeteira Oster Flavor Inox Programável",
     description:
-      "Cafeteira Oster Flavor programável, cor vermelha, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L).",
+      "Cafeteira Oster Flavor programável, cor inox, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). - Não recomendada para lava louças",
     salePrice: 200,
     references: [
       {
@@ -100,7 +100,7 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Cor: "Vermelha",
+      Cor: "Inox",
       Potência: "900W",
       Voltagem: "110V",
       Capacidade: "12 xícaras (jarra de 1,5L)",
@@ -120,10 +120,10 @@ export const products: Product[] = [
   },
   {
     id: "4",
-    name: "Microondas LG Solo 30L Tecnologia I Wave Preto",
+    name: "Microondas LG Solo 30L",
     description:
-      "Microondas LG Solo com capacidade de 30 litros, tecnologia I Wave, cor preta, voltagem 127V. Possui 16 programas e descongelamento automático por peso.",
-    salePrice: 750,
+      "Microondas LG Solo com capacidade de 30 litros, tecnologia I Wave que esquenta a comida de forma uniforme. Cor preta, voltagem 127V. Possui 16 programas e descongelamento automático por peso.",
+    salePrice: 850,
     references: [
       {
         price: 1199.9,
@@ -159,7 +159,7 @@ export const products: Product[] = [
     id: "5",
     name: "Sofá super confortável",
     description:
-      "Sofá cinza de suede veludo com 2.70m de largura, composto por 2 módulos de 1.20m e 2 braços de 15cm.",
+      "Sofá cinza de suede veludo com 2.70m de largura, composto por 2 módulos de 1.20m e 2 braços de 15cm. - Possui avarias",
     salePrice: 5000.0,
     references: [
       {
@@ -168,8 +168,13 @@ export const products: Product[] = [
         storeName: "",
       },
     ],
-    imageUrls: ["https://i.postimg.cc/15tcytnN/IMG-3928.jpg", "https://i.postimg.cc/W3w61qw0/IMG-3929.jpg","https://i.postimg.cc/gJWHpH8Y/IMG-3930.jpg","https://i.postimg.cc/Vk2FG8N0/IMG-3931.jpg"],
-    category: "Furniture",
+    imageUrls: [
+      "https://i.postimg.cc/15tcytnN/IMG-3928.jpg",
+      "https://i.postimg.cc/W3w61qw0/IMG-3929.jpg",
+      "https://i.postimg.cc/gJWHpH8Y/IMG-3930.jpg",
+      "https://i.postimg.cc/Vk2FG8N0/IMG-3931.jpg",
+    ],
+    category: "Móveis",
     availability: "available",
     specifications: {
       Material: "Suede Veludo",
@@ -191,9 +196,9 @@ export const products: Product[] = [
   },
   {
     id: "6",
-    name: "Mesa de Jantar Acapulco 180x90 Off White com pés Natural",
+    name: "Mesa de Jantar Acapulco ",
     description:
-      "Mesa de jantar modelo Acapulco com tampo de 180x90 cm na cor Off White e pés em madeira natural.",
+      "Mesa de jantar modelo Acapulco com tampo de 180x90 cm na cor Off White e pés com desing diferenciado em madeira natural.",
     salePrice: 2000.0,
     references: [
       {
@@ -203,7 +208,8 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://i.postimg.cc/YqbnxZgQ/IMG-3949.jpg","https://i.postimg.cc/x1Z6wm6C/IMG-3950.jpg"
+      "https://i.postimg.cc/YqbnxZgQ/IMG-3949.jpg",
+      "https://i.postimg.cc/x1Z6wm6C/IMG-3950.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -233,7 +239,9 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-          "https://i.postimg.cc/2SyH9GFM/IMG-3951.jpg","https://i.postimg.cc/x1Z6wm6C/IMG-3950.jpg"],
+      "https://i.postimg.cc/2SyH9GFM/IMG-3951.jpg",
+      "https://i.postimg.cc/x1Z6wm6C/IMG-3950.jpg",
+    ],
     category: "Móveis",
     availability: "available",
     specifications: {
@@ -251,9 +259,9 @@ export const products: Product[] = [
   },
   {
     id: "8",
-    name: "Buffet Lizz 1.90 Off White/Cedro",
+    name: "Buffet Lizz ",
     description:
-      "Buffet Lizz com 1,90 m de comprimento nas cores Off White e Cedro.",
+      "Buffet Lizz com 1,90 m de comprimento nas cores Off White e Cedro. Com porta xícaras instalado na parte superior para otimizar espaço.",
     salePrice: 779.9,
     references: [
       {
@@ -263,7 +271,11 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://static.mobly.com.br/p/Modern-Buffet-Lizz-4-PT-Off-White-e-Cedro-190-cm-0879-5538811-1.jpg","https://static.mobly.com.br/p/Modern-Buffet-Lizz-4-PT-Off-White-e-Cedro-190-cm-0881-5538811-3.jpg","https://i.postimg.cc/T35VW4cd/IMG-3920.jpg","https://i.postimg.cc/pdDKs573/IMG-3921.jpg","https://i.postimg.cc/ZqkrPxfr/IMG-3923.jpg"
+      "https://static.mobly.com.br/p/Modern-Buffet-Lizz-4-PT-Off-White-e-Cedro-190-cm-0879-5538811-1.jpg",
+      "https://static.mobly.com.br/p/Modern-Buffet-Lizz-4-PT-Off-White-e-Cedro-190-cm-0881-5538811-3.jpg",
+      "https://i.postimg.cc/T35VW4cd/IMG-3920.jpg",
+      "https://i.postimg.cc/pdDKs573/IMG-3921.jpg",
+      "https://i.postimg.cc/ZqkrPxfr/IMG-3923.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -282,7 +294,7 @@ export const products: Product[] = [
   },
   {
     id: "9",
-    name: "Rack com Painel para TV até 75 polegadas com LED Sublime 220cm Gelius Movies Off White/Natural",
+    name: "Rack com Painel para TV até 75 polegadas com LED Sublime",
     description:
       "Rack com painel para TV de até 75 polegadas, com iluminação LED, 220 cm de largura, modelo Gelius Movies nas cores Off White e Natural.",
     salePrice: 1261.29,
@@ -294,7 +306,13 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://i.postimg.cc/MKvRhFN7/IMG-3908.jpg","https://product-hub-prd.madeiramadeira.com.br/730597/images/08ad9b79-dffc-440c-9cc3-1d2b4476b758aoffwhite1651547326198zoom.jpg?width=700&canvas=1:1&bg-color=FFF","https://product-hub-prd.madeiramadeira.com.br/730597/images/fbcce19e-ebe3-48dd-80e4-435769044544aoffwhite1651547327196zoom.jpg?width=700&canvas=1:1&bg-color=FFF","https://i.postimg.cc/bvH2xcSh/IMG-3904.jpg","https://i.postimg.cc/CMvkrgPM/IMG-3907.jpg","https://i.postimg.cc/g0PZLkJs/IMG-3909.jpg","https://i.postimg.cc/nrwmX4j9/IMG-3910.jpg"
+      "https://i.postimg.cc/MKvRhFN7/IMG-3908.jpg",
+      "https://product-hub-prd.madeiramadeira.com.br/730597/images/08ad9b79-dffc-440c-9cc3-1d2b4476b758aoffwhite1651547326198zoom.jpg?width=700&canvas=1:1&bg-color=FFF",
+      "https://product-hub-prd.madeiramadeira.com.br/730597/images/fbcce19e-ebe3-48dd-80e4-435769044544aoffwhite1651547327196zoom.jpg?width=700&canvas=1:1&bg-color=FFF",
+      "https://i.postimg.cc/bvH2xcSh/IMG-3904.jpg",
+      "https://i.postimg.cc/CMvkrgPM/IMG-3907.jpg",
+      "https://i.postimg.cc/g0PZLkJs/IMG-3909.jpg",
+      "https://i.postimg.cc/nrwmX4j9/IMG-3910.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -318,7 +336,7 @@ export const products: Product[] = [
     name: "Mesa de Escritório Kuandra",
     description:
       "Mesa de escritório modelo Kuandra na cor Carvalho, com altura de 75 cm, largura de 180 cm e profundidade de 70 cm.",
-    salePrice: 460.00,
+    salePrice: 460.0,
     references: [
       {
         price: 589.46,
@@ -327,7 +345,8 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Kuandra-Carvalho-e-Preta-3259-6993001-5.jpg","https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Kuandra-Carvalho-e-Preta-3257-6993001-3.jpg"
+      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Kuandra-Carvalho-e-Preta-3259-6993001-5.jpg",
+      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Kuandra-Carvalho-e-Preta-3257-6993001-3.jpg",
     ],
     category: "Móveis de Escritório",
     availability: "available",
@@ -347,10 +366,10 @@ export const products: Product[] = [
   },
   {
     id: "12",
-    name: "Cadeira Escritório Diretor Ergonômico NR17 Tela Mesh Tóquio 3329 Preto",
+    name: "Cadeira Escritório Diretor Ergonômico ",
     description:
-      "Cadeira ergonômica de escritório modelo Diretor NR17 com encosto em tela mesh, na cor preta.",
-    salePrice: 442.51,
+      "Cadeira ergonômica de escritório modelo Diretor NR17 com encosto em tela mesh Tóqui 3329, na cor preta.",
+    salePrice: 580,
     references: [
       {
         price: 642.51,
@@ -359,7 +378,10 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://product-hub-prd.madeiramadeira.com.br/730100/images/730100_3.jpg?width=700&canvas=1:1&bg-color=FFF","https://product-hub-prd.madeiramadeira.com.br/730100/images/ddb41c85-8ef9-4994-8982-0adf69671b8caordesign1651596599194zoom.jpg?width=700&canvas=1:1&bg-color=FFF","https://i.postimg.cc/qRV482GM/331c6282-6802-4bfb-934e-50e09615c719.jpg","https://i.postimg.cc/MGjzM9VF/78a7d66b-f4be-4768-a840-121d1ab11421.jpg"
+      "https://product-hub-prd.madeiramadeira.com.br/730100/images/730100_3.jpg?width=700&canvas=1:1&bg-color=FFF",
+      "https://product-hub-prd.madeiramadeira.com.br/730100/images/ddb41c85-8ef9-4994-8982-0adf69671b8caordesign1651596599194zoom.jpg?width=700&canvas=1:1&bg-color=FFF",
+      "https://i.postimg.cc/qRV482GM/331c6282-6802-4bfb-934e-50e09615c719.jpg",
+      "https://i.postimg.cc/MGjzM9VF/78a7d66b-f4be-4768-a840-121d1ab11421.jpg",
     ],
     category: "Móveis de Escritório",
     availability: "available",
@@ -380,7 +402,7 @@ export const products: Product[] = [
   },
   {
     id: "13",
-    name: "Monitor Dell P2210T (22”) + Cabo Display Port",
+    name: "Monitor Dell P2210T (22”) com Cabo Display Port",
     description:
       "2 unidades do Monitor Dell de 22 polegadas, modelo P2210T, acompanhado de cabo Display Port.",
     salePrice: 250.0,
@@ -392,7 +414,12 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://coretekcomputers.com/cdn/shop/products/P2210T1_1024x1024.jpg?v=1605811590","https://i.postimg.cc/zG7xwNSL/IMG-3493.jpg","https://i.postimg.cc/vmm33K30/IMG-3498.jpg","https://i.postimg.cc/BQW74Mnv/IMG-3499.jpg","https://i.postimg.cc/HsQZxXr9/IMG-3500.jpg","https://i.postimg.cc/13sWNX6h/IMG-4007.jpg"
+      "https://coretekcomputers.com/cdn/shop/products/P2210T1_1024x1024.jpg?v=1605811590",
+      "https://i.postimg.cc/zG7xwNSL/IMG-3493.jpg",
+      "https://i.postimg.cc/vmm33K30/IMG-3498.jpg",
+      "https://i.postimg.cc/BQW74Mnv/IMG-3499.jpg",
+      "https://i.postimg.cc/HsQZxXr9/IMG-3500.jpg",
+      "https://i.postimg.cc/13sWNX6h/IMG-4007.jpg",
     ],
     category: "Eletrônicos",
     availability: "available",
@@ -412,10 +439,10 @@ export const products: Product[] = [
   },
   {
     id: "14",
-    name: "Puff Banqueta Redondo Luxo - Tecido Cinza Noturno",
+    name: "Puff Banqueta Redondo Luxo",
     description:
-      "Puff banqueta redondo de luxo, revestido em tecido cinza noturno.",
-    salePrice: 269.9,
+      "Puff banqueta redondo de luxo, revestido em tecido cinza noturno. Vira mesa de centro.",
+    salePrice: 370,
     references: [
       {
         price: 469.9,
@@ -424,7 +451,10 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_628979-MLB49784175520_042022-F.webp","https://i.postimg.cc/rF3Wc92v/IMG-3913.jpg","https://i.postimg.cc/t466gVX7/IMG-3914.jpg","https://i.postimg.cc/hvGx4yjq/IMG-3915.jpg"
+      "https://http2.mlstatic.com/D_NQ_NP_2X_628979-MLB49784175520_042022-F.webp",
+      "https://i.postimg.cc/rF3Wc92v/IMG-3913.jpg",
+      "https://i.postimg.cc/t466gVX7/IMG-3914.jpg",
+      "https://i.postimg.cc/hvGx4yjq/IMG-3915.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -443,19 +473,21 @@ export const products: Product[] = [
   },
   {
     id: "15",
-    name: "Cama Box Bau Bipartido Queen Star Flex Blindado Pistão Linha Hotel 30cm Prof. Interna e Externa 48cm",
+    name: "Cama Box Bau Bipartido Queen Star Flex",
     description:
-      "Cama box baú bipartido tamanho queen da linha hotel, com pistão blindado e profundidade interna de 30cm e externa de 48cm.",
-    salePrice: 2500,
+      "Cama box baú bipartido tamanho queen. Pistão da linha hotel, com baú blindado e profundidade interna de 30cm e externa de 48cm.",
+    salePrice: 2800,
     references: [
       {
-        price: 3779.10,
+        price: 3779.1,
         link: "https://www.westwing.com.br/box-bau-bipartido-linho-cinza-37035.html",
         storeName: "Westwing",
       },
     ],
     imageUrls: [
-      "https://i.postimg.cc/Njj6cHmM/IMG-4008.jpg","https://i.postimg.cc/SKXxLSFV/IMG-4003.jpg","https://i.postimg.cc/k4Q9wDjN/bd2f6404-164a-4801-ae89-363d2b5a8648.jpg"
+      "https://i.postimg.cc/Njj6cHmM/IMG-4008.jpg",
+      "https://i.postimg.cc/SKXxLSFV/IMG-4003.jpg",
+      "https://i.postimg.cc/k4Q9wDjN/bd2f6404-164a-4801-ae89-363d2b5a8648.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -463,7 +495,7 @@ export const products: Product[] = [
       Tamanho: "Queen",
       "Profundidade Interna": "30 cm",
       "Profundidade Externa": "48 cm",
-      Mecanismo: "Pistão Blindado",
+      Mecanismo: "Pistão linha hotel",
       Material: "Linho Cinza",
     },
     testimonials: [
@@ -476,10 +508,10 @@ export const products: Product[] = [
   },
   {
     id: "15.1",
-    name: "Colchão Estate Firm Cross System 28cm - Stearns Foster 1.58x1.98 M",
+    name: "Colchão Estate Firm Stearns Foster",
     description:
       "Colchão modelo Estate Firm com 28cm de altura, tecnologia Cross System, da marca Stearns Foster, nas dimensões 1,58x1,98m.",
-    salePrice: 1790.0,
+    salePrice: 1900.0,
     references: [
       {
         price: 2790.0,
@@ -488,7 +520,12 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://sleephouse.vteximg.com.br/arquivos/ids/165231-1000-1000/Colch-o-Stearns-Foster-Estate-Molas-Ensacadas-Firm-Cross-System-0.jpg","https://i.postimg.cc/rpvFQBqT/IMG-4005.jpg","https://i.postimg.cc/5Nn4ZYfn/IMG-4004.jpg","https://i.postimg.cc/G2G3NXpy/IMG-4002.jpg","https://i.postimg.cc/SKXxLSFV/IMG-4003.jpg","https://i.postimg.cc/4x2zNxQ1/IMG-4009.jpg"
+      "https://sleephouse.vteximg.com.br/arquivos/ids/165231-1000-1000/Colch-o-Stearns-Foster-Estate-Molas-Ensacadas-Firm-Cross-System-0.jpg",
+      "https://i.postimg.cc/rpvFQBqT/IMG-4005.jpg",
+      "https://i.postimg.cc/5Nn4ZYfn/IMG-4004.jpg",
+      "https://i.postimg.cc/G2G3NXpy/IMG-4002.jpg",
+      "https://i.postimg.cc/SKXxLSFV/IMG-4003.jpg",
+      "https://i.postimg.cc/4x2zNxQ1/IMG-4009.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -511,7 +548,7 @@ export const products: Product[] = [
     name: 'Televisão Samsung 55" UHD 4K ',
     description:
       "Smart TV Samsung de 55 polegadas com resolução 4K UHD, processador Crystal, conectividade Wi-Fi, sistema operacional Tizen e comando de voz integrado.",
-    salePrice: 1553.28,
+    salePrice: 2000,
     references: [
       {
         price: 2553.28,
@@ -520,7 +557,13 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://images-americanas.b2w.io/produtos/01/00/img/3069509/6/3069509649_4SZ.jpg","https://images-americanas.b2w.io/produtos/01/00/img/3069509/6/3069509649_12SZ.jpg","https://i.postimg.cc/nrwmX4j9/IMG-3910.jpg","https://i.postimg.cc/rsz02DnV/IMG-3901.jpg","https://i.postimg.cc/sXTQLYJH/IMG-3902.jpg","https://i.postimg.cc/rmVRgn5t/IMG-3903.jpg","https://i.postimg.cc/MKvRhFN7/IMG-3908.jpg"
+      "https://images-americanas.b2w.io/produtos/01/00/img/3069509/6/3069509649_4SZ.jpg",
+      "https://images-americanas.b2w.io/produtos/01/00/img/3069509/6/3069509649_12SZ.jpg",
+      "https://i.postimg.cc/nrwmX4j9/IMG-3910.jpg",
+      "https://i.postimg.cc/rsz02DnV/IMG-3901.jpg",
+      "https://i.postimg.cc/sXTQLYJH/IMG-3902.jpg",
+      "https://i.postimg.cc/rmVRgn5t/IMG-3903.jpg",
+      "https://i.postimg.cc/MKvRhFN7/IMG-3908.jpg",
     ],
     category: "Eletrônicos",
     availability: "available",
@@ -544,7 +587,7 @@ export const products: Product[] = [
     name: 'Telelvisão 32" Led HD',
     description:
       "Smart TV TCL de 32 polegadas com resolução HD, suporte a HDR e conectividade Wi-Fi.",
-    salePrice: 1099.0,
+    salePrice: 800.0,
     references: [
       {
         price: 1199.0,
@@ -553,7 +596,9 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://a-static.mlcdn.com.br/800x560/smart-tv-32-hd-led-tcl-s615-va-60hz-android-wi-fi-e-bluetooth-google-assistente-2-hdmi/takahashieletro/d012f970524e11eda00f4201ac185019/922780382724cc8835abeef1f21bd582.jpeg","https://i.postimg.cc/FKJTNK6x/IMG-3947.jpg",""
+      "https://a-static.mlcdn.com.br/800x560/smart-tv-32-hd-led-tcl-s615-va-60hz-android-wi-fi-e-bluetooth-google-assistente-2-hdmi/takahashieletro/d012f970524e11eda00f4201ac185019/922780382724cc8835abeef1f21bd582.jpeg",
+      "https://i.postimg.cc/FKJTNK6x/IMG-3947.jpg",
+      "",
     ],
     category: "Eletrônicos",
     availability: "available",
@@ -580,13 +625,20 @@ export const products: Product[] = [
     salePrice: 330.0,
     references: [
       {
-        price: 430.0,
+        price: 270,
         link: "https://www.magazineluiza.com.br/kit-de-banheiro-acrilico-com-6-pecas-lancamento-banho-e-decor/p/be28868588/ud/udab/",
         storeName: "Magazine Luiza",
       },
+      {
+        price: 49.9,
+        link: "https://www.tokstok.com.br/lixeira-7-l-branco-brilhante-epicentro/p",
+        storeName: "Tok & Stok",
+      },
     ],
     imageUrls: [
-      "https://a-static.mlcdn.com.br/800x560/kit-de-banheiro-acrilico-com-6-pecas-lancamento-banho-e-decor/banhoedecor/fffa7618e73711ec82724201ac185078/a6999dd9aa792acba40ec9c5fcb88159.jpeg","https://i.postimg.cc/FK2nLSSq/IMG-3958.jpg","https://i.postimg.cc/B6H7cvcv/IMG-3960.jpg"
+      "https://a-static.mlcdn.com.br/800x560/kit-de-banheiro-acrilico-com-6-pecas-lancamento-banho-e-decor/banhoedecor/fffa7618e73711ec82724201ac185078/a6999dd9aa792acba40ec9c5fcb88159.jpeg",
+      "https://i.postimg.cc/FK2nLSSq/IMG-3958.jpg",
+      "https://i.postimg.cc/B6H7cvcv/IMG-3960.jpg",
     ],
     category: "Utilidades Domésticas",
     availability: "available",
@@ -594,7 +646,7 @@ export const products: Product[] = [
       Material: "Acrílico",
       Cor: "Branco Perolado",
       "Itens Inclusos":
-        "Porta-sabonete líquido, porta-escovas, saboneteira, dois potes multiuso, lixeira",
+        "Porta-sabonete líquido, porta-escovas, porta-aromatizador, dois potes multiuso, organizador de bancada e lixeira",
     },
     testimonials: [
       {
@@ -607,23 +659,31 @@ export const products: Product[] = [
   {
     id: "19",
     name: "Kit de Banheiro Preto",
-    description: "Kit de lavabo em vidro preto, composto por 5 peças. Possui avarias",
-    salePrice: 450.0,
+    description:
+      "Kit de lavabo em vidro preto, composto por 5 peças. Possui avarias",
+    salePrice: 200.0,
     references: [
       {
-        price: 450.0,
-        link: "",
-        storeName: "",
+        price: 360.0,
+        link: "https://www.magazineluiza.com.br/kit-de-banheiro-luxo-5-pecas-lavabo-difusor-porta-escova-porta-treco-bnadeja-jc-style/p/dg31353j09/ud/udab/",
+        storeName: "MagaLu",
+      },
+      {
+        price: 49.9,
+        link: "https://www.tokstok.com.br/lixeira-7-l-preto-brilhante-epicentro/p",
+        storeName: "Tok & Stok",
       },
     ],
-    imageUrls: ["https://a-static.mlcdn.com.br/800x560/kit-de-banheiro-luxo-5-pecas-lavabo-difusor-porta-escova-porta-treco-bnadeja-jc-style/jcstyle/kitbanhei5pecaspretopreto/4263909afe807b24b15bf2002f6c875f.jpeg"],
+    imageUrls: [
+      "https://a-static.mlcdn.com.br/800x560/kit-de-banheiro-luxo-5-pecas-lavabo-difusor-porta-escova-porta-treco-bnadeja-jc-style/jcstyle/kitbanhei5pecaspretopreto/4263909afe807b24b15bf2002f6c875f.jpeg",
+    ],
     category: "Utilidades Domésticas",
     availability: "available",
     specifications: {
       Material: "Vidro",
       Cor: "Preto",
       "Itens Inclusos":
-        "Porta-sabonete líquido, porta-escovas, saboneteira, dois potes multiuso",
+        "Porta-sabonete líquido, porta-escovas, porta-aromarizador, dois potes multiuso e lixo",
     },
     testimonials: [
       {
@@ -635,18 +695,46 @@ export const products: Product[] = [
   },
   {
     id: "20",
-    name: "Kit de Bancada para Banheiro Cerâmica Madeira de Bamboo Clara Fudji Sensea 3 Peças + Lixeira",
+    name: "Kit de Bancada para Banheiro Cerâmica Madeira de Bamboo Clara Fudji Sensea 5 Peças e Lixeira",
     description:
       "Kit de bancada para banheiro em cerâmica com detalhes em madeira de bambu clara, modelo Fudji Sensea, composto por 3 peças e uma lixeira.",
-    salePrice: 240,
+    salePrice: 700,
     references: [
       {
-        price: 1000,
-        link: "",
-        storeName: "",
+        price: 79.9,
+        link: "https://www.tokstok.com.br/bandeja-38-cm-x-24-cm-bambu-bamboo/p",
+        storeName: "Tok & Stok",
+      },
+      {
+        price: 154.9,
+        link: "https://www.leroymerlin.com.br/porta-objetos-de-bancada-para-banheiro-fibra-natural-marrom-natural-bamboo-sensea_89830923",
+        storeName: "LeroyMerlin - Porta objetos",
+      },
+      {
+        price: 104.9,
+        link: "https://www.leroymerlin.com.br/bandeja-para-banheiro-de-madeira-marrom-natural-bamboo-sensea_89830762",
+        storeName: "LeroyMerlin - Bandeja",
+      },
+      {
+        price: 89.9,
+        link: "https://www.leroymerlin.com.br/porta-sabonete-liquido-de-bancada-para-banheiro-300ml-ceramica-madeira-clara-fudji-sensea_89830076",
+        storeName: "LeroyMerlin - Porta-sabonete",
+      },
+      {
+        price: 94.9,
+        storeName: "LeroyMerlin - Porta-objetos (cerâmica)",
+        link: "https://www.leroymerlin.com.br/porta-objetos-de-bancada-para-banheiro-ceramica-madeira-clara-fudji-sensea_89830090",
+      },
+      {
+        price: 178.42,
+        link: "https://www.leroymerlin.com.br/lixeira-para-banheiro-3l-metal-e-madeira-pedal-branca-sensea_90503504",
+        storeName: "LeroyMerlin - Lixeira",
       },
     ],
-    imageUrls: ["https://i.postimg.cc/YSfJKGSP/2f8fd7fd-c7e9-4dc1-b799-67a2ea1540e9.jpg","https://i.postimg.cc/25fPKFCv/ae641d85-818e-40b1-8deb-01310bf82ada.jpg"],
+    imageUrls: [
+      "https://i.postimg.cc/YSfJKGSP/2f8fd7fd-c7e9-4dc1-b799-67a2ea1540e9.jpg",
+      "https://i.postimg.cc/25fPKFCv/ae641d85-818e-40b1-8deb-01310bf82ada.jpg",
+    ],
     category: "Utilidades Domésticas",
     availability: "available",
     specifications: {
@@ -658,7 +746,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Design clean e moderno, perfeito para banheiros contemporâneos.",
+          "Colocamos este no nosso banheiro de visitas e a Carol diz que é muito bonito",
         username: "Mauro",
       },
     ],
@@ -676,7 +764,11 @@ export const products: Product[] = [
         storeName: "Amazon",
       },
     ],
-    imageUrls: ["https://m.media-amazon.com/images/I/51TPurBPfVL._AC_SL1000_.jpg","https://i.postimg.cc/HsHRzbN1/IMG-3966.jpg","https://i.postimg.cc/66CFCMYh/IMG-3967.jpg"],
+    imageUrls: [
+      "https://m.media-amazon.com/images/I/51TPurBPfVL._AC_SL1000_.jpg",
+      "https://i.postimg.cc/HsHRzbN1/IMG-3966.jpg",
+      "https://i.postimg.cc/66CFCMYh/IMG-3967.jpg",
+    ],
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
@@ -710,7 +802,11 @@ export const products: Product[] = [
         storeName: "Shopee",
       },
     ],
-    imageUrls: ["https://down-br.img.susercontent.com/file/f2cec769d6f07bbdf1f0e401b21bf801.webp","https://i.postimg.cc/sgHL3qg3/IMG-3964.jpg","https://i.postimg.cc/VLRTVdyr/IMG-3965.jpg"],
+    imageUrls: [
+      "https://down-br.img.susercontent.com/file/f2cec769d6f07bbdf1f0e401b21bf801.webp",
+      "https://i.postimg.cc/sgHL3qg3/IMG-3964.jpg",
+      "https://i.postimg.cc/VLRTVdyr/IMG-3965.jpg",
+    ],
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
@@ -732,18 +828,23 @@ export const products: Product[] = [
   },
   {
     id: "25",
-    name: "Banqueta Giratória Cinza",
+    name: "Banqueta Giratória Milano",
     description:
-      "Banqueta giratória Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui avarias",
-    salePrice: 495.0,
+      "2 Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui avarias",
+    salePrice: 295.0,
     references: [
       {
-        price: 895.0,
+        price: 436.48,
         link: "https://www.mobly.com.br/banqueta-giratoria-milano-cinza-553605.html",
         storeName: "Mobly",
       },
     ],
-    imageUrls: ["https://static.mobly.com.br/p/Keva-Banqueta-GiratC3B3ria-Milano-Cinza-4272-506355-1.jpg","https://static.mobly.com.br/p/Keva-Banqueta-GiratC3B3ria-Milano-Cinza-4274-506355-2.jpg","https://i.postimg.cc/L6bk5pLQ/IMG-3925.jpg","https://i.postimg.cc/T2QJ8mw6/IMG-3927.jpg"],
+    imageUrls: [
+      "https://static.mobly.com.br/p/Keva-Banqueta-GiratC3B3ria-Milano-Cinza-4272-506355-1.jpg",
+      "https://static.mobly.com.br/p/Keva-Banqueta-GiratC3B3ria-Milano-Cinza-4274-506355-2.jpg",
+      "https://i.postimg.cc/L6bk5pLQ/IMG-3925.jpg",
+      "https://i.postimg.cc/T2QJ8mw6/IMG-3927.jpg",
+    ],
     category: "Móveis",
     availability: "available",
     specifications: {
@@ -766,7 +867,7 @@ export const products: Product[] = [
     name: "Blender Oster MyBlend ",
     description:
       "Liquidificador pessoal Blender Oster Myblend com 2 Jarras portáteis, Preto 110V, 250W, BLSTPB-BBL. Produto ideal para preparar shakes e smoothies.",
-    salePrice: 150.0,
+    salePrice: 200.0,
     references: [
       {
         price: 250.0,
@@ -774,7 +875,10 @@ export const products: Product[] = [
         storeName: "Mercado Livre",
       },
     ],
-    imageUrls: ["https://http2.mlstatic.com/D_NQ_NP_2X_976851-MLB71543411984_092023-F.webp","https://i.postimg.cc/KcVjz36j/3562331a-e6c7-4435-85e3-dd6a2a346929.jpg"],
+    imageUrls: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_976851-MLB71543411984_092023-F.webp",
+      "https://i.postimg.cc/KcVjz36j/3562331a-e6c7-4435-85e3-dd6a2a346929.jpg",
+    ],
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
@@ -796,8 +900,8 @@ export const products: Product[] = [
     id: "27",
     name: "Piano Digital com Suporte",
     description:
-      "Piano Digital Stage CDP-S110 BK compacto com 88 teclas e suporte dedicado. Ideal para estudantes e músicos profissionais. Acompanha Suporte para Piano Digital",
-    salePrice: 2290.0,
+      "Piano Digital Stage CDP-S110 BK compacto com 88 teclas e suporte dedicado. Ideal para estudantes e músicos profissionais. Acompanha Suporte para Piano Digital, mas sem suporte de partitura.",
+    salePrice: 2600.0,
     references: [
       {
         price: 3290.0,
@@ -805,7 +909,11 @@ export const products: Product[] = [
         storeName: "Mercado Livre",
       },
     ],
-    imageUrls: ["https://http2.mlstatic.com/D_NQ_NP_2X_965503-MLB54102766402_032023-F.webp","https://i.postimg.cc/j5tPmdY2/IMG-3916.jpg","https://i.postimg.cc/rmjxkXqJ/IMG-3917.jpg"],
+    imageUrls: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_965503-MLB54102766402_032023-F.webp",
+      "https://i.postimg.cc/j5tPmdY2/IMG-3916.jpg",
+      "https://i.postimg.cc/rmjxkXqJ/IMG-3917.jpg",
+    ],
     category: "Instrumentos Musicais",
     availability: "available",
     specifications: {
@@ -826,8 +934,7 @@ export const products: Product[] = [
   {
     id: "11",
     name: "Mesa de Escritório Studio",
-    description:
-      "Mesa de Escritório Studio Carvalho A 75cm x L 150cm X P 50cm",
+    description: "Mesa de Escritório Studio Carvalho A 75cm x L 150cm X P 50cm",
     salePrice: 260.0,
     references: [
       {
@@ -837,7 +944,8 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3489-534108-2.jpg","https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
+      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3489-534108-2.jpg",
+      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -849,8 +957,7 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment:
-          ".",
+        ownerComment: ".",
         username: "Mauro",
       },
     ],
@@ -858,8 +965,7 @@ export const products: Product[] = [
   {
     id: "21",
     name: "Varal de Chão",
-    description:
-      "Varal de Chão Com Abas Retrátil Slim Preto ",
+    description: "Varal de Chão Com Abas Retrátil Slim Preto ",
     salePrice: 50.0,
     references: [
       {
@@ -869,7 +975,10 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_933390-MLU72826544065_112023-F.webp","https://http2.mlstatic.com/D_NQ_NP_2X_703171-MLU70636393863_072023-F.webp","https://i.postimg.cc/PqLRJyCY/11b82ac8-a82a-4aad-9b1a-bcb006245451.jpg","https://i.postimg.cc/VkkTQm17/f24d6b43-ae96-4aa2-8e89-21c25facacfa.jpg"
+      "https://http2.mlstatic.com/D_NQ_NP_2X_933390-MLU72826544065_112023-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_703171-MLU70636393863_072023-F.webp",
+      "https://i.postimg.cc/PqLRJyCY/11b82ac8-a82a-4aad-9b1a-bcb006245451.jpg",
+      "https://i.postimg.cc/VkkTQm17/f24d6b43-ae96-4aa2-8e89-21c25facacfa.jpg",
     ],
     category: "Utilidades Domésticas",
     availability: "available",
@@ -901,7 +1010,11 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://images.samsung.com/is/image/samsung/p6pim/br/rl4353rbasl-bz/gallery/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-537712356?$684_547_JPG$","https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-frontangleopensilver-192805607?$684_547_JPG$","https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-topanglesilver-192805610?$684_547_JPG$","https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg","https://i.postimg.cc/HL59FhJZ/IMG-3934.jpg"
+      "https://images.samsung.com/is/image/samsung/p6pim/br/rl4353rbasl-bz/gallery/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-537712356?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-frontangleopensilver-192805607?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-topanglesilver-192805610?$684_547_JPG$",
+      "https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg",
+      "https://i.postimg.cc/HL59FhJZ/IMG-3934.jpg",
     ],
     category: "Instrumentos Musicais",
     availability: "available",
@@ -933,7 +1046,9 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_914490-MLU73764835966_012024-F.webp","https://i.postimg.cc/4dfjJf7x/3648a21b-cd87-495a-bcd8-1bc62475c2ae.jpg","https://i.postimg.cc/ZKXkrzgw/b038606a-db9d-4a8e-998c-1a7ea922bdfb.jpg"
+      "https://http2.mlstatic.com/D_NQ_NP_2X_914490-MLU73764835966_012024-F.webp",
+      "https://i.postimg.cc/4dfjJf7x/3648a21b-cd87-495a-bcd8-1bc62475c2ae.jpg",
+      "https://i.postimg.cc/ZKXkrzgw/b038606a-db9d-4a8e-998c-1a7ea922bdfb.jpg",
     ],
     category: "Utilidades Domésticas",
     availability: "available",
@@ -964,7 +1079,11 @@ export const products: Product[] = [
         storeName: "",
       },
     ],
-    imageUrls: ["https://lojaarno.vtexassets.com/arquivos/ids/166557-1200-auto?v=638626964618030000&width=1200&height=auto&aspect=true","https://i.postimg.cc/2jcNSZxR/ef614147-93ca-4e26-b88b-fbd7cca5b304.jpg","https://i.postimg.cc/281RbSHq/eead0e82-5391-4f41-9f91-5aa1dbeaef28.jpg"],
+    imageUrls: [
+      "https://lojaarno.vtexassets.com/arquivos/ids/166557-1200-auto?v=638626964618030000&width=1200&height=auto&aspect=true",
+      "https://i.postimg.cc/2jcNSZxR/ef614147-93ca-4e26-b88b-fbd7cca5b304.jpg",
+      "https://i.postimg.cc/281RbSHq/eead0e82-5391-4f41-9f91-5aa1dbeaef28.jpg",
+    ],
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
@@ -994,7 +1113,12 @@ export const products: Product[] = [
         storeName: "",
       },
     ],
-    imageUrls: ["https://brastemp.vtexassets.com/arquivos/ids/224004-500-500?v=637699034121630000&width=500&height=500&aspect=true","https://brastemp.vtexassets.com/arquivos/ids/224007-500-500?v=637699034126970000&width=500&height=500&aspect=true","https://i.postimg.cc/Wp7X2C5x/IMG-3938.jpg","https://i.postimg.cc/0yzf0Q9q/IMG-3937.jpg"],
+    imageUrls: [
+      "https://brastemp.vtexassets.com/arquivos/ids/224004-500-500?v=637699034121630000&width=500&height=500&aspect=true",
+      "https://brastemp.vtexassets.com/arquivos/ids/224007-500-500?v=637699034126970000&width=500&height=500&aspect=true",
+      "https://i.postimg.cc/Wp7X2C5x/IMG-3938.jpg",
+      "https://i.postimg.cc/0yzf0Q9q/IMG-3937.jpg",
+    ],
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
@@ -1014,18 +1138,18 @@ export const products: Product[] = [
   {
     id: "22",
     name: "Varal de Parede",
-    description:
-      "Varal Mágico 74cm com 4 varetas - alumínio - Branco",
-    salePrice: 100.00,
+    description: "Varal Mágico 74cm com 4 varetas - alumínio - Branco",
+    salePrice: 100.0,
     references: [
       {
-        price: 168.20,
+        price: 168.2,
         link: "https://www.mercadolivre.com.br/varal-magico-74cm/p/MLB25609404?pdp_filters=item_id%3AMLB5112058044&from=gshop&matt_tool=37064035&matt_word=&matt_source=google&matt_campaign_id=22090354481&matt_ad_group_id=173090606396&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882732977&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735098639&matt_product_id=MLB25609404-product&matt_product_partition_id=2390507632238&matt_target_id=pla-2390507632238&cq_src=google_ads&cq_cmp=22090354481&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAiAw5W-BhAhEiwApv4goD5Jp255kCFTVcRMtPMZQJfCrRMIdt8h422DAe4_MxSu1wmNvSRsPxoCoUUQAvD_BwE",
         storeName: "Mercado Livre",
       },
     ],
     imageUrls: [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_901319-MLU70791468198_082023-F.webp","https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_901319-MLU70791468198_082023-F.webp",
+      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
     ],
     category: "Utilidades Domésticas",
     availability: "available",
@@ -1037,8 +1161,7 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment:
-          ".",
+        ownerComment: ".",
         username: "Mauro",
       },
     ],
@@ -1057,7 +1180,9 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://electrolux.vtexassets.com/arquivos/ids/222842-1200-1200?v=638036159709630000&width=1200&height=1200&aspect=true","https://electrolux.vtexassets.com/arquivos/ids/222843-1200-1200?v=638036159840070000&width=1200&height=1200&aspect=true",""
+      "https://electrolux.vtexassets.com/arquivos/ids/222842-1200-1200?v=638036159709630000&width=1200&height=1200&aspect=true",
+      "https://electrolux.vtexassets.com/arquivos/ids/222843-1200-1200?v=638036159840070000&width=1200&height=1200&aspect=true",
+      "",
     ],
     category: "Eletrodomésticos",
     availability: "available",
@@ -1069,8 +1194,7 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment:
-          ".",
+        ownerComment: ".",
         username: "Mauro",
       },
     ],
@@ -1078,18 +1202,20 @@ export const products: Product[] = [
   {
     id: "33",
     name: "Cafeteira Dolce Gusto",
-    description:
-      "Dolce Gusto Mini Me Preta 110v",
+    description: "Dolce Gusto Mini Me Preta 110v",
     salePrice: 400,
     references: [
       {
-        price: 429.90,
+        price: 429.9,
         link: "https://www.nescafe-dolcegusto.com.br/mini-me-automatica-maquina-de-cafe-preta-110v?gad_source=1&gclid=Cj0KCQjwm7q-BhDRARIsACD6-fU4w92RPWPQk10KQq5fXxS3evxQSvUDH6_SJGJGYwJIBOcxzqksqkQaAo09EALw_wcB&gclsrc=aw.ds",
         storeName: "Nescafé-Dolce Gusto",
       },
     ],
     imageUrls: [
-      "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/m/i/minime_preta_1_1.webp","https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/_/2/_2-mini-me-autom_tica-m_quina-de-caf_-preta-_110v_.webp","",""
+      "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/m/i/minime_preta_1_1.webp",
+      "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/_/2/_2-mini-me-autom_tica-m_quina-de-caf_-preta-_110v_.webp",
+      "",
+      "",
     ],
     category: "Eletrodoméstico",
     availability: "available",
