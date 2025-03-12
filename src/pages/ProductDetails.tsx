@@ -135,8 +135,11 @@ const ProductDetails = () => {
         <div className="container mx-auto px-4">
           {/* Breadcrumbs */}
           <div className="py-4 flex items-center text-sm text-muted-foreground mb-6">
-            <Link to="/" className="hover:text-foreground transition-colors">
-              Início
+            <Link
+              to="/#products"
+              className="hover:text-foreground transition-colors"
+            >
+              Produtos
             </Link>
             <ChevronRight size={16} className="mx-2" />
             <Link
@@ -149,6 +152,65 @@ const ProductDetails = () => {
             <span className="text-foreground">{product.name}</span>
           </div>
 
+          {/* Mobile View All Products Button */}
+          <div className="md:hidden mb-6">
+            <Link
+              to="/#products"
+              className="w-full block text-center px-4 py-3 bg-secondary hover:bg-secondary/80 text-foreground rounded-md transition-colors"
+            >
+              Ver todos os {products.length} produtos
+            </Link>
+          </div>
+
+          {/* Product Title */}
+          <h1 className="text-2xl md:text-3xl font-display font-medium mb-4 tracking-tight">
+            {product.name}
+          </h1>
+
+          {/* Price and Status Section */}
+          <div className="mb-6">
+            <div className="flex items-baseline mb-4">
+              <span className="text-3xl font-medium mr-3">
+                {formatCurrency(product.salePrice)}
+              </span>
+
+              {discount > 0 && (
+                <>
+                  <span className="text-lg text-muted-foreground line-through mr-2">
+                    {formatCurrency(maxPrice)}
+                  </span>
+
+                  <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
+                    <Tag size={14} className="mr-1" />
+                    {discount}% OFF
+                  </span>
+                </>
+              )}
+            </div>
+
+            {product.availability === "available" ? (
+              <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
+                <CheckCircle size={20} className="mr-2 text-emerald-600" />
+                <span className="font-medium">Produto disponível</span>
+              </div>
+            ) : product.availability === "reserved" ? (
+              <div className="bg-yellow-100 text-yellow-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-yellow-300 animate-fade-in">
+                <AlertCircle size={20} className="mr-2 text-yellow-700" />
+                <span className="font-medium">
+                  Este produto já está reservado e pode não estar mais
+                  disponível
+                </span>
+              </div>
+            ) : (
+              <div className="bg-red-100 text-red-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-red-300 animate-fade-in">
+                <AlertCircle size={20} className="mr-2 text-red-700" />
+                <span className="font-medium">
+                  Que pena! Este produto já foi vendido
+                </span>
+              </div>
+            )}
+          </div>
+
           {/* Product Details */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-16">
             <div className="animate-fade-in">
@@ -159,51 +221,6 @@ const ProductDetails = () => {
             </div>
 
             <div className="flex flex-col animate-slide-in">
-              <h1 className="text-2xl md:text-3xl font-display font-medium mb-2 tracking-tight">
-                {product.name}
-              </h1>
-
-              <div className="flex items-baseline mb-4">
-                <span className="text-3xl font-medium mr-3">
-                  {formatCurrency(product.salePrice)}
-                </span>
-
-                {discount > 0 && (
-                  <>
-                    <span className="text-lg text-muted-foreground line-through mr-2">
-                      {formatCurrency(maxPrice)}
-                    </span>
-
-                    <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
-                      <Tag size={14} className="mr-1" />
-                      {discount}% OFF
-                    </span>
-                  </>
-                )}
-              </div>
-
-              {product.availability === "available" ? (
-                <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
-                  <CheckCircle size={20} className="mr-2 text-emerald-600" />
-                  <span className="font-medium">Produto disponível</span>
-                </div>
-              ) : product.availability === "reserved" ? (
-                <div className="bg-yellow-100 text-yellow-800 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-yellow-300 animate-fade-in">
-                  <AlertCircle size={20} className="mr-2 text-yellow-700" />
-                  <span className="font-medium">
-                    Este produto já está reservado e pode não estar mais
-                    disponível
-                  </span>
-                </div>
-              ) : (
-                <div className="bg-red-100 text-red-800 rounded-md px-4 py-3 mb-6 flex items-center shadow-sm border border-red-300 animate-fade-in">
-                  <AlertCircle size={20} className="mr-2 text-red-700" />
-                  <span className="font-medium">
-                    Que pena! Este produto já foi vendido
-                  </span>
-                </div>
-              )}
-
               <p className="text-muted-foreground mb-6">
                 {product.description}
               </p>
@@ -262,21 +279,30 @@ const ProductDetails = () => {
           {/* Related Products */}
           {relatedProducts.length > 0 && (
             <div className="mb-16">
-              <h2 className="text-2xl font-display font-medium mb-6">
-                Produtos Relacionados
+              <h2 className="text-2xl font-display font-medium mb-8">
+                Produtos relacionados
               </h2>
-
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {relatedProducts.map((relatedProduct, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {relatedProducts.map((product, index) => (
                   <ProductCard
-                    key={index}
-                    product={relatedProduct}
+                    key={product.id}
+                    product={product}
                     index={index}
                   />
                 ))}
               </div>
             </div>
           )}
+
+          {/* Mobile View All Products Button (Below Testimonials) */}
+          <div className="md:hidden mb-8">
+            <Link
+              to="/#products"
+              className="w-full block text-center px-3 py-2 bg-secondary/60 hover:bg-secondary/80 text-foreground text-sm rounded-md transition-colors"
+            >
+              Ver todos os {products.length} produtos
+            </Link>
+          </div>
         </div>
       </main>
 

@@ -85,6 +85,7 @@ const Header = () => {
           });
         }
       }
+      setMobileMenuOpen(false);
     };
 
   useEffect(() => {
@@ -119,15 +120,27 @@ const Header = () => {
           behavior: "smooth",
         });
       }
+      setMobileMenuOpen(false);
     };
 
   // Function to scroll to top when clicking "Início"
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 300);
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -146,17 +159,21 @@ const Header = () => {
             className="text-3xl font-display font-bold tracking-wide transition-opacity hover:opacity-80 flex items-center space-x-3"
           >
             <div className="flex flex-col text-center">
-              <span className="text-3xl drop-shadow-md">Mauro e Carol</span>
-              <span className="text-ukred text-3xl">em Londres</span>
+              <span className="text-2xl md:text-3xl drop-shadow-md leading-tight">
+                Mauro e Carol
+              </span>
+              <span className="text-ukred text-2xl md:text-3xl leading-tight">
+                em Londres
+              </span>
             </div>
-            <UKFlag className="w-20 h-20 drop-shadow-lg" />
+            <UKFlag className="w-16 h-16 md:w-20 md:h-20 drop-shadow-lg" />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
               className="text-foreground/80 hover:text-ukblue transition-colors"
-              onClick={handleNavigation("")}
+              onClick={scrollToTop}
             >
               Início
             </Link>
@@ -185,11 +202,11 @@ const Header = () => {
 
           <div className="flex items-center">
             <button
-              className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors"
+              className="md:hidden p-2 pl-4 rounded-full hover:bg-secondary transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -208,21 +225,21 @@ const Header = () => {
             <a
               href="#story"
               className="text-xl font-medium pb-4 border-b border-border/30"
-              onClick={handleSmoothScroll("story")}
+              onClick={handleNavigation("story")}
             >
               Nossa História
             </a>
             <a
               href="#products"
               className="text-xl font-medium pb-4 border-b border-border/30"
-              onClick={handleSmoothScroll("products")}
+              onClick={handleNavigation("products")}
             >
               Produtos
             </a>
             <a
               href="#how-it-works"
               className="text-xl font-medium pb-4 border-b border-border/30"
-              onClick={handleSmoothScroll("how-it-works")}
+              onClick={handleNavigation("how-it-works")}
             >
               Como Funciona
             </a>

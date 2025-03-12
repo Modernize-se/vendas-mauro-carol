@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import ProductGrid from "@/components/ProductGrid";
 import { products } from "@/data/products";
@@ -59,24 +58,24 @@ const Index = () => {
           <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
             <div className="max-w-2xl mb-8 md:mb-0">
               {/* Updated title with a more personal touch and wine-red highlight */}
-              <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
+              <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance pt-16">
                 Estamos vendendo{" "}
                 <span className="text-ukred">peças especiais</span>
               </h1>
 
               {/* Added personal text below title */}
               <p className="text-lg md:text-xl text-muted-foreground mb-8 staggered-item">
-                Estamos nos mudando para Londres e por isso estamos vendendo os
-                itens que escolhemos com carinho para montar nosso primeiro lar.
-                Cada peça foi selecionada com cuidado e possui qualidade,
-                histórias e momentos especiais.
+                Estamos indo para Londres e por isso estamos vendendo os itens
+                que escolhemos com carinho para montar nosso primeiro lar. Cada
+                peça foi selecionada com cuidado e possui qualidade, histórias e
+                momentos especiais.
               </p>
 
               {/* Couple Photo - Only visible on mobile */}
               <div className="md:hidden flex justify-center my-6">
                 <div className="rounded-md overflow-hidden w-full max-w-xs shadow-md staggered-item">
                   <img
-                    src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg"
+                    src="https://i.postimg.cc/htpTWNdm/20170115-135348-1.jpg"
                     alt="Casal em Londres"
                     className="w-full h-auto"
                   />
@@ -86,14 +85,6 @@ const Index = () => {
               {/* Removed the unnecessary text as requested */}
 
               <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-24 sm:mb-0">
-                <a
-                  href="#products"
-                  className="industrial-button flex items-center justify-center gap-2"
-                  onClick={handleSmoothScroll("products")}
-                >
-                  <ShoppingBag size={18} />
-                  Ver produtos
-                </a>
                 <a
                   href={generateWhatsAppLink({
                     customMessage:
@@ -113,7 +104,7 @@ const Index = () => {
             <div className="hidden md:flex justify-center md:justify-end items-center w-full md:w-auto md:ml-auto">
               <div className="relative rounded-md overflow-hidden w-72 h-72 md:w-96 md:h-96 staggered-item shadow-lg border-4 border-industrial-metal/20">
                 <img
-                  src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg"
+                  src="https://i.postimg.cc/htpTWNdm/20170115-135348-1.jpg"
                   alt="Casal em Londres"
                   className="w-full h-full object-cover"
                 />
@@ -123,7 +114,7 @@ const Index = () => {
         </section>
 
         {/* Products Section - Moved up to emphasize products */}
-        <section id="products" className="container mx-auto px-4 mb-24">
+        <section id="products" className="container mx-auto px-4 my-24">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">
               Catálogo de Produtos
@@ -141,8 +132,9 @@ const Index = () => {
               Nossa História
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Oferecemos itens cuidadosamente escolhidos e bem conservados para
-              seu lar.
+              Estamos indo passar um tempo na Inglaterra, e para isso vamos nos
+              desfazer dos nossos móveis e eletrodomésticos. Oferecemos itens
+              cuidadosamente escolhidos e bem conservados para seu lar.
             </p>
           </div>
 
@@ -217,8 +209,8 @@ const Index = () => {
             <p className="text-muted-foreground">
               Vamos passar todas as informações e tirar qualquer dúvida via
               WhatsApp após confirmação do interesse de compra. Não temos como
-              realizar entregas mas podemos combinar a melhor maneira de
-              entregar o produto.
+              realizar entregas por correio ou transportadora, mas podemos
+              combinar a melhor maneira de entregar o produto.
             </p>
           </div>
         </section>
@@ -251,7 +243,7 @@ const Index = () => {
               </div>
               <div className="hidden md:block">
                 <img
-                  src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg"
+                  src="https://i.postimg.cc/htpTWNdm/20170115-135348-1.jpg"
                   alt="Nosso lar"
                   className="w-full h-80 object-cover rounded-md shadow-md"
                 />
