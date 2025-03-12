@@ -947,7 +947,7 @@ export const products: Product[] = [
       "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3489-534108-2.jpg",
       "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
     ],
-    category: "Móveis",
+    category: "Móveis de Escritório",
     availability: "available",
     specifications: {
       Material: "Estrutura de aço cromado com assento estofado em PU",
@@ -983,15 +983,15 @@ export const products: Product[] = [
     category: "Utilidades Domésticas",
     availability: "available",
     specifications: {
-      Potência: "250W",
-      Capacidade: "Jarras de 600ml cada",
-      Voltagem: "110V",
-      Acessórios: "2 jarras portáteis com tampa",
+      Material: "Aço",
+      Dimensões: "Altura aberto: 89 cm, Largura aberto: 49 cm, Comprimento aberto: 144 cm",
+      "Mais informações": "6 varetas e é extensível",
+      Cor: "Preto",
     },
     testimonials: [
       {
         ownerComment:
-          "Liquidificador portátil ideal para preparar shakes e smoothies de maneira prática.",
+          "",
         username: "Mauro",
       },
     ],
@@ -1000,7 +1000,7 @@ export const products: Product[] = [
     id: "31",
     name: "Geladeira",
     description:
-      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor e Rack para Vinho 435L Inox Look",
+      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis, ou seja, se adapta ao desing da cozinha possibilitando abrir de ambos os lados.",
     salePrice: 6000,
     references: [
       {
@@ -1016,18 +1016,19 @@ export const products: Product[] = [
       "https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg",
       "https://i.postimg.cc/HL59FhJZ/IMG-3934.jpg",
     ],
-    category: "Instrumentos Musicais",
+    category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Teclas: "88 teclas com ação de martelo escalonado",
-      Polifonia: "64 vozes",
-      Timbres: "10 sons integrados",
-      Conectividade: "USB tipo B, entrada para pedal",
+      Dimenções: "Largura: 70cm, Altura: 185cm, Profundidade: 69cm",
+      Voltagem: "110V",
+      "Capacidade total": "435L - Freezer 132 L e Refrigerador 303 L",
+      "Material das Lâminas": "Aço inoxidável",
+      Acessórios: "Porta reversível, puxador embutido, all-around Cooling, rack para vinhos, iluminação LED e sensores.",
     },
     testimonials: [
       {
         ownerComment:
-          "Piano digital compacto e de alta qualidade, perfeito para estudantes e profissionais.",
+          "",
         username: "Mauro",
       },
     ],
@@ -1061,7 +1062,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Organizadores ideais para manter a geladeira arrumada e otimizar espaço.",
+          "Organizadores ideais para manter a geladeira arrumada, otimizar espaço e prolongar a qualidade dos alimentos frescos.",
         username: "Mauro",
       },
     ],
@@ -1087,10 +1088,10 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Potência: "800W",
-      Capacidade: "1,5L",
-      Velocidades: "4 níveis",
-      Funções: "Smoothie, Triturar Gelo, Autolimpeza",
+      Potência: "550W",
+      Capacidade: "2L",
+      Velocidades: "2 níveis",
+      Funções: "Smoothie, Triturar Gelo, pulsar",
     },
     testimonials: [
       {
@@ -1105,7 +1106,7 @@ export const products: Product[] = [
     name: "Máquina de lavar-louças",
     description:
       "Máquina de lavar-louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha.",
-    salePrice: 200.0,
+    salePrice: 3700.0,
     references: [
       {
         price: 4000.0,
@@ -1122,7 +1123,7 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Capacidade: "14 serviços",
+      Capacidade: "10 serviços",
       "Programas de Lavagem": "6 programas, incluindo Eco, Intensivo e Rápido",
       "Eficiência Energética": "Classe A++",
       "Nível de Ruído": "44 dB",
@@ -1149,15 +1150,15 @@ export const products: Product[] = [
     ],
     imageUrls: [
       "https://http2.mlstatic.com/D_NQ_NP_2X_901319-MLU70791468198_082023-F.webp",
-      "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
+      "https://i.postimg.cc/kXnYKqVn/IMG-3952.jpg",
+      "https://i.postimg.cc/5ymPTkrd/IMG-3953.jpg",
     ],
     category: "Utilidades Domésticas",
     availability: "available",
     specifications: {
-      Material: "Estrutura de aço cromado com assento estofado em PU",
-      Dimensões: "Altura: 75 cm, Largura: 150 cm, Profundidade: 50 cm",
-      "Peso Suportado": "14,2 kg",
-      Cor: "Carvalho e Preto",
+      Material: "Alumínio",
+      Dimensões: "Altura aberto: 8 cm, Largura aberto: 35 cm, Comprimento aberto: 74 cm",
+      Cor: "Branco",
     },
     testimonials: [
       {
@@ -1182,11 +1183,15 @@ export const products: Product[] = [
     imageUrls: [
       "https://electrolux.vtexassets.com/arquivos/ids/222842-1200-1200?v=638036159709630000&width=1200&height=1200&aspect=true",
       "https://electrolux.vtexassets.com/arquivos/ids/222843-1200-1200?v=638036159840070000&width=1200&height=1200&aspect=true",
-      "",
+      "https://i.postimg.cc/2jFx9L3V/IMG-4012.jpg",
+      "https://i.postimg.cc/cL6MJDhn/IMG-4013.jpg",
+      "https://i.postimg.cc/rFVNBytg/IMG-4014.jpg",
     ],
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
+      Potência: "1400W",
+      Voltagem: "110V",
       Material: "Air Fryer com painel digital e 9 receitas pré-programadas.",
       Dimensões: "Altura: 32,3 cm, Largura: 28,9 cm, Profundidade: 39,3 cm",
       "Peso Suportado": "3,2 L",
@@ -1214,21 +1219,21 @@ export const products: Product[] = [
     imageUrls: [
       "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/m/i/minime_preta_1_1.webp",
       "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/_/2/_2-mini-me-autom_tica-m_quina-de-caf_-preta-_110v_.webp",
-      "",
-      "",
+      "https://i.postimg.cc/c4FB0qRW/IMG-4015.jpg",
+      "https://i.postimg.cc/YCVNL1Dy/IMG-4016.jpg",
     ],
     category: "Eletrodoméstico",
     availability: "available",
     specifications: {
-      Potência: "",
-      Capacidade: "Jarras de 600ml cada",
+      Potência: "1500W",
+      Capacidade: "0.8L",
       Voltagem: "110V",
-      Acessórios: "2 jarras portáteis com tampa",
+      Acessórios: "Bandeja de coleta removível",
     },
     testimonials: [
       {
         ownerComment:
-          "Liquidificador portátil ideal para preparar shakes e smoothies de maneira prática.",
+          "",
         username: "Mauro",
       },
     ],
