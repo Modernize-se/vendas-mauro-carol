@@ -202,7 +202,7 @@ const Header = () => {
 
           <div className="flex items-center">
             <button
-              className="md:hidden p-2 pl-4 rounded-full hover:bg-secondary transition-colors"
+              className="md:hidden p-2 rounded-full hover:bg-secondary transition-colors flex items-center justify-center w-10 h-10"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >

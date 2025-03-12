@@ -169,22 +169,24 @@ const ProductDetails = () => {
 
           {/* Price and Status Section */}
           <div className="mb-6">
-            <div className="flex items-baseline mb-4">
-              <span className="text-3xl font-medium mr-3">
-                {formatCurrency(product.salePrice)}
-              </span>
+            <div className="flex flex-col mb-4">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl font-medium">
+                  {formatCurrency(product.salePrice)}
+                </span>
 
-              {discount > 0 && (
-                <>
-                  <span className="text-lg text-muted-foreground line-through mr-2">
-                    {formatCurrency(maxPrice)}
-                  </span>
-
+                {discount > 0 && (
                   <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
                     <Tag size={14} className="mr-1" />
                     {discount}% OFF
                   </span>
-                </>
+                )}
+              </div>
+
+              {discount > 0 && (
+                <span className="text-lg text-muted-foreground line-through mt-1">
+                  {formatCurrency(maxPrice)}
+                </span>
               )}
             </div>
 
@@ -269,7 +271,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
             <ReferencePrices references={product.references} />
             {product.testimonials && product.testimonials.length > 0 && (
               <Testimonials testimonials={product.testimonials} />
@@ -278,8 +280,8 @@ const ProductDetails = () => {
 
           {/* Related Products */}
           {relatedProducts.length > 0 && (
-            <div className="mb-16">
-              <h2 className="text-2xl font-display font-medium mb-8">
+            <div className="mb-8 md:mb-16">
+              <h2 className="text-2xl font-display font-medium mb-4 md:mb-8">
                 Produtos relacionados
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -294,11 +296,11 @@ const ProductDetails = () => {
             </div>
           )}
 
-          {/* Mobile View All Products Button (Below Testimonials) */}
-          <div className="md:hidden mb-8">
+          {/* View All Products Button (Below Related Products) */}
+          <div className="mb-8 flex justify-center">
             <Link
               to="/#products"
-              className="w-full block text-center px-3 py-2 bg-secondary/60 hover:bg-secondary/80 text-foreground text-sm rounded-md transition-colors"
+              className="text-center px-4 py-3 bg-secondary/60 hover:bg-secondary/80 text-foreground rounded-md transition-colors md:min-w-[300px]"
             >
               Ver todos os {products.length} produtos
             </Link>

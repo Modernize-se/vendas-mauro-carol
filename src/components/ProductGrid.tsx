@@ -138,21 +138,24 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       <div className="mb-8 flex flex-col gap-4">
         {/* Search and Filter Bar */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <form onSubmit={handleSearch} className="relative flex-grow max-w-md">
+          <div className="relative flex-grow max-w-md">
             <input
               type="text"
               placeholder="Buscar produtos..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setFilters((prev) => ({
+                  ...prev,
+                  searchQuery: e.target.value || undefined,
+                }));
+              }}
               className="w-full pl-4 pr-12 py-2.5 rounded-md border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
             />
-            <button
-              type="submit"
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors"
-            >
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground">
               <Search size={18} />
-            </button>
-          </form>
+            </div>
+          </div>
 
           <div className="flex items-center space-x-3">
             <div className="relative">
