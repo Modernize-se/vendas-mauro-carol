@@ -162,55 +162,57 @@ const ProductDetails = () => {
             </Link>
           </div>
 
-          {/* Product Title */}
-          <h1 className="text-2xl md:text-3xl font-display font-medium mb-4 tracking-tight">
-            {product.name}
-          </h1>
+          {/* Mobile Product Title and Info */}
+          <div className="md:hidden">
+            <h1 className="text-2xl md:text-3xl font-display font-medium mb-4 tracking-tight">
+              {product.name}
+            </h1>
 
-          {/* Price and Status Section */}
-          <div className="mb-6">
-            <div className="flex flex-col mb-4">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl font-medium">
-                  {formatCurrency(product.salePrice)}
-                </span>
+            {/* Price and Status Section - Mobile */}
+            <div className="mb-6">
+              <div className="flex flex-col mb-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl font-medium">
+                    {formatCurrency(product.salePrice)}
+                  </span>
+
+                  {discount > 0 && (
+                    <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
+                      <Tag size={14} className="mr-1" />
+                      {discount}% OFF
+                    </span>
+                  )}
+                </div>
 
                 {discount > 0 && (
-                  <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
-                    <Tag size={14} className="mr-1" />
-                    {discount}% OFF
+                  <span className="text-lg text-muted-foreground line-through mt-1">
+                    {formatCurrency(maxPrice)}
                   </span>
                 )}
               </div>
 
-              {discount > 0 && (
-                <span className="text-lg text-muted-foreground line-through mt-1">
-                  {formatCurrency(maxPrice)}
-                </span>
+              {product.availability === "available" ? (
+                <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
+                  <CheckCircle size={20} className="mr-2 text-emerald-600" />
+                  <span className="font-medium">Produto disponível</span>
+                </div>
+              ) : product.availability === "reserved" ? (
+                <div className="bg-yellow-100 text-yellow-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-yellow-300 animate-fade-in">
+                  <AlertCircle size={20} className="mr-2 text-yellow-700" />
+                  <span className="font-medium">
+                    Este produto já está reservado e pode não estar mais
+                    disponível
+                  </span>
+                </div>
+              ) : (
+                <div className="bg-red-100 text-red-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-red-300 animate-fade-in">
+                  <AlertCircle size={20} className="mr-2 text-red-700" />
+                  <span className="font-medium">
+                    Que pena! Este produto já foi vendido
+                  </span>
+                </div>
               )}
             </div>
-
-            {product.availability === "available" ? (
-              <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
-                <CheckCircle size={20} className="mr-2 text-emerald-600" />
-                <span className="font-medium">Produto disponível</span>
-              </div>
-            ) : product.availability === "reserved" ? (
-              <div className="bg-yellow-100 text-yellow-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-yellow-300 animate-fade-in">
-                <AlertCircle size={20} className="mr-2 text-yellow-700" />
-                <span className="font-medium">
-                  Este produto já está reservado e pode não estar mais
-                  disponível
-                </span>
-              </div>
-            ) : (
-              <div className="bg-red-100 text-red-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-red-300 animate-fade-in">
-                <AlertCircle size={20} className="mr-2 text-red-700" />
-                <span className="font-medium">
-                  Que pena! Este produto já foi vendido
-                </span>
-              </div>
-            )}
           </div>
 
           {/* Product Details */}
@@ -223,6 +225,62 @@ const ProductDetails = () => {
             </div>
 
             <div className="flex flex-col animate-slide-in">
+              {/* Desktop Product Title and Info */}
+              <div className="hidden md:block">
+                <h1 className="text-2xl md:text-3xl font-display font-medium mb-4 tracking-tight">
+                  {product.name}
+                </h1>
+
+                {/* Price and Status Section - Desktop */}
+                <div className="mb-6">
+                  <div className="flex flex-col mb-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-3xl font-medium">
+                        {formatCurrency(product.salePrice)}
+                      </span>
+
+                      {discount > 0 && (
+                        <span className="px-2 py-1 bg-accent/10 text-accent rounded-md text-sm font-medium flex items-center">
+                          <Tag size={14} className="mr-1" />
+                          {discount}% OFF
+                        </span>
+                      )}
+                    </div>
+
+                    {discount > 0 && (
+                      <span className="text-lg text-muted-foreground line-through mt-1">
+                        {formatCurrency(maxPrice)}
+                      </span>
+                    )}
+                  </div>
+
+                  {product.availability === "available" ? (
+                    <div className="bg-[#F2FCE2] text-emerald-700 rounded-md px-4 py-3 flex items-center shadow-sm border border-emerald-100 animate-fade-in">
+                      <CheckCircle
+                        size={20}
+                        className="mr-2 text-emerald-600"
+                      />
+                      <span className="font-medium">Produto disponível</span>
+                    </div>
+                  ) : product.availability === "reserved" ? (
+                    <div className="bg-yellow-100 text-yellow-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-yellow-300 animate-fade-in">
+                      <AlertCircle size={20} className="mr-2 text-yellow-700" />
+                      <span className="font-medium">
+                        Este produto já está reservado e pode não estar mais
+                        disponível
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="bg-red-100 text-red-800 rounded-md px-4 py-3 flex items-center shadow-sm border border-red-300 animate-fade-in">
+                      <AlertCircle size={20} className="mr-2 text-red-700" />
+                      <span className="font-medium">
+                        Que pena! Este produto já foi vendido
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
               <p className="text-muted-foreground mb-6">
                 {product.description}
               </p>
@@ -255,7 +313,7 @@ const ProductDetails = () => {
                 )}
 
               {/* Call to Action */}
-              <div className="mt-auto pt-4">
+              <div>
                 <WhatsAppButton
                   link={product.whatsAppLink || ""}
                   isProductAvailable={product.availability === "available"}
@@ -268,14 +326,24 @@ const ProductDetails = () => {
                   retirada.
                 </p>
               </div>
+
+              {/* Desktop Testimonials */}
+              {product.testimonials && product.testimonials.length > 0 && (
+                <div className="hidden md:block mt-8 max-w-xl">
+                  <Testimonials testimonials={product.testimonials} />
+                </div>
+              )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
-            <ReferencePrices references={product.references} />
+            {/* Mobile Testimonials */}
             {product.testimonials && product.testimonials.length > 0 && (
-              <Testimonials testimonials={product.testimonials} />
+              <div className="md:hidden">
+                <Testimonials testimonials={product.testimonials} />
+              </div>
             )}
+            <ReferencePrices references={product.references} />
           </div>
 
           {/* Related Products */}

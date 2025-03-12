@@ -22,7 +22,7 @@ export function Testimonials({
       <div className="relative">
         <div
           className={cn(
-            "flex justify-center items-center gap-5 flex-wrap",
+            "grid grid-cols-1 md:grid-cols-2 gap-4",
             !showAll &&
               testimonials.length > maxDisplayed &&
               "max-h-[720px] overflow-hidden"
@@ -33,7 +33,7 @@ export function Testimonials({
             .map((testimonial, index) => (
               <Card
                 key={index}
-                className="w-full md:w-80 h-auto p-3 md:p-5 relative bg-card border-border rounded-lg"
+                className="w-full h-auto p-3 md:p-5 relative bg-card border-border rounded-lg"
               >
                 <div className="flex items-center">
                   <img
