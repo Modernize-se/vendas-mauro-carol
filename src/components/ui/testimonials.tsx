@@ -10,6 +10,11 @@ interface TestimonialsProps {
   maxDisplayed?: number;
 }
 
+const testimonialImages: Record<Testimonial["username"], string> = {
+  Mauro: "https://i.postimg.cc/d16VLZ8S/Screenshot-at-Mar-11-20-44-27-2.jpg",
+  Carol: "https://i.postimg.cc/j2jdNqcq/Screenshot-at-Mar-11-21-34-38-1.png",
+};
+
 export function Testimonials({
   testimonials,
   className,
@@ -37,7 +42,7 @@ export function Testimonials({
               >
                 <div className="flex items-center">
                   <img
-                    src={`/${testimonial.username.toLowerCase()}.jpg`}
+                    src={testimonialImages[testimonial.username]}
                     alt={testimonial.username}
                     className="w-12 h-12 rounded-full object-cover"
                   />
