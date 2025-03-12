@@ -654,6 +654,11 @@ export const products: Product[] = [
           "Kit elegante e funcional, ideal para organizar o banheiro.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Kit elegante e funcional, ideal para organizar o banheiro.",
+        username: "Carol",
+      },
     ],
   },
   {

@@ -97,13 +97,15 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
             {product.name}
           </h3>
 
-          <div className="mt-2">
-            <span className="text-foreground font-medium text-lg">
-              {formatCurrency(product.salePrice)}
-            </span>
+          <div className="mt-2 flex flex-col">
+            <div className="flex items-center gap-2">
+              <span className="text-foreground font-medium text-lg">
+                {formatCurrency(product.salePrice)}
+              </span>
+            </div>
 
             {discount > 0 && (
-              <span className="ml-2 text-muted-foreground line-through text-sm">
+              <span className="text-muted-foreground line-through text-sm mt-0.5">
                 {formatCurrency(maxPrice)}
               </span>
             )}
@@ -111,7 +113,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
 
           {product.references.length > 0 && (
             <div className="mt-2 text-xs text-muted-foreground">
-              <p className="font-medium mb-1">Referências:</p>
+              <p className="font-medium mb-1 hidden md:block">Referências:</p>
               <div className="flex flex-wrap gap-x-2">
                 {product.references.slice(0, 2).map((ref, idx) => (
                   <a

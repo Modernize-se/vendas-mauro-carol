@@ -7,16 +7,17 @@ import { Testimonial } from "@/types/product";
 interface TestimonialsProps {
   testimonials: Testimonial[];
   className?: string;
-  title?: string;
-  description?: string;
   maxDisplayed?: number;
 }
+
+const testimonialImages: Record<Testimonial["username"], string> = {
+  Mauro: "https://i.postimg.cc/d16VLZ8S/Screenshot-at-Mar-11-20-44-27-2.jpg",
+  Carol: "https://i.postimg.cc/j2jdNqcq/Screenshot-at-Mar-11-21-34-38-1.png",
+};
 
 export function Testimonials({
   testimonials,
   className,
-  title = "Read what people are saying",
-  description = "Dummy feedback from virtual customers using our component library.",
   maxDisplayed = 6,
 }: TestimonialsProps) {
   const [showAll, setShowAll] = useState(false);
@@ -26,7 +27,7 @@ export function Testimonials({
       <div className="relative">
         <div
           className={cn(
-            "flex justify-center items-center gap-5 flex-wrap",
+            "grid grid-cols-1 md:grid-cols-2 gap-4",
             !showAll &&
               testimonials.length > maxDisplayed &&
               "max-h-[720px] overflow-hidden"
@@ -37,13 +38,13 @@ export function Testimonials({
             .map((testimonial, index) => (
               <Card
                 key={index}
-                className="w-80 h-auto p-5 relative bg-card border-border rounded-lg"
+                className="w-full h-auto p-3 md:p-5 relative bg-card border-border rounded-lg"
               >
                 <div className="flex items-center">
                   <img
-                    src={`/public/${testimonial.username.toLowerCase()}.jpg`}
+                    src={testimonialImages[testimonial.username]}
                     alt={testimonial.username}
-                    className="w-12 h-12 rounded-full"
+                    className="w-12 h-12 rounded-full object-cover"
                   />
                   <div className="flex flex-col pl-4">
                     <span className="font-semibold text-base">
@@ -51,7 +52,7 @@ export function Testimonials({
                     </span>
                   </div>
                 </div>
-                <div className="mt-5 mb-5">
+                <div className="mt-3 md:mt-5 mb-3 md:mb-5">
                   <p className="text-foreground font-medium">
                     {testimonial.ownerComment}
                   </p>
