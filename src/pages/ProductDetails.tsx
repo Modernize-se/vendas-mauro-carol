@@ -343,7 +343,9 @@ const ProductDetails = () => {
                 <Testimonials testimonials={product.testimonials} />
               </div>
             )}
-            <ReferencePrices references={product.references} />
+            {product.references.length > 0 && (
+              <ReferencePrices references={product.references} />
+            )}
           </div>
 
           {/* Related Products */}

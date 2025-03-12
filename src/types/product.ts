@@ -14,7 +14,12 @@ export interface Product {
     storeName?: string;
   }[];
   imageUrls: string[];
-  category: string;
+  category:
+    | "Eletrodomésticos"
+    | "Móveis"
+    | "Eletrônicos"
+    | "Utilidades Domésticas"
+    | "Instrumentos Musicais";
   availability: "sold" | "reserved" | "available";
   specifications?: Record<string, string>;
   testimonials?: Testimonial[];

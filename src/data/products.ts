@@ -35,7 +35,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Esta máquina é excelente. O aplicativo do Samsung Smart Things ajuda a controlar o setup de lavagem de qualquer tipo de roupa. As lavagens são rápidas e o aplicativo ajuda em tudo.",
+          "Esta máquina é excelente. O aplicativo Samsung Smart Things ajuda a controlar o setup de lavagem de qualquer tipo de roupa. As lavagens são rápidas e o aplicativo é muito útil para todas as funções.",
         username: "Mauro",
       },
     ],
@@ -82,7 +82,7 @@ export const products: Product[] = [
     id: "3",
     name: "Cafeteira Oster Flavor Inox Programável",
     description:
-      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). - Não recomendada para lava louças",
+      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). Não recomendada para lava-louças.",
     salePrice: 200,
     references: [
       {
@@ -112,7 +112,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Gostamos muito desta cafeteira porque dá pra programar pro café sair quentinho na hora que acordamos. E o café fica ótimo",
+          "Gostamos muito desta cafeteira porque dá para programar o café para sair quentinho na hora em que acordamos. O café fica ótimo.",
         username: "Mauro",
       },
     ],
@@ -158,7 +158,7 @@ export const products: Product[] = [
     id: "5",
     name: "Sofá super confortável",
     description:
-      "Sofá cinza de suede veludo com 2.70m de largura, composto por 2 módulos de 1.20m e 2 braços de 15cm. - Fizemos higienização nele no dia 26/02/2025, pois estava com alguns pontinhos que pareciam de micróbios. Os pontinhos sumiram, mas ainda ficaram algumas marquinhas de deterioração bem pequenas no tecido.",
+      "Sofá cinza de suede veludo com 2,70m de largura, composto por 2 módulos de 1,20m e 2 braços de 15cm. Fizemos higienização nele em 26/02/2025, pois estava com alguns pontinhos que pareciam de micróbios. Os pontinhos sumiram, mas ainda ficaram algumas pequenas marcas de deterioração no tecido.",
     salePrice: 5000.0,
     references: [],
     imageUrls: [
@@ -179,11 +179,12 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Este sofá é foi uma excelente compra que fizemos. Pagamos aproximadamente 6500 reais numa loja de móveis de luxo na Teodoro Sampaio em março de 2023. Sempre deixamos ele esticado e perto da janela pra pegar sol e ventilar. Logo que notamos que apareceram alguns pontinhos pretos, chamei uma empresa para higienizar e eles fizeram um excelente trabalho.",
+          "Este sofá foi uma excelente compra que fizemos. Pagamos aproximadamente R$ 6.500 em uma loja de móveis de luxo na Teodoro Sampaio em março de 2023. Sempre deixamos ele esticado e perto da janela para pegar sol e ventilar. Logo que notamos que apareceram alguns pontinhos pretos, chamei uma empresa para higienizar e eles fizeram um excelente trabalho.",
         username: "Mauro",
       },
       {
-        ownerComment: "Comfortable and stylish, perfect for any living room.",
+        ownerComment:
+          "Confortável e elegante, perfeito para qualquer sala de estar.",
         username: "Carol",
       },
     ],
@@ -324,7 +325,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Fizemos a montagem com profissionais em março de 2023. Depois de um tempo, instalei a tomada inteligente para ligar o LED com comando de voz ou aplicativo. O rack está em perfeito estado. Compramos em conjunto com o buffet que também está anunciado aqui. Estou dando de brinde a tomada e o suporte para TV, sem parafuso.",
+          "Fizemos a montagem com profissionais em março de 2023. Depois de um tempo, instalei a tomada inteligente para ligar o LED com comando de voz ou aplicativo. O rack está em perfeito estado. Compramos em conjunto com o buffet que também está anunciado aqui. Estou dando de brinde a tomada e o suporte para TV, sem parafusos.",
         username: "Mauro",
       },
     ],
@@ -346,7 +347,7 @@ export const products: Product[] = [
       "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Kuandra-Carvalho-e-Preta-3259-6993001-5.jpg",
       "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Kuandra-Carvalho-e-Preta-3257-6993001-3.jpg",
     ],
-    category: "Móveis de Escritório",
+    category: "Móveis",
     availability: "available",
     specifications: {
       Altura: "75 cm",
@@ -382,7 +383,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/qRV482GM/331c6282-6802-4bfb-934e-50e09615c719.jpg",
       "https://i.postimg.cc/MGjzM9VF/78a7d66b-f4be-4768-a840-121d1ab11421.jpg",
     ],
-    category: "Móveis de Escritório",
+    category: "Móveis",
     availability: "available",
     specifications: {
       Modelo: "Tóquio 3329",
@@ -394,14 +395,14 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "É a cadeira que eu passo horas todos os dias, portanto é muito importante que seja confortável. Está em perfeito estado, e com várias regulagens.",
+          "É a cadeira que eu passo horas todos os dias, portanto é muito importante que seja confortável. Está em perfeito estado e com várias opções de regulagem.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "13",
-    name: "Monitor Dell P2210T (22”) com Cabo Display Port",
+    name: 'Monitor Dell P2210T (22") com Cabo Display Port',
     description:
       "2 unidades do Monitor Dell de 22 polegadas, modelo P2210T, acompanhado de cabo Display Port.",
     salePrice: 250.0,
@@ -477,7 +478,7 @@ export const products: Product[] = [
     id: "15",
     name: "Cama Box Baú Bipartido Queen Star Flex",
     description:
-      "Cama box baú bipartido tamanho queen. Pistão da linha hotel, com baú blindado e profundidade interna de 30cm e altura de 48cm.",
+      "Cama box baú bipartido tamanho queen. Pistão da linha Hotel, com baú blindado e profundidade interna de 30cm e altura de 48cm.",
     salePrice: 2000,
     references: [
       {
@@ -496,8 +497,8 @@ export const products: Product[] = [
     specifications: {
       Tamanho: "Queen",
       "Profundidade Interna": "30 cm",
-      "Profundidade Externa": "48 cm",
-      Mecanismo: "Pistão linha hotel",
+      Dimensões: "AxLxP: 43 x 158 x 198 cm",
+      Mecanismo: "Pistão a gás",
       Material: "Linho Cinza",
     },
     testimonials: [
@@ -585,7 +586,7 @@ export const products: Product[] = [
   },
   {
     id: "17",
-    name: 'Telelvisão TCL 32" Led HD',
+    name: 'Televisão TCL 32" Led HD',
     description:
       "Smart TV TCL de 32 polegadas com resolução HD, suporte a HDR e conectividade Wi-Fi.",
     salePrice: 400.0,
@@ -612,7 +613,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Televisão que deixamos no nosso quarto, mas praticamente não usamos. Estamos dando um desconto espetacular porque ela o sistema operacional é um pouco lento, mas para o que precisamos, está ótimo.",
+          "Televisão que deixamos no nosso quarto, mas praticamente não usamos. Estamos dando um desconto espetacular porque o sistema operacional é um pouco lento, mas para o que precisamos, está ótimo.",
         username: "Mauro",
       },
     ],
@@ -660,7 +661,7 @@ export const products: Product[] = [
     id: "19",
     name: "Kit de Banheiro Preto",
     description:
-      "Kit de lavabo em vidro preto, composto por 5 peças. Possui avarias",
+      "Kit de lavabo em vidro preto, composto por 5 peças. Possui avarias.",
     salePrice: 200.0,
     references: [
       {
@@ -695,7 +696,7 @@ export const products: Product[] = [
   },
   {
     id: "20",
-    name: "Kit de Bancada para Banheiro Cerâmica Madeira de Bamboo Clara Fudji Sensea 5 Peças e Lixeira",
+    name: "Kit de Bancada para Banheiro Cerâmica Madeira de Bambu Clara Fudji Sensea 5 Peças e Lixeira",
     description:
       "Kit de bancada para banheiro em cerâmica com detalhes em madeira de bambu clara, modelo Fudji Sensea, composto por 3 peças e uma lixeira.",
     salePrice: 700,
@@ -746,12 +747,79 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Colocamos este no nosso banheiro de visitas e a Carol diz que é muito bonito",
+          "Colocamos este kit no nosso banheiro de visitas e a Carol diz que é muito bonito.",
         username: "Mauro",
       },
       {
         ownerComment: "Kit de banheiro muito prático e completo.",
         username: "Carol",
+      },
+    ],
+  },
+  {
+    id: "21",
+    name: "Varal de Chão",
+    description: "Varal de Chão Com Abas Retrátil Slim Preto ",
+    salePrice: 50.0,
+    references: [
+      {
+        price: 78.99,
+        link: "https://www.mercadolivre.com.br/varal-chao-com-abas-retratil-slim-preto-mor/p/MLB24672996#polycard_client=search-nordic&searchVariation=MLB24672996&wid=MLB5306070068&position=3&search_layout=grid&type=product&tracking_id=cd5f81ff-3124-425c-bfc8-34f7be2ee29a&sid=search",
+        storeName: "Mercado Livre",
+      },
+    ],
+    imageUrls: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_933390-MLU72826544065_112023-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_703171-MLU70636393863_072023-F.webp",
+      "https://i.postimg.cc/PqLRJyCY/11b82ac8-a82a-4aad-9b1a-bcb006245451.jpg",
+      "https://i.postimg.cc/VkkTQm17/f24d6b43-ae96-4aa2-8e89-21c25facacfa.jpg",
+    ],
+    category: "Utilidades Domésticas",
+    availability: "available",
+    specifications: {
+      Material: "Aço",
+      Dimensões:
+        "Altura aberto: 89 cm, Largura aberto: 49 cm, Comprimento aberto: 144 cm",
+      "Mais informações": "6 varetas e é extensível",
+      Cor: "Preto",
+    },
+    testimonials: [
+      {
+        ownerComment: "Varal de chão muito bom. Fácil de guardar e de usar.",
+        username: "Carol",
+      },
+    ],
+  },
+  {
+    id: "22",
+    name: "Varal de Parede",
+    description: "Varal Mágico 74cm com 4 varetas - alumínio - Branco",
+    salePrice: 100.0,
+    references: [
+      {
+        price: 168.2,
+        link: "https://www.mercadolivre.com.br/varal-magico-74cm/p/MLB25609404?pdp_filters=item_id%3AMLB5112058044&from=gshop&matt_tool=37064035&matt_word=&matt_source=google&matt_campaign_id=22090354481&matt_ad_group_id=173090606396&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882732977&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735098639&matt_product_id=MLB25609404-product&matt_product_partition_id=2390507632238&matt_target_id=pla-2390507632238&cq_src=google_ads&cq_cmp=22090354481&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAiAw5W-BhAhEiwApv4goD5Jp255kCFTVcRMtPMZQJfCrRMIdt8h422DAe4_MxSu1wmNvSRsPxoCoUUQAvD_BwE",
+        storeName: "Mercado Livre",
+      },
+    ],
+    imageUrls: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_901319-MLU70791468198_082023-F.webp",
+      "https://i.postimg.cc/kXnYKqVn/IMG-3952.jpg",
+      "https://i.postimg.cc/5ymPTkrd/IMG-3953.jpg",
+    ],
+    category: "Utilidades Domésticas",
+    availability: "available",
+    specifications: {
+      Material: "Alumínio",
+      Dimensões:
+        "Altura aberto: 8 cm, Largura aberto: 35 cm, Comprimento aberto: 74 cm",
+      Cor: "Branco",
+    },
+    testimonials: [
+      {
+        ownerComment:
+          "Esse varal é muito resistente e fica bem compacto quando dobrado.",
+        username: "Mauro",
       },
     ],
   },
@@ -833,7 +901,7 @@ export const products: Product[] = [
     id: "25",
     name: "Banqueta Giratória Milano",
     description:
-      "2 Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui avarias",
+      "2 Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui avarias.",
     salePrice: 250.0,
     references: [
       {
@@ -869,7 +937,7 @@ export const products: Product[] = [
     id: "26",
     name: "Blender Oster MyBlend ",
     description:
-      "Liquidificador pessoal Blender Oster Myblend com 2 Jarras portáteis, Preto 110V, 250W, BLSTPB-BBL. Produto ideal para preparar shakes e smoothies.",
+      "Liquidificador pessoal Blender Oster Myblend com 2 jarras portáteis, Preto 110V, 250W, BLSTPB-BBL. Produto ideal para preparar shakes e smoothies.",
     salePrice: 200.0,
     references: [
       {
@@ -894,7 +962,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Este blender é muito prático para o dia a dia. Fácil de lavar também. A Carol gosta bastante",
+          "Este blender é muito prático para o dia a dia. Fácil de lavar também. A Carol gosta bastante.",
         username: "Mauro",
       },
     ],
@@ -903,7 +971,7 @@ export const products: Product[] = [
     id: "27",
     name: "Piano Digital com Suporte",
     description:
-      "Piano Digital Stage CDP-S110 BK compacto com 88 teclas e suporte dedicado. Ideal para estudantes e músicos profissionais. Acompanha Suporte para Piano Digital, mas sem suporte de partitura.",
+      "Piano Digital Stage CDP-S110 BK compacto com 88 teclas e suporte dedicado. Ideal para estudantes e músicos profissionais. Acompanha suporte para Piano Digital, mas sem suporte de partitura.",
     salePrice: 2900.0,
     references: [
       {
@@ -950,7 +1018,7 @@ export const products: Product[] = [
       "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3489-534108-2.jpg",
       "https://static.mobly.com.br/p/Compace-Mesa-de-EscritC3B3rio-Studio-Carvalho-150-cm-3491-534108-3.jpg",
     ],
-    category: "Móveis de Escritório",
+    category: "Móveis",
     availability: "available",
     specifications: {
       Material: "Estrutura de aço cromado com assento estofado em PU",
@@ -961,79 +1029,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Mesa de escritório muito boa. Faremos um desconto extra pra quem levar a outra mesa do conjunto.",
-        username: "Mauro",
-      },
-    ],
-  },
-  {
-    id: "21",
-    name: "Varal de Chão",
-    description: "Varal de Chão Com Abas Retrátil Slim Preto ",
-    salePrice: 50.0,
-    references: [
-      {
-        price: 78.99,
-        link: "https://www.mercadolivre.com.br/varal-chao-com-abas-retratil-slim-preto-mor/p/MLB24672996#polycard_client=search-nordic&searchVariation=MLB24672996&wid=MLB5306070068&position=3&search_layout=grid&type=product&tracking_id=cd5f81ff-3124-425c-bfc8-34f7be2ee29a&sid=search",
-        storeName: "Mercado Livre",
-      },
-    ],
-    imageUrls: [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_933390-MLU72826544065_112023-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_703171-MLU70636393863_072023-F.webp",
-      "https://i.postimg.cc/PqLRJyCY/11b82ac8-a82a-4aad-9b1a-bcb006245451.jpg",
-      "https://i.postimg.cc/VkkTQm17/f24d6b43-ae96-4aa2-8e89-21c25facacfa.jpg",
-    ],
-    category: "Utilidades Domésticas",
-    availability: "available",
-    specifications: {
-      Material: "Aço",
-      Dimensões:
-        "Altura aberto: 89 cm, Largura aberto: 49 cm, Comprimento aberto: 144 cm",
-      "Mais informações": "6 varetas e é extensível",
-      Cor: "Preto",
-    },
-    testimonials: [
-      {
-        ownerComment: "Varal de chão muito bom. Fácil de guardar e de usar.",
-        username: "Carol",
-      },
-    ],
-  },
-  {
-    id: "31",
-    name: "Geladeira",
-    description:
-      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior",
-    salePrice: 6000,
-    references: [
-      {
-        price: 6576.74,
-        link: "https://www.samsung.com/br/refrigerators/bottom-mount-freezer/435l-ez-clean-steel-rl4353rbasl-az/",
-        storeName: "Samsung",
-      },
-    ],
-    imageUrls: [
-      "https://images.samsung.com/is/image/samsung/p6pim/br/rl4353rbasl-bz/gallery/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-537712356?$684_547_JPG$",
-      "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-frontangleopensilver-192805607?$684_547_JPG$",
-      "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-topanglesilver-192805610?$684_547_JPG$",
-      "https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg",
-      "https://i.postimg.cc/HL59FhJZ/IMG-3934.jpg",
-    ],
-    category: "Eletrodomésticos",
-    availability: "available",
-    specifications: {
-      Dimenções: "Largura: 70cm, Altura: 185cm, Profundidade: 69cm",
-      Voltagem: "110V",
-      "Capacidade total": "435L - Freezer 132 L e Refrigerador 303 L",
-      "Material das Lâminas": "Aço inoxidável",
-      Acessórios:
-        "Porta reversível, puxador embutido, all-around Cooling, rack para vinhos, iluminação LED e sensores.",
-    },
-    testimonials: [
-      {
-        ownerComment:
-          "Compramos esta geladeira pela qualidade e pela possibilidade de inverter o lado de abertura da porta. Acabamos não precisando trocar o lado, ela ainda abre da esquerda pra direita. Extremamente silenciosa e gela muito bem. Dá pra controlar direitinho a temperatura tanto do freezer quanto da geladeira.",
+          "Mesa de escritório muito boa. Faremos um desconto extra para quem levar a outra mesa do conjunto.",
         username: "Mauro",
       },
     ],
@@ -1108,9 +1104,9 @@ export const products: Product[] = [
   },
   {
     id: "30",
-    name: "Máquina de lavar-louças",
+    name: "Máquina de lavar louças",
     description:
-      "Máquina de lavar-louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha.",
+      "Máquina de lavar louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha.",
     salePrice: 3700.0,
     references: [
       {
@@ -1143,41 +1139,46 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "22",
-    name: "Varal de Parede",
-    description: "Varal Mágico 74cm com 4 varetas - alumínio - Branco",
-    salePrice: 100.0,
+    id: "31",
+    name: "Geladeira",
+    description:
+      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior",
+    salePrice: 6000,
     references: [
       {
-        price: 168.2,
-        link: "https://www.mercadolivre.com.br/varal-magico-74cm/p/MLB25609404?pdp_filters=item_id%3AMLB5112058044&from=gshop&matt_tool=37064035&matt_word=&matt_source=google&matt_campaign_id=22090354481&matt_ad_group_id=173090606396&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882732977&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735098639&matt_product_id=MLB25609404-product&matt_product_partition_id=2390507632238&matt_target_id=pla-2390507632238&cq_src=google_ads&cq_cmp=22090354481&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAiAw5W-BhAhEiwApv4goD5Jp255kCFTVcRMtPMZQJfCrRMIdt8h422DAe4_MxSu1wmNvSRsPxoCoUUQAvD_BwE",
-        storeName: "Mercado Livre",
+        price: 6576.74,
+        link: "https://www.samsung.com/br/refrigerators/bottom-mount-freezer/435l-ez-clean-steel-rl4353rbasl-az/",
+        storeName: "Samsung",
       },
     ],
     imageUrls: [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_901319-MLU70791468198_082023-F.webp",
-      "https://i.postimg.cc/kXnYKqVn/IMG-3952.jpg",
-      "https://i.postimg.cc/5ymPTkrd/IMG-3953.jpg",
+      "https://images.samsung.com/is/image/samsung/p6pim/br/rl4353rbasl-bz/gallery/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-537712356?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-frontangleopensilver-192805607?$684_547_JPG$",
+      "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-topanglesilver-192805610?$684_547_JPG$",
+      "https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg",
+      "https://i.postimg.cc/HL59FhJZ/IMG-3934.jpg",
     ],
-    category: "Utilidades Domésticas",
+    category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Material: "Alumínio",
-      Dimensões:
-        "Altura aberto: 8 cm, Largura aberto: 35 cm, Comprimento aberto: 74 cm",
-      Cor: "Branco",
+      Dimenções: "Largura: 70cm, Altura: 185cm, Profundidade: 69cm",
+      Voltagem: "110V",
+      "Capacidade total": "435L - Freezer 132 L e Refrigerador 303 L",
+      "Material das Lâminas": "Aço inoxidável",
+      Acessórios:
+        "Porta reversível, puxador embutido, all-around Cooling, rack para vinhos, iluminação LED e sensores.",
     },
     testimonials: [
       {
         ownerComment:
-          "Esse varal é muito resistente e fica bem compacto quando dobrado.",
+          "Compramos esta geladeira pela qualidade e pela possibilidade de inverter o lado de abertura da porta. Acabamos não precisando trocar o lado, ela ainda abre da esquerda pra direita. Extremamente silenciosa e gela muito bem. Dá pra controlar direitinho a temperatura tanto do freezer quanto da geladeira.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "32",
-    name: "Air Fryer Eletrolux",
+    name: "Air Fryer Electrolux",
     description:
       "Air Fryer Electrolux por Rita Lobo 3,2L Digital Cinza Experience Com Função Virar 1400W (EAF20)",
     salePrice: 250.0,
@@ -1208,7 +1209,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Essa air fryer ajuda muito por conta da praticidade. Uma vez eu deixei cair a panela de dentro na bancada e acabou fazendo um amassadinho de leve que não atrapalha em nada no uso.",
+          "Essa air fryer ajuda muito por conta da praticidade. Uma vez deixei cair a panela interna na bancada e acabou fazendo um pequeno amassado que não atrapalha em nada o funcionamento.",
         username: "Mauro",
       },
     ],
@@ -1217,12 +1218,12 @@ export const products: Product[] = [
     id: "33",
     name: "Cafeteira Dolce Gusto + Cápsulas",
     description:
-      "Dolce Gusto Mini Me Preta 110v. Leve também 5 caixas de cápsulas de sabores variados",
+      "Dolce Gusto Mini Me Preta 110v. Leve também 5 caixas de cápsulas de sabores variados.",
     salePrice: 350,
     references: [
       {
         price: 429.9,
-        link: "https://www.nescafe-dolcegusto.com.br/mini-me-automatica-maquina-de-cafe-preta-110v?gad_source=1&gclid=Cj0KCQjwm7q-BhDRARIsACD6-fU4w92RPWPQk10KQq5fXxS3evxQSvUDH6_SJGJGYwJIBOcxzqksqkQaAo09EALw_wcB&gclsrc=aw.ds",
+        link: "https://www.nescafe-dolcegusto.com.br/mini-me-automatica-mquina-de-cafe-preta-110v?gad_source=1&gclid=Cj0KCQjwm7q-BhDRARIsACD6-fU4w92RPWPQk10KQq5fXxS3evxQSvUDH6_SJGJGYwJIBOcxzqksqkQaAo09EALw_wcB&gclsrc=aw.ds",
         storeName: "Nescafé-Dolce Gusto",
       },
     ],
@@ -1232,7 +1233,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/c4FB0qRW/IMG-4015.jpg",
       "https://i.postimg.cc/YCVNL1Dy/IMG-4016.jpg",
     ],
-    category: "Eletrodoméstico",
+    category: "Eletrodomésticos",
     availability: "available",
     specifications: {
       Potência: "1500W",
