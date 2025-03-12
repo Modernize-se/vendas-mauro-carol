@@ -68,7 +68,8 @@ const Index = () => {
                 Estamos indo para Londres e por isso estamos vendendo os itens
                 que escolhemos com carinho para montar nosso primeiro lar. Cada
                 peça foi selecionada com cuidado e possui qualidade, histórias e
-                momentos especiais.
+                momentos especiais. Todos os itens possuem no máximo 24 meses de
+                uso.
               </p>
 
               {/* Couple Photo - Only visible on mobile */}
@@ -85,10 +86,7 @@ const Index = () => {
               {/* CTA Button */}
               <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-4">
                 <a
-                  href={generateWhatsAppLink({
-                    customMessage:
-                      "Olá, gostaria de mais informações sobre os produtos à venda.",
-                  })}
+                  href={generateWhatsAppLink({})}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 font-medium rounded-md px-6 py-3 bg-ukred text-white hover:bg-ukred/90 transition-colors"
@@ -236,10 +234,7 @@ const Index = () => {
                   podemos responder quaisquer dúvidas sobre os produtos.
                 </p>
                 <a
-                  href={generateWhatsAppLink({
-                    customMessage:
-                      "Olá, gostaria de mais informações sobre os produtos à venda.",
-                  })}
+                  href={generateWhatsAppLink({})}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="industrial-button inline-flex items-center justify-center gap-2 bg-ukred hover:bg-ukred/90"
@@ -263,14 +258,7 @@ const Index = () => {
       <Footer />
 
       {/* Fixed WhatsApp Button */}
-      <WhatsAppButton
-        link={generateWhatsAppLink({
-          customMessage:
-            "Olá, gostaria de mais informações sobre os produtos à venda.",
-        })}
-        fixed={true}
-        size="md"
-      />
+      <WhatsAppButton link={generateWhatsAppLink({})} fixed={true} size="md" />
     </div>
   );
 };

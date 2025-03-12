@@ -1,6 +1,8 @@
+const DEFAULT_MESSAGE =
+  "Olá, gostaria de mais informações sobre os seguintes produtos à venda:";
 export function generateWhatsAppLink({
   productName,
-  customMessage,
+  customMessage = DEFAULT_MESSAGE,
 }: {
   customMessage?: string;
   productName?: string;
@@ -10,11 +12,11 @@ export function generateWhatsAppLink({
   if (!productName && !customMessage) {
     return `https://wa.me/${phoneNumber}`;
   }
-  const message =
-    customMessage ??
-    encodeURIComponent(
-      `Olá, estou interessado no produto "${productName}" que vocês estão vendendo. Podemos conversar sobre ele?`
-    );
+  const message = productName
+    ? encodeURIComponent(
+        `Olá, estou interessado no produto "${productName}" que vocês estão vendendo. Podemos conversar sobre ele?`
+      )
+    : customMessage;
 
   return `https://wa.me/${phoneNumber}?text=${message}`;
 }

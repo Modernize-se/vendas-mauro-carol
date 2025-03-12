@@ -177,7 +177,7 @@ export const products: Product[] = [
     id: "5",
     name: "Sofá super confortável",
     description:
-      "Sofá cinza de suede veludo com 2,70m de largura, composto por 2 módulos de 1,20m e 2 braços de 15cm. Fizemos higienização nele em 26/02/2025, pois estava com alguns pontinhos que pareciam de micróbios. Os pontinhos sumiram, mas ainda ficaram algumas pequenas marcas de deterioração no tecido.",
+      "Sofá cinza de suede veludo com 2,70m de largura, composto por 2 módulos de 1,20m e 2 braços de 15cm. Fizemos higienização nele em 26/02/2025, pois estava com alguns pontinhos que pareciam fungos. Os pontinhos sumiram, mas ainda ficaram algumas pequenas marcas de deterioração no tecido.",
     salePrice: 5000.0,
     references: [],
     imageUrls: [
