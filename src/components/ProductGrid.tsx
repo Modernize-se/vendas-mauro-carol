@@ -137,8 +137,8 @@ const ProductGrid = ({ products }: ProductGridProps) => {
     <div className="w-full">
       <div className="mb-8 flex flex-col gap-4">
         {/* Search and Filter Bar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="relative flex-grow max-w-md">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-20">
+          <div className="relative flex-grow max-w-md w-full">
             <input
               type="text"
               placeholder="Buscar produtos..."
@@ -150,25 +150,28 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                   searchQuery: e.target.value || undefined,
                 }));
               }}
-              className="w-full pl-4 pr-12 py-2.5 rounded-md border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
+              className="w-full pl-4 pr-12 py-3 rounded-md border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 relative z-20"
             />
-            <div className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground">
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground pointer-events-none">
               <Search size={18} />
             </div>
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 relative z-20">
             <div className="relative">
               <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors"
+                onClick={() => {
+                  console.log("showFilters", showFilters);
+                  setShowFilters(!showFilters);
+                }}
+                className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors relative z-10"
               >
                 <SlidersHorizontal size={18} />
                 <span>Filtros</span>
               </button>
 
               {showFilters && (
-                <div className="fixed md:absolute left-0 md:right-0 md:left-auto top-full mt-2 w-full md:w-80 bg-background glass-panel shadow-lg rounded-md p-4 z-20 animate-fade-in max-h-[80vh] overflow-y-auto">
+                <div className="absolute left-0 top-full mt-2 w-80 md:w-80 bg-background glass-panel shadow-lg rounded-md p-4 z-50 animate-fade-in max-h-[80vh] overflow-y-auto border border-border">
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-medium">Categoria</h3>
@@ -247,7 +250,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
 
             <div className="relative">
               <button
-                className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2.5 border border-border rounded-md hover:bg-secondary/50 transition-colors relative z-10"
                 onClick={() => setShowSortMenu(!showSortMenu)}
               >
                 <span>Ordenar</span>
@@ -255,7 +258,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
               </button>
 
               {showSortMenu && (
-                <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-md py-2 z-20">
+                <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-md py-2 z-50 border border-border">
                   <div
                     className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
                     onClick={() => updateSort("name-asc")}

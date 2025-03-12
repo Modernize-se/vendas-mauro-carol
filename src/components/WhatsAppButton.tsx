@@ -37,7 +37,7 @@ const WhatsAppButton = ({
         "inline-flex items-center justify-center text-white rounded-lg font-medium transition-all",
         sizeClasses[size],
         isProductAvailable ? buttonColors : soldColors, // Aplica as cores certas
-        fixed && "fixed bottom-6 right-6 shadow-lg z-40",
+        fixed && "fixed bottom-6 right-6 shadow-lg z-50",
         className
       )}
     >

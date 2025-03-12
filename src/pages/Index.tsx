@@ -44,9 +44,9 @@ const Index = () => {
       <Header />
 
       <main className="flex-grow pt-24">
-        {/* Hero Section - More industrial, less boho */}
-        <section className="relative h-[70vh] md:h-[80vh] mb-16">
-          <div className="absolute inset-0 z-0">
+        {/* Hero Section with fixed height */}
+        <section className="relative min-h-[450px] md:min-h-[500px] mb-0 pb-6 md:pb-12 border-b border-border/30">
+          <div className="absolute inset-0 bottom-[50px] md:bottom-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?q=80&w=2000&auto=format&fit=crop"
               alt="Móveis de alta qualidade com design industrial"
@@ -55,10 +55,10 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/60"></div>
           </div>
 
-          <div className="container mx-auto px-4 h-full flex flex-col md:flex-row items-center relative z-10">
+          <div className="container mx-auto px-4 pt-24 pb-12 flex flex-col md:flex-row items-center relative z-10">
             <div className="max-w-2xl mb-8 md:mb-0">
               {/* Updated title with a more personal touch and wine-red highlight */}
-              <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance pt-16">
+              <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-6 staggered-item tracking-tight text-balance">
                 Estamos vendendo{" "}
                 <span className="text-ukred">peças especiais</span>
               </h1>
@@ -82,9 +82,8 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Removed the unnecessary text as requested */}
-
-              <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-24 sm:mb-0">
+              {/* CTA Button */}
+              <div className="flex flex-col sm:flex-row gap-4 staggered-item mb-4">
                 <a
                   href={generateWhatsAppLink({
                     customMessage:
@@ -113,20 +112,28 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Products Section - Moved up to emphasize products */}
-        <section id="products" className="container mx-auto px-4 my-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">
-              Catálogo de Produtos
-            </h2>
-            {/* Removed repeating text below catalog title as requested */}
-          </div>
+        {/* Clear visual separator - only visible on desktop */}
+        <div className="h-4 md:h-12 bg-background"></div>
 
-          <ProductGrid products={products} />
+        {/* Products Section - Fixed spacing */}
+        <section id="products" className="bg-background pt-4 md:pt-8 pb-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">
+                Catálogo de Produtos
+              </h2>
+              {/* Removed repeating text below catalog title as requested */}
+            </div>
+
+            <ProductGrid products={products} />
+          </div>
         </section>
 
-        {/* Our Approach Section - Replacing "Our Story" with focus on quality */}
-        <section id="story" className="container mx-auto px-4 mb-24 pt-24">
+        {/* Our Approach Section - With fixed spacing */}
+        <section
+          id="story"
+          className="container mx-auto px-4 py-12 mb-12 border-t border-border/30"
+        >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium mb-4">
               Nossa História
