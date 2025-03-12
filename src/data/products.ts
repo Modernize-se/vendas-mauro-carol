@@ -38,6 +38,11 @@ export const products: Product[] = [
           "Esta máquina é excelente. O aplicativo Samsung Smart Things ajuda a controlar o setup de lavagem de qualquer tipo de roupa. As lavagens são rápidas e o aplicativo é muito útil para todas as funções.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Máquina silenciosa e eficiente, com ótimos recursos de personalização e integração com aplicativo.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -76,6 +81,11 @@ export const products: Product[] = [
           "Este filtro é excelente. Silencioso, compacto e a água gelada é realmente gelada. Também é bom que a água sai bem forte, então dá pra encher uma garrafa em poucos segundos.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Design elegante e compacto, perfeito para ambientes modernos. Silencioso e potente, tanto na temperatura quanto na vazão.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -112,8 +122,13 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Gostamos muito desta cafeteira porque dá para programar o café para sair quentinho na hora em que acordamos. O café fica ótimo.",
+          "Gostamos muito desta cafeteira porque dá para programar o café para sair quentinho na hora em que acordamos. O café fica ótimo, o segredo é colocar água até o nível de 7 xícaras 7 colheres (de sopa) de café.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Prepara um café delicioso e mantém a temperatura ideal por horas.",
+        username: "Carol",
       },
     ],
   },
@@ -151,6 +166,11 @@ export const products: Product[] = [
         ownerComment:
           "Microondas muito bom, fácil de usar e espaçoso. Está em perfeito estado e esquenta rapidinho a comida.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Microondas perfeito, fácil de usar e esquenta muito rápido. Em 1 minuto as marmitas da geladeira já estão quentinhas.",
+        username: "Carol",
       },
     ],
   },
@@ -219,6 +239,11 @@ export const products: Product[] = [
           "Mesa em ótimo estado, sem absolutamente nada de arranhões ou marcas de uso. Sempre usamos proteção em baixo de pratos, copos e objetos. Geralmente não usamos para comer, então ela está praticamente intacta.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Mesa elegante que combina com diversos estilos de decoração.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -251,6 +276,10 @@ export const products: Product[] = [
         ownerComment:
           "Cadeiras confortáveis e bem conservadas. Como usamos pouco a mesa de jantar, todas elas estão praticamente intactas.",
         username: "Mauro",
+      },
+      {
+        ownerComment: "Cadeiras resistentes e com acabamento impecável.",
+        username: "Carol",
       },
     ],
   },
@@ -285,8 +314,12 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Comprei este buffet na Mobly e foi montado por profissionais. Está em perfeito estado, foi muito pouco usado.",
+          "Comprei este buffet na Mobly e. Está em perfeito estado, montagem perfeita e foi muito pouco usado.",
         username: "Mauro",
+      },
+      {
+        ownerComment: "Móvel versátil com ótimo espaço de armazenamento.",
+        username: "Carol",
       },
     ],
   },
@@ -325,8 +358,13 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Fizemos a montagem com profissionais em março de 2023. Depois de um tempo, instalei a tomada inteligente para ligar o LED com comando de voz ou aplicativo. O rack está em perfeito estado. Compramos em conjunto com o buffet que também está anunciado aqui. Estou dando de brinde a tomada e o suporte para TV, sem parafusos.",
+          "Recebemos em março de 2023. Depois de um tempo, instalei a tomada inteligente para ligar o LED com comando de voz ou aplicativo. O rack está em perfeito estado. Compramos em conjunto com o buffet que também está anunciado aqui. Estou dando de brinde a tomada e o suporte para TV, sem parafusos.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "O painel com LED cria um ambiente acolhedor na sala. Com a tomada inteligente que estamos dando de brinde, a gente só pede pra Alexa ligar e desligar.",
+        username: "Carol",
       },
     ],
   },
@@ -361,6 +399,10 @@ export const products: Product[] = [
         ownerComment:
           "Essa mesa é muito boa. É a que eu uso pra trabalhar diariamente. Muito resistente, muito bem fixada no lugar e também é leve e fácil de movimentar.",
         username: "Mauro",
+      },
+      {
+        ownerComment: "Espaço de trabalho funcional com acabamento refinado.",
+        username: "Carol",
       },
     ],
   },
@@ -397,6 +439,11 @@ export const products: Product[] = [
         ownerComment:
           "É a cadeira que eu passo horas todos os dias, portanto é muito importante que seja confortável. Está em perfeito estado e com várias opções de regulagem.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Excelente ergonomia para longas horas de trabalho como meu marido gosta de ficar.",
+        username: "Carol",
       },
     ],
   },
@@ -437,6 +484,11 @@ export const products: Product[] = [
           'Monitor em perfeito funcionamento, sem nada de detalhe e imagem clara e nítida. Eu usava antigamente, antes de mudar para um de 27". Tenho 2 pra vender, dá pra fazer um descontinho se levar os 2.',
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Qualidade de imagem consistente e cores bem calibradas. Uso diariamente para trabalhar.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -469,8 +521,13 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Essa banquetinha foi uma ótima compra. É muito prática, eu uso pra tocar piano, e usamos como mesinha também. Está com algumas marquinhas de uso da mesinha, mas está quase perfeita.",
+          "Essa banquetinha foi uma ótima compra. É muito prática, eu uso pra tocar piano, e usamos como mesinha também. Está com as marquinhas de uso da mesinha que estão na foto, mas está quase perfeita.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Peça versátil que funciona bem como assento e mesa auxiliar.",
+        username: "Carol",
       },
     ],
   },
@@ -506,6 +563,11 @@ export const products: Product[] = [
         ownerComment:
           "Box em excelente estado, com amplo espaço de armazenamento. O pistão também funciona perfeitamente. Dá pra levantar a tampa com facilidade, mesmo com o colchão em cima.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Tampa de abertura e fechamento suaves e muito prático para organização, ainda mais por separar o baú de cada um.",
+        username: "Carol",
       },
     ],
   },
@@ -543,6 +605,10 @@ export const products: Product[] = [
           "Colchão ótimo, fizemos questão de comprar o melhor que encontramos, sem economia. Está em perfeito estado, porque compramos uma proteção de colchão, que posso até dar de brinde. É um lençol um pouco mais grosso que serve pra proteger o colchão.",
         username: "Mauro",
       },
+      {
+        ownerComment: "Proporciona uma noite de sono confortável e relaxante.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -579,8 +645,13 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Televisão em perfeito estado, com imagem nítida e som de qualidade. Estado de nova.",
+          "Televisão em perfeito estado, com imagem nítida e som de qualidade. Responde imediatamente aos comandos, não é aquele tipo de TV que fica demorando vários segundos pra mudar de canal. Também conecta muito fácil com o meu celular, e meu PC via bluetooth.",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Cores perfeitas e sistema smart TV intuitivo e bem responsivo. É nossa televisão principal.",
+        username: "Carol",
       },
     ],
   },
@@ -615,6 +686,10 @@ export const products: Product[] = [
         ownerComment:
           "Televisão que deixamos no nosso quarto, mas praticamente não usamos. Estamos dando um desconto espetacular porque o sistema operacional é um pouco lento, mas para o que precisamos, está ótimo.",
         username: "Mauro",
+      },
+      {
+        ownerComment: "Ideal para ambientes menores como quarto ou escritório.",
+        username: "Carol",
       },
     ],
   },
@@ -855,7 +930,8 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment: "Parece um cachorrinho andando em casa.",
+        ownerComment:
+          "Parece uma joaninha gigante andando em casa. Tem que ficar um pouco de olho que ele às vezes empaca quando tem desnível, ele não é smart. Funciona com um sensorzinho de obstáculos.",
         username: "Mauro",
       },
     ],
@@ -895,6 +971,10 @@ export const products: Product[] = [
           "Esse aspira bem e rapidinho. Fácil de usar e a bateria dura várias aspirações. Podem levar sem erro. Ele é pequeno, fácil de guardar e tem várias ponteiras para diferentes usos.",
         username: "Mauro",
       },
+      {
+        ownerComment: "Prático para limpezas rápidas e manutenção diária.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -931,6 +1011,11 @@ export const products: Product[] = [
           "Essa banqueta é muito prática. Eu usei bastante e ela acabou ficando com uns rasguinhos de leve nos cantos. Temos 2, então posso fazer um descontinho extra pra quem levar o par.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Banquetas confortáveis e altura ajustável perfeita para bancada. Meu marido danificou um pouco o revestimento das pontas de tanto ficar girando, mas ainda está muito confortável.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -965,6 +1050,11 @@ export const products: Product[] = [
           "Este blender é muito prático para o dia a dia. Fácil de lavar também. A Carol gosta bastante.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Excelente para preparar vitaminas e shakes. Lava muito bem na lava-louças",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -997,7 +1087,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Esse piano eu não gostaria de vender, mas não vai ter jeito. Ele é excelente, o som é muito limpo e realista. Comprei também com o suporte original da Casio, e vou dar de brinde o pedal de sustain.",
+          "Esse piano eu não gostaria de vender, mas não vai ter jeito. Ele é excelente, o som é muito limpo e realista, o melhor piano digital que eu já tive. Comprei também com o suporte original da Casio, e vou dar de brinde o pedal de sustain.",
         username: "Mauro",
       },
     ],
@@ -1097,8 +1187,12 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Liquidificador potente e versátil, ideal para diversas preparações na cozinha.",
+          "Liquidificador simples e prático, ideal para diversas preparações na cozinha. Lava direitinho na lava-louças.",
         username: "Mauro",
+      },
+      {
+        ownerComment: "Excelente para preparar vitaminas e molhos.",
+        username: "Carol",
       },
     ],
   },
@@ -1122,7 +1216,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/0yzf0Q9q/IMG-3937.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Capacidade: "10 serviços",
       "Programas de Lavagem": "6 programas, incluindo Eco, Intensivo e Rápido",
@@ -1133,8 +1227,12 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Máquina muito silenciosa e lava muito bem. Mesmo cheia de louças sujas ele deixa todas elas limpinhas e brilhantes.",
+          "Máquina muito silenciosa e lava muito bem. Mesmo cheia de louças sujas ele deixa todas elas limpinhas e brilhantes. Basta colocar um sabãozinho em pó e ela já identifica o nível de sujeira com o modo Smart Sensor.",
         username: "Mauro",
+      },
+      {
+        ownerComment: "Economia significativa de tempo na cozinha.",
+        username: "Carol",
       },
     ],
   },
@@ -1174,6 +1272,11 @@ export const products: Product[] = [
           "Compramos esta geladeira pela qualidade e pela possibilidade de inverter o lado de abertura da porta. Acabamos não precisando trocar o lado, ela ainda abre da esquerda pra direita. Extremamente silenciosa e gela muito bem. Dá pra controlar direitinho a temperatura tanto do freezer quanto da geladeira.",
         username: "Mauro",
       },
+      {
+        ownerComment:
+          "Organização interna bem planejada, iluminação eficiente e o freezer é enorme. O controle de temperatura também é perfeito.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -1212,6 +1315,10 @@ export const products: Product[] = [
           "Essa air fryer ajuda muito por conta da praticidade. Uma vez deixei cair a panela interna na bancada e acabou fazendo um pequeno amassado que não atrapalha em nada o funcionamento.",
         username: "Mauro",
       },
+      {
+        ownerComment: "Prepara alimentos de forma rápida e saudável.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -1246,6 +1353,11 @@ export const products: Product[] = [
         ownerComment:
           "Cafeteira muito prática. Resolvi agora que vou dar umas 5 caixas de cápsulas de brinde pra quem levar",
         username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Café sempre na temperatura ideal e com sabor perfeito. Muito prática.",
+        username: "Carol",
       },
     ],
   },
