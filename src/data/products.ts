@@ -11,7 +11,7 @@ export const products: Product[] = [
     salePrice: 3000,
     references: [
       {
-        price: 3989,
+        price: 3999,
         link: "https://site.fastshop.com.br/lava---seca-11-kg-samsung-smartthings-inox-look-com-12-programas-de-lavagem---wd11t504dbx-sgwd11ti_prd/p",
         storeName: "Fast Shop",
       },
@@ -24,12 +24,12 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Cor: "Inox Look",
+      Cor: "Inox",
       Capacidade: "11 kg",
       Voltagem: "127V",
       Potência: "1050W (lavagem), 1900W (secagem)",
       Dimensões: "AxLxP: 85 x 60 x 65 cm",
-      Tecnologia: "SmartThings (Wi-Fi)",
+      Conectividade: "SmartThings (Wi-Fi)",
       "Programas de Lavagem": "12 programas",
     },
     testimonials: [
@@ -42,13 +42,13 @@ export const products: Product[] = [
   },
   {
     id: "2",
-    name: "Purificador de Água Electrolux ",
+    name: "Purificador Electrolux ",
     description:
       "Purificador de água Electrolux modelo PE12G Bivolt, super compacto, tecnologia Peltier (silencioso pois é sem compressor), água natural, fria e gelada.",
     salePrice: 500,
     references: [
       {
-        price: 649,
+        price: 699,
         link: "https://loja.electrolux.com.br/pe12g-pe12g-purif-agua-pelt-bivolt/p?idsku=2005159",
         storeName: "Electrolux",
       },
@@ -65,7 +65,7 @@ export const products: Product[] = [
       Cor: "Cinza",
       Voltagem: "Bivolt",
       Potência: "70W",
-      Dimensões: "AxLxP: 35 x 42 x 16 cm",
+      Dimensões: "AxLxP: 35 x 16 x 42 cm",
       "Capacidade do Reservatório": "0,8 litros",
       "Temperatura da Água": "Natural, Fria e Gelada",
       Tecnologia: "Peltier (sem compressor)",
@@ -82,11 +82,11 @@ export const products: Product[] = [
     id: "3",
     name: "Cafeteira Oster Flavor Inox Programável",
     description:
-      "Cafeteira Oster Flavor programável, cor inox, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). - Não recomendada para lava louças",
+      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). - Não recomendada para lava louças",
     salePrice: 200,
     references: [
       {
-        price: 389.8,
+        price: 354.49,
         link: "https://www.oster.com.br/cafeteira-oster-flavor-vermelha-programavel/p?idsku=492",
         storeName: "Oster",
       },
@@ -106,9 +106,8 @@ export const products: Product[] = [
       Capacidade: "12 xícaras (jarra de 1,5L)",
       "Material da Jarra": "Vidro",
       Programável: "Sim",
-      Dimensões: "Altura 32cm x Largura 20cm x Profundidade 25cm",
+      Dimensões: "AxLxP: 33 x 22.5 x 23.5 cm",
       "Filtro Permanente": "Sim",
-      "Display Digital": "Sim",
     },
     testimonials: [
       {
@@ -127,7 +126,7 @@ export const products: Product[] = [
     references: [
       {
         price: 1199.9,
-        link: "https://www.mercadolivre.com.br/microondas-lg-solo-30l-com-tecnologia-i-wave-preto-127v-110v/p",
+        link: "https://www.mercadolivre.com.br/microondas-lg-solo-30l-com-tecnologia-i-wave-preto-127v-110v/p/MLB15562041#polycard_client=search-nordic&searchVariation=MLB15562041&wid=MLB3670097834&position=4&search_layout=stack&type=product&tracking_id=547c2b05-e00e-4d47-b1fd-7a9dd621f3a2",
         storeName: "Mercado Livre",
       },
     ],
@@ -159,15 +158,9 @@ export const products: Product[] = [
     id: "5",
     name: "Sofá super confortável",
     description:
-      "Sofá cinza de suede veludo com 2.70m de largura, composto por 2 módulos de 1.20m e 2 braços de 15cm. - Possui avarias",
+      "Sofá cinza de suede veludo com 2.70m de largura, composto por 2 módulos de 1.20m e 2 braços de 15cm. - Fizemos higienização nele no dia 26/02/2025, pois estava com alguns pontinhos que pareciam de micróbios. Os pontinhos sumiram, mas ainda ficaram algumas marquinhas de deterioração bem pequenas no tecido.",
     salePrice: 5000.0,
-    references: [
-      {
-        price: 7500.0,
-        link: "",
-        storeName: "",
-      },
-    ],
+    references: [],
     imageUrls: [
       "https://i.postimg.cc/15tcytnN/IMG-3928.jpg",
       "https://i.postimg.cc/W3w61qw0/IMG-3929.jpg",
@@ -185,7 +178,8 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment: "Comfortable and stylish, perfect for any living room.",
+        ownerComment:
+          "Este sofá é foi uma excelente compra que fizemos. Pagamos aproximadamente 6500 reais numa loja de móveis de luxo na Teodoro Sampaio em março de 2023. Sempre deixamos ele esticado e perto da janela pra pegar sol e ventilar. Logo que notamos que apareceram alguns pontinhos pretos, chamei uma empresa para higienizar e eles fizeram um excelente trabalho.",
         username: "Mauro",
       },
       {
@@ -198,7 +192,7 @@ export const products: Product[] = [
     id: "6",
     name: "Mesa de Jantar Acapulco ",
     description:
-      "Mesa de jantar modelo Acapulco com tampo de 180x90 cm na cor Off White e pés com desing diferenciado em madeira natural.",
+      "Mesa de jantar modelo Acapulco com tampo de 180x90 cm na cor Off-White e base com design diferenciado em madeira natural.",
     salePrice: 2000.0,
     references: [
       {
@@ -215,21 +209,22 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Dimensões: "180x90 cm",
-      "Cor do Tampo": "Off White",
+      "Cor do Tampo": "Off-white",
       "Material dos Pés": "Madeira Natural",
     },
     testimonials: [
       {
-        ownerComment: "Mesa em ótimo estado, sem arranhões ou marcas de uso.",
+        ownerComment:
+          "Mesa em ótimo estado, sem absolutamente nada de arranhões ou marcas de uso. Sempre usamos proteção em baixo de pratos, copos e objetos. Geralmente não usamos para comer, então ela está praticamente intacta.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "7",
-    name: "Conjunto 6 cadeiras estofadas linho cinza - pés de madeira cor natural",
+    name: "Conjunto de 6 cadeiras estofadas",
     description:
-      "Conjunto de 6 cadeiras estofadas em linho cinza com pés de madeira na cor natural.",
+      "6 cadeiras estofadas em linho cinza com pés de madeira na cor natural. Tecido impermeabilizado em março de 2023.",
     salePrice: 2000.0,
     references: [
       {
@@ -252,7 +247,8 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment: "Cadeiras confortáveis e bem conservadas.",
+        ownerComment:
+          "Cadeiras confortáveis e bem conservadas. Como usamos pouco a mesa de jantar, todas elas estão praticamente intactas.",
         username: "Mauro",
       },
     ],
@@ -261,7 +257,7 @@ export const products: Product[] = [
     id: "8",
     name: "Buffet Lizz ",
     description:
-      "Buffet Lizz com 1,90 m de comprimento nas cores Off White e Cedro. Com porta xícaras instalado na parte superior para otimizar espaço.",
+      "Buffet Lizz com 1,90 m de comprimento nas cores Off-white e Cedro. Com porta xícaras instalado na parte superior para otimizar espaço.",
     salePrice: 779.9,
     references: [
       {
@@ -281,13 +277,14 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Comprimento: "1,90 m",
-      Cor: "Off White/Cedro",
+      Cor: "Off-white/Cedro",
       "Número de Portas": "4",
       Material: "MDF",
     },
     testimonials: [
       {
-        ownerComment: "Buffet espaçoso e em excelente estado.",
+        ownerComment:
+          "Comprei este buffet na Mobly e foi montado por profissionais. Está em perfeito estado, foi muito pouco usado.",
         username: "Mauro",
       },
     ],
@@ -296,7 +293,7 @@ export const products: Product[] = [
     id: "9",
     name: "Rack com Painel para TV até 75 polegadas com LED Sublime",
     description:
-      "Rack com painel para TV de até 75 polegadas, com iluminação LED, 220 cm de largura, modelo Gelius Movies nas cores Off White e Natural.",
+      "Rack com painel para TV de até 75 polegadas, com iluminação LED, 220 cm de largura, modelo Gelius nas cores Off-white e Natural.",
     salePrice: 1261.29,
     references: [
       {
@@ -320,13 +317,14 @@ export const products: Product[] = [
       Largura: "220 cm",
       "Capacidade para TV": "Até 75 polegadas",
       "Iluminação LED": "Sim",
-      Cor: "Off White/Natural",
+      Cor: "Off-white/Natural",
       Material: "MDF",
+      Inclui: "Tomada inteligente para ligar o LED e suporte para TV",
     },
     testimonials: [
       {
         ownerComment:
-          "Produto em perfeito estado, acompanha manual de montagem.",
+          "Fizemos a montagem com profissionais em março de 2023. Depois de um tempo, instalei a tomada inteligente para ligar o LED com comando de voz ou aplicativo. O rack está em perfeito estado. Compramos em conjunto com o buffet que também está anunciado aqui. Estou dando de brinde a tomada e o suporte para TV, sem parafuso.",
         username: "Mauro",
       },
     ],
@@ -335,7 +333,7 @@ export const products: Product[] = [
     id: "10",
     name: "Mesa de Escritório Kuandra",
     description:
-      "Mesa de escritório modelo Kuandra na cor Carvalho, com altura de 75 cm, largura de 180 cm e profundidade de 70 cm.",
+      "Mesa de escritório modelo Kuandra na cor Carvalho. Muito resistente, com estrutura de aço.",
     salePrice: 460.0,
     references: [
       {
@@ -359,20 +357,21 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment: "Mesa espaçosa e bem conservada, ideal para home office.",
+        ownerComment:
+          "Essa mesa é muito boa. É a que eu uso pra trabalhar diariamente. Muito resistente, muito bem fixada no lugar e também é leve e fácil de movimentar.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "12",
-    name: "Cadeira Escritório Diretor Ergonômico ",
+    name: "Cadeira de Escritório Ergonômica",
     description:
-      "Cadeira ergonômica de escritório modelo Diretor NR17 com encosto em tela mesh Tóqui 3329, na cor preta.",
-    salePrice: 580,
+      "Cadeira ergonômica de escritório modelo Diretor NR17 com encosto em tela mesh Tóquio 3329, na cor preta.",
+    salePrice: 500,
     references: [
       {
-        price: 642.51,
+        price: 599.98,
         link: "https://www.madeiramadeira.com.br/cadeira-escritorio-diretor-ergonomico-nr17-tela-mesh-toquio-3329-preto-730100.html",
         storeName: "MadeiraMadeira",
       },
@@ -395,7 +394,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Cadeira confortável e em ótimo estado, ideal para longas horas de trabalho.",
+          "É a cadeira que eu passo horas todos os dias, portanto é muito importante que seja confortável. Está em perfeito estado, e com várias regulagens.",
         username: "Mauro",
       },
     ],
@@ -429,10 +428,12 @@ export const products: Product[] = [
       "Resolução Máxima": "1680 x 1050",
       Conexões: "DisplayPort, DVI, VGA",
       Ajustes: "Altura, Inclinação, Rotação",
+      Inclui: "Cabo DisplayPort e cabo de alimentação",
     },
     testimonials: [
       {
-        ownerComment: "Monitor em perfeito funcionamento, sem dead pixels.",
+        ownerComment:
+          'Monitor em perfeito funcionamento, sem nada de detalhe e imagem clara e nítida. Eu usava antigamente, antes de mudar para um de 27". Tenho 2 pra vender, dá pra fazer um descontinho se levar os 2.',
         username: "Mauro",
       },
     ],
@@ -461,25 +462,26 @@ export const products: Product[] = [
     specifications: {
       Formato: "Redondo",
       Material: "Tecido",
-      Cor: "Cinza Noturno",
-      Uso: "Banqueta, Puff Decorativo",
+      Cor: "Cinza Escuro",
+      Uso: "Banqueta e Puff Decorativo",
     },
     testimonials: [
       {
-        ownerComment: "Puff em excelente estado, sem manchas ou rasgos.",
+        ownerComment:
+          "Essa banquetinha foi uma ótima compra. É muito prática, eu uso pra tocar piano, e usamos como mesinha também. Está com algumas marquinhas de uso da mesinha, mas está quase perfeita.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "15",
-    name: "Cama Box Bau Bipartido Queen Star Flex",
+    name: "Cama Box Baú Bipartido Queen Star Flex",
     description:
-      "Cama box baú bipartido tamanho queen. Pistão da linha hotel, com baú blindado e profundidade interna de 30cm e externa de 48cm.",
-    salePrice: 2800,
+      "Cama box baú bipartido tamanho queen. Pistão da linha hotel, com baú blindado e profundidade interna de 30cm e altura de 48cm.",
+    salePrice: 2000,
     references: [
       {
-        price: 3779.1,
+        price: 2602.05,
         link: "https://www.westwing.com.br/box-bau-bipartido-linho-cinza-37035.html",
         storeName: "Westwing",
       },
@@ -501,7 +503,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Cama box em ótimo estado, com amplo espaço de armazenamento.",
+          "Box em excelente estado, com amplo espaço de armazenamento. O pistão também funciona perfeitamente. Dá pra levantar a tampa com facilidade, mesmo com o colchão em cima.",
         username: "Mauro",
       },
     ],
@@ -511,10 +513,10 @@ export const products: Product[] = [
     name: "Colchão Estate Firm Stearns Foster",
     description:
       "Colchão modelo Estate Firm com 28cm de altura, tecnologia Cross System, da marca Stearns Foster, nas dimensões 1,58x1,98m.",
-    salePrice: 1900.0,
+    salePrice: 1500,
     references: [
       {
-        price: 2790.0,
+        price: 1997.68,
         link: "https://www.sleephouse.com.br/col-estate-firm-cross-system-28cm---stearns-foster-088-x-188-m-sf0001_1049/p?idSku=46390",
         storeName: "Sleep House",
       },
@@ -531,14 +533,13 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Modelo: "Estate Firm",
-      Altura: "28 cm",
-      Tecnologia: "Cross System",
       Marca: "Stearns Foster",
-      Dimensões: "1,58 x 1,98 m",
+      Dimensões: "AxLxP: 28 x 158 x 198 cm",
     },
     testimonials: [
       {
-        ownerComment: "Colchão firme e confortável, pouco uso.",
+        ownerComment:
+          "Colchão ótimo, fizemos questão de comprar o melhor que encontramos, sem economia. Está em perfeito estado, porque compramos uma proteção de colchão, que posso até dar de brinde. É um lençol um pouco mais grosso que serve pra proteger o colchão.",
         username: "Mauro",
       },
     ],
@@ -547,11 +548,11 @@ export const products: Product[] = [
     id: "16",
     name: 'Televisão Samsung 55" UHD 4K ',
     description:
-      "Smart TV Samsung de 55 polegadas com resolução 4K UHD, processador Crystal, conectividade Wi-Fi, sistema operacional Tizen e comando de voz integrado.",
+      "Smart TV Samsung de 55 polegadas com resolução 4K UHD, processador Crystal, conectividade Wi-Fi, comando de voz integrado.",
     salePrice: 2000,
     references: [
       {
-        price: 2553.28,
+        price: 2999,
         link: "https://www.americanas.com.br/produto/3069509622/smart-tv-55-uhd-4k-samsung-55au7700-processador-crystal-4k-tela-sem-limites-visual-livre-de-cabos-alexa-built-in-controle-unico",
         storeName: "Americanas",
       },
@@ -577,17 +578,17 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Televisão em perfeito estado, com imagem nítida e som de qualidade.",
+          "Televisão em perfeito estado, com imagem nítida e som de qualidade. Estado de nova.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "17",
-    name: 'Telelvisão 32" Led HD',
+    name: 'Telelvisão TCL 32" Led HD',
     description:
       "Smart TV TCL de 32 polegadas com resolução HD, suporte a HDR e conectividade Wi-Fi.",
-    salePrice: 800.0,
+    salePrice: 400.0,
     references: [
       {
         price: 1199.0,
@@ -598,7 +599,6 @@ export const products: Product[] = [
     imageUrls: [
       "https://a-static.mlcdn.com.br/800x560/smart-tv-32-hd-led-tcl-s615-va-60hz-android-wi-fi-e-bluetooth-google-assistente-2-hdmi/takahashieletro/d012f970524e11eda00f4201ac185019/922780382724cc8835abeef1f21bd582.jpeg",
       "https://i.postimg.cc/FKJTNK6x/IMG-3947.jpg",
-      "",
     ],
     category: "Eletrônicos",
     availability: "available",
@@ -612,7 +612,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Ótima opção para quartos ou cozinhas, com acesso a aplicativos de streaming.",
+          "Televisão que deixamos no nosso quarto, mas praticamente não usamos. Estamos dando um desconto espetacular porque ela o sistema operacional é um pouco lento, mas para o que precisamos, está ótimo.",
         username: "Mauro",
       },
     ],
@@ -622,7 +622,7 @@ export const products: Product[] = [
     name: "Kit de Banheiro Acrílico com 6 Peças + Lixeira - Branco Perolado",
     description:
       "Conjunto de acessórios de banheiro em acrílico branco perolado, composto por 6 peças e uma lixeira.",
-    salePrice: 330.0,
+    salePrice: 300.0,
     references: [
       {
         price: 270,
@@ -632,7 +632,7 @@ export const products: Product[] = [
       {
         price: 49.9,
         link: "https://www.tokstok.com.br/lixeira-7-l-branco-brilhante-epicentro/p",
-        storeName: "Tok & Stok",
+        storeName: "Tok&Stok",
       },
     ],
     imageUrls: [
@@ -649,11 +649,6 @@ export const products: Product[] = [
         "Porta-sabonete líquido, porta-escovas, porta-aromatizador, dois potes multiuso, organizador de bancada e lixeira",
     },
     testimonials: [
-      {
-        ownerComment:
-          "Kit elegante e funcional, ideal para organizar o banheiro.",
-        username: "Mauro",
-      },
       {
         ownerComment:
           "Kit elegante e funcional, ideal para organizar o banheiro.",
@@ -693,7 +688,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Conjunto sofisticado, adiciona um toque de elegância ao banheiro.",
+          "Estamos dando um bom desconto porque ele está com uma trinquinha num dos cantos de uma tampa porque eu deixei cair na pia.",
         username: "Mauro",
       },
     ],
@@ -754,6 +749,10 @@ export const products: Product[] = [
           "Colocamos este no nosso banheiro de visitas e a Carol diz que é muito bonito",
         username: "Mauro",
       },
+      {
+        ownerComment: "Kit de banheiro muito prático e completo.",
+        username: "Carol",
+      },
     ],
   },
   {
@@ -761,7 +760,7 @@ export const products: Product[] = [
     name: "Aspirador de Pó Robô Multilaser",
     description:
       "Aspirador robô 3 em 1 que varre, aspira e passa pano. Equipado com sensores de obstáculos e antiqueda, ideal para diversos tipos de piso.",
-    salePrice: 300,
+    salePrice: 250,
     references: [
       {
         price: 450,
@@ -788,8 +787,7 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment:
-          "Perfeito para manter a casa limpa sem esforço. Funciona bem em pisos frios, madeira e tapetes de baixa espessura.",
+        ownerComment: "Parece um cachorrinho andando em casa.",
         username: "Mauro",
       },
     ],
@@ -826,7 +824,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Ótimo para limpezas rápidas e diárias. A função sem fio proporciona maior mobilidade.",
+          "Esse aspira bem e rapidinho. Fácil de usar e a bateria dura várias aspirações. Podem levar sem erro. Ele é pequeno, fácil de guardar e tem várias ponteiras para diferentes usos.",
         username: "Mauro",
       },
     ],
@@ -836,7 +834,7 @@ export const products: Product[] = [
     name: "Banqueta Giratória Milano",
     description:
       "2 Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui avarias",
-    salePrice: 295.0,
+    salePrice: 250.0,
     references: [
       {
         price: 436.48,
@@ -862,7 +860,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Confortável e elegante, perfeita para complementar a decoração da cozinha.",
+          "Essa banqueta é muito prática. Eu usei bastante e ela acabou ficando com uns rasguinhos de leve nos cantos. Temos 2, então posso fazer um descontinho extra pra quem levar o par.",
         username: "Mauro",
       },
     ],
@@ -875,9 +873,9 @@ export const products: Product[] = [
     salePrice: 200.0,
     references: [
       {
-        price: 250.0,
-        link: "https://produto.mercadolivre.com.br/MLB-4023892426-liquidificador-oster-personal-blender-250w-2-jarras-_JM",
-        storeName: "Mercado Livre",
+        price: 264.9,
+        link: "https://www.carrefour.com.br/blender-myblend-2-jarras-oster-220v-mp18351998/p",
+        storeName: "Carrefour",
       },
     ],
     imageUrls: [
@@ -896,7 +894,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Prático para o dia a dia, especialmente para quem prepara shakes pós-treino.",
+          "Este blender é muito prático para o dia a dia. Fácil de lavar também. A Carol gosta bastante",
         username: "Mauro",
       },
     ],
@@ -906,10 +904,10 @@ export const products: Product[] = [
     name: "Piano Digital com Suporte",
     description:
       "Piano Digital Stage CDP-S110 BK compacto com 88 teclas e suporte dedicado. Ideal para estudantes e músicos profissionais. Acompanha Suporte para Piano Digital, mas sem suporte de partitura.",
-    salePrice: 2600.0,
+    salePrice: 2900.0,
     references: [
       {
-        price: 3290.0,
+        price: 3125.0,
         link: "https://produto.mercadolivre.com.br/MLB-2784305839-piano-digital-casio-cdp-s110-stage-profissional-suporte-_JM",
         storeName: "Mercado Livre",
       },
@@ -931,7 +929,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Excelente qualidade de som e toque. O suporte incluído oferece estabilidade durante a performance.",
+          "Esse piano eu não gostaria de vender, mas não vai ter jeito. Ele é excelente, o som é muito limpo e realista. Comprei também com o suporte original da Casio, e vou dar de brinde o pedal de sustain.",
         username: "Mauro",
       },
     ],
@@ -962,7 +960,8 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment: ".",
+        ownerComment:
+          "Mesa de escritório muito boa. Faremos um desconto extra pra quem levar a outra mesa do conjunto.",
         username: "Mauro",
       },
     ],
@@ -974,7 +973,7 @@ export const products: Product[] = [
     salePrice: 50.0,
     references: [
       {
-        price: 79,
+        price: 78.99,
         link: "https://www.mercadolivre.com.br/varal-chao-com-abas-retratil-slim-preto-mor/p/MLB24672996#polycard_client=search-nordic&searchVariation=MLB24672996&wid=MLB5306070068&position=3&search_layout=grid&type=product&tracking_id=cd5f81ff-3124-425c-bfc8-34f7be2ee29a&sid=search",
         storeName: "Mercado Livre",
       },
@@ -989,15 +988,15 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Material: "Aço",
-      Dimensões: "Altura aberto: 89 cm, Largura aberto: 49 cm, Comprimento aberto: 144 cm",
+      Dimensões:
+        "Altura aberto: 89 cm, Largura aberto: 49 cm, Comprimento aberto: 144 cm",
       "Mais informações": "6 varetas e é extensível",
       Cor: "Preto",
     },
     testimonials: [
       {
-        ownerComment:
-          "",
-        username: "Mauro",
+        ownerComment: "Varal de chão muito bom. Fácil de guardar e de usar.",
+        username: "Carol",
       },
     ],
   },
@@ -1005,11 +1004,11 @@ export const products: Product[] = [
     id: "31",
     name: "Geladeira",
     description:
-      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis, ou seja, se adapta ao desing da cozinha possibilitando abrir de ambos os lados.",
+      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior",
     salePrice: 6000,
     references: [
       {
-        price: 6600.0,
+        price: 6576.74,
         link: "https://www.samsung.com/br/refrigerators/bottom-mount-freezer/435l-ez-clean-steel-rl4353rbasl-az/",
         storeName: "Samsung",
       },
@@ -1028,12 +1027,13 @@ export const products: Product[] = [
       Voltagem: "110V",
       "Capacidade total": "435L - Freezer 132 L e Refrigerador 303 L",
       "Material das Lâminas": "Aço inoxidável",
-      Acessórios: "Porta reversível, puxador embutido, all-around Cooling, rack para vinhos, iluminação LED e sensores.",
+      Acessórios:
+        "Porta reversível, puxador embutido, all-around Cooling, rack para vinhos, iluminação LED e sensores.",
     },
     testimonials: [
       {
         ownerComment:
-          "",
+          "Compramos esta geladeira pela qualidade e pela possibilidade de inverter o lado de abertura da porta. Acabamos não precisando trocar o lado, ela ainda abre da esquerda pra direita. Extremamente silenciosa e gela muito bem. Dá pra controlar direitinho a temperatura tanto do freezer quanto da geladeira.",
         username: "Mauro",
       },
     ],
@@ -1043,7 +1043,7 @@ export const products: Product[] = [
     name: "Organizador de geladeira",
     description:
       "Kit com 6 organizadores de geladeira de 2,2L e um porta frios. Cor transparente/branco.",
-    salePrice: 300.0,
+    salePrice: 250.0,
     references: [
       {
         price: 300.0,
@@ -1068,7 +1068,7 @@ export const products: Product[] = [
       {
         ownerComment:
           "Organizadores ideais para manter a geladeira arrumada, otimizar espaço e prolongar a qualidade dos alimentos frescos.",
-        username: "Mauro",
+        username: "Carol",
       },
     ],
   },
@@ -1132,11 +1132,12 @@ export const products: Product[] = [
       "Programas de Lavagem": "6 programas, incluindo Eco, Intensivo e Rápido",
       "Eficiência Energética": "Classe A++",
       "Nível de Ruído": "44 dB",
+      Dimensões: "AxLxP: 84,5 x 44,8 x 63,7cm",
     },
     testimonials: [
       {
         ownerComment:
-          "Máquina de lavar-louças espaçosa e silenciosa, garantindo louças limpas com economia de energia.",
+          "Máquina muito silenciosa e lava muito bem. Mesmo cheia de louças sujas ele deixa todas elas limpinhas e brilhantes.",
         username: "Mauro",
       },
     ],
@@ -1162,12 +1163,14 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Material: "Alumínio",
-      Dimensões: "Altura aberto: 8 cm, Largura aberto: 35 cm, Comprimento aberto: 74 cm",
+      Dimensões:
+        "Altura aberto: 8 cm, Largura aberto: 35 cm, Comprimento aberto: 74 cm",
       Cor: "Branco",
     },
     testimonials: [
       {
-        ownerComment: ".",
+        ownerComment:
+          "Esse varal é muito resistente e fica bem compacto quando dobrado.",
         username: "Mauro",
       },
     ],
@@ -1177,7 +1180,7 @@ export const products: Product[] = [
     name: "Air Fryer Eletrolux",
     description:
       "Air Fryer Electrolux por Rita Lobo 3,2L Digital Cinza Experience Com Função Virar 1400W (EAF20)",
-    salePrice: 300.0,
+    salePrice: 250.0,
     references: [
       {
         price: 329,
@@ -1204,16 +1207,18 @@ export const products: Product[] = [
     },
     testimonials: [
       {
-        ownerComment: ".",
+        ownerComment:
+          "Essa air fryer ajuda muito por conta da praticidade. Uma vez eu deixei cair a panela de dentro na bancada e acabou fazendo um amassadinho de leve que não atrapalha em nada no uso.",
         username: "Mauro",
       },
     ],
   },
   {
     id: "33",
-    name: "Cafeteira Dolce Gusto",
-    description: "Dolce Gusto Mini Me Preta 110v",
-    salePrice: 400,
+    name: "Cafeteira Dolce Gusto + Cápsulas",
+    description:
+      "Dolce Gusto Mini Me Preta 110v. Leve também 5 caixas de cápsulas de sabores variados",
+    salePrice: 350,
     references: [
       {
         price: 429.9,
@@ -1238,7 +1243,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "",
+          "Cafeteira muito prática. Resolvi agora que vou dar umas 5 caixas de cápsulas de brinde pra quem levar",
         username: "Mauro",
       },
     ],
