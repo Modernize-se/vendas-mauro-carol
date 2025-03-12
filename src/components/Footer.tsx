@@ -70,15 +70,6 @@ const Footer = () => {
               Mauro e Carol <span className="text-ukred ml-2">em Londres</span>
               <UKFlag className="ml-2" />
             </Link>
-            <div className="h-[240px] w-[320px] mt-4 rounded-lg overflow-hidden border border-ukblue/20">
-              <AspectRatio ratio={4 / 3} className="bg-muted">
-                <img
-                  src="https://tarahcoonan.com/wp-content/uploads/2016/07/19-15051-post/london-couples-photoshoot_01.jpg"
-                  alt="Mauro e Carol"
-                  className="object-cover w-fit h-[250px]"
-                />
-              </AspectRatio>
-            </div>
           </div>
 
           {/* Column 4: Contact (without email) */}

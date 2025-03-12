@@ -2,27 +2,23 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import { Product, ProductFilter, SortOption } from "@/types/product";
-import {
-  ChevronDown,
-  SlidersHorizontal,
-  Check,
-  Search,
-  Tag,
-  X,
-} from "lucide-react";
+import { ChevronDown, SlidersHorizontal, Check, Search, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ProductGridProps {
   products: Product[];
 }
 
+const MOBILE_ITEMS_PER_PAGE = 20; // 10 rows * 2 columns
+
 const ProductGrid = ({ products }: ProductGridProps) => {
   const [searchParams] = useSearchParams();
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
+  const [displayedItems, setDisplayedItems] = useState(MOBILE_ITEMS_PER_PAGE);
   const [filters, setFilters] = useState<ProductFilter>({
     onlyAvailable: false,
   });
-  const [sort, setSort] = useState<SortOption>("price-asc");
+  const [sort, setSort] = useState<SortOption>("name-asc");
   const [showFilters, setShowFilters] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
@@ -109,18 +105,13 @@ const ProductGrid = ({ products }: ProductGridProps) => {
     setFilters({
       onlyAvailable: false,
     });
-    setSort("price-asc");
+    setSort("name-asc");
     setSearchQuery("");
     setShowFilters(false);
   };
 
   const updateCategory = (category: string | undefined) => {
     setFilters((prev) => ({ ...prev, category }));
-    setShowFilters(false);
-  };
-
-  const updateMaterial = (material: string | undefined) => {
-    setFilters((prev) => ({ ...prev, material }));
     setShowFilters(false);
   };
 
@@ -147,21 +138,24 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       <div className="mb-8 flex flex-col gap-4">
         {/* Search and Filter Bar */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <form onSubmit={handleSearch} className="relative flex-grow max-w-md">
+          <div className="relative flex-grow max-w-md">
             <input
               type="text"
               placeholder="Buscar produtos..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setFilters((prev) => ({
+                  ...prev,
+                  searchQuery: e.target.value || undefined,
+                }));
+              }}
               className="w-full pl-4 pr-12 py-2.5 rounded-md border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
             />
-            <button
-              type="submit"
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary/60 transition-colors"
-            >
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-muted-foreground">
               <Search size={18} />
-            </button>
-          </form>
+            </div>
+          </div>
 
           <div className="flex items-center space-x-3">
             <div className="relative">
@@ -174,7 +168,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
               </button>
 
               {showFilters && (
-                <div className="absolute right-0 top-full mt-2 w-80 bg-background glass-panel shadow-lg rounded-md p-4 z-20 animate-fade-in">
+                <div className="fixed md:absolute left-0 md:right-0 md:left-auto top-full mt-2 w-full md:w-80 bg-background glass-panel shadow-lg rounded-md p-4 z-20 animate-fade-in max-h-[80vh] overflow-y-auto">
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-medium">Categoria</h3>
@@ -223,54 +217,6 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                   </div>
 
                   <div className="mb-4">
-                    <h3 className="font-medium mb-2">Preço</h3>
-                    <div className="grid grid-cols-2 gap-2">
-                      <button
-                        className={cn(
-                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          !filters.minPrice &&
-                            !filters.maxPrice &&
-                            "bg-primary text-primary-foreground hover:bg-primary/90"
-                        )}
-                        onClick={() => updatePriceRange(undefined, undefined)}
-                      >
-                        Todos os preços
-                      </button>
-                      <button
-                        className={cn(
-                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          filters.maxPrice === 1000 &&
-                            "bg-primary text-primary-foreground hover:bg-primary/90"
-                        )}
-                        onClick={() => updatePriceRange(0, 1000)}
-                      >
-                        Até R$ 1.000
-                      </button>
-                      <button
-                        className={cn(
-                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          filters.minPrice === 1000 &&
-                            filters.maxPrice === 3000 &&
-                            "bg-primary text-primary-foreground hover:bg-primary/90"
-                        )}
-                        onClick={() => updatePriceRange(1000, 3000)}
-                      >
-                        R$ 1.000 - R$ 3.000
-                      </button>
-                      <button
-                        className={cn(
-                          "px-3 py-1.5 text-sm border border-border rounded-md hover:bg-secondary/50 transition-colors",
-                          filters.minPrice === 3000 &&
-                            "bg-primary text-primary-foreground hover:bg-primary/90"
-                        )}
-                        onClick={() => updatePriceRange(3000, undefined)}
-                      >
-                        Acima de R$ 3.000
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
                     <label className="flex items-center space-x-2 cursor-pointer">
                       <input
                         type="checkbox"
@@ -294,12 +240,6 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                     >
                       Limpar filtros
                     </button>
-                    <button
-                      onClick={() => setShowFilters(false)}
-                      className="text-sm text-primary hover:text-primary/80"
-                    >
-                      Aplicar filtros
-                    </button>
                   </div>
                 </div>
               )}
@@ -318,20 +258,6 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                 <div className="absolute right-0 top-full mt-2 w-48 bg-background glass-panel shadow-lg rounded-md py-2 z-20">
                   <div
                     className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                    onClick={() => updateSort("price-asc")}
-                  >
-                    <span>Menor preço</span>
-                    {sort === "price-asc" && <Check size={16} />}
-                  </div>
-                  <div
-                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
-                    onClick={() => updateSort("price-desc")}
-                  >
-                    <span>Maior preço</span>
-                    {sort === "price-desc" && <Check size={16} />}
-                  </div>
-                  <div
-                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
                     onClick={() => updateSort("name-asc")}
                   >
                     <span>Nome (A-Z)</span>
@@ -343,6 +269,20 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                   >
                     <span>Nome (Z-A)</span>
                     {sort === "name-desc" && <Check size={16} />}
+                  </div>
+                  <div
+                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                    onClick={() => updateSort("price-asc")}
+                  >
+                    <span>Menor preço</span>
+                    {sort === "price-asc" && <Check size={16} />}
+                  </div>
+                  <div
+                    className="px-4 py-2 hover:bg-secondary/50 cursor-pointer flex items-center justify-between"
+                    onClick={() => updateSort("price-desc")}
+                  >
+                    <span>Maior preço</span>
+                    {sort === "price-desc" && <Check size={16} />}
                   </div>
                 </div>
               )}
@@ -490,10 +430,43 @@ const ProductGrid = ({ products }: ProductGridProps) => {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product, index) => (
-            <ProductCard key={product.id} product={product} index={index} />
-          ))}
+        <div className="relative">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 overflow-hidden">
+            {filteredProducts
+              .slice(
+                0,
+                window.innerWidth < 640
+                  ? displayedItems + 2
+                  : filteredProducts.length
+              )
+              .map((product, index) => (
+                <div
+                  key={product.id}
+                  className={cn(
+                    window.innerWidth < 640 &&
+                      index >= displayedItems &&
+                      "opacity-20"
+                  )}
+                >
+                  <ProductCard product={product} index={index} />
+                </div>
+              ))}
+          </div>
+
+          {window.innerWidth < 640 &&
+            filteredProducts.length > displayedItems && (
+              <div className="relative mt-[-120px] h-[160px] flex items-start justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-transparent" />
+                <button
+                  onClick={() =>
+                    setDisplayedItems((prev) => prev + MOBILE_ITEMS_PER_PAGE)
+                  }
+                  className="relative z-10 px-6 py-3 mt-12 bg-primary text-primary-foreground rounded-full shadow-lg hover:bg-primary/90 transition-colors"
+                >
+                  Ver mais {filteredProducts.length - displayedItems} produtos
+                </button>
+              </div>
+            )}
         </div>
       )}
     </div>
