@@ -257,9 +257,9 @@ export const products: Product[] = [
     salePrice: 2000.0,
     references: [
       {
-        price: 2200.0,
+        price: 2318.89,
         link: "https://www.maislardecor.com.br/kit-com-6-cadeiras-daniela-madeira-macica-estofada-para-mesa-de-jantar-detalhe-de-madeira-nas-costas-linho-cinza-claro?utm_source=google&utm_medium=Shopping&utm_campaign=kit-com-6-cadeiras-daniela-madeira-macica-estofada-para-mesa-de-jantar-detalhe-de-madeira-nas-costas-linho-cinza-claro&inStock&gad_source=4&gclid=CjwKCAiAw5W-BhAhEiwApv4goBVNgv9RalY1XUN_2xqh9xA8-CUiAOrV2Dw5LzCWG0bXQV0luIXRGxoCzEUQAvD_BwE#derivacao=81",
-        storeName: "Mais Lar Decor",
+        storeName: "Mais Lar Decor (produto similar)",
       },
     ],
     imageUrls: [
@@ -435,7 +435,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/MGjzM9VF/78a7d66b-f4be-4768-a840-121d1ab11421.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Modelo: "Tóquio 3329",
       Cor: "Preto",
@@ -630,7 +630,7 @@ export const products: Product[] = [
     name: 'Televisão Samsung 55" UHD 4K ',
     description:
       "Smart TV Samsung de 55 polegadas com resolução 4K UHD, processador Crystal, conectividade Wi-Fi, comando de voz integrado.",
-    salePrice: 2000,
+    salePrice: 2200,
     references: [
       {
         price: 2999,
@@ -648,7 +648,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/MKvRhFN7/IMG-3908.jpg",
     ],
     category: "Eletrônicos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Resolução: "4K UHD",
       "Sistema Operacional": "Tizen",
@@ -770,6 +770,8 @@ export const products: Product[] = [
     ],
     imageUrls: [
       "https://a-static.mlcdn.com.br/800x560/kit-de-banheiro-luxo-5-pecas-lavabo-difusor-porta-escova-porta-treco-bnadeja-jc-style/jcstyle/kitbanhei5pecaspretopreto/4263909afe807b24b15bf2002f6c875f.jpeg",
+      "https://i.postimg.cc/WpDwBZL8/IMG_4035.jpg",
+      "https://i.postimg.cc/J795MhRL/IMG_4036.jpg",
     ],
     category: "Utilidades Domésticas",
     availability: "available",
@@ -935,7 +937,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/66CFCMYh/IMG-3967.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Potência: "30W",
       "Duração da Bateria": "2 horas",
@@ -1010,8 +1012,11 @@ export const products: Product[] = [
     imageUrls: [
       "https://static.mobly.com.br/p/Keva-Banqueta-GiratC3B3ria-Milano-Cinza-4272-506355-1.jpg",
       "https://static.mobly.com.br/p/Keva-Banqueta-GiratC3B3ria-Milano-Cinza-4274-506355-2.jpg",
-      "https://i.postimg.cc/L6bk5pLQ/IMG-3925.jpg",
-      "https://i.postimg.cc/T2QJ8mw6/IMG-3927.jpg",
+      "https://i.postimg.cc/k4wMwGwt/IMG_3925.jpg",
+      "https://i.postimg.cc/ZnMbtQGb/IMG_3927.jpg",
+      "https://i.postimg.cc/50DL4Pd3/IMG_4032.jpg",
+      "https://i.postimg.cc/7Y0M6yLT/IMG_4033.jpg",
+      "https://i.postimg.cc/XYWKBDZ1/IMG_4034.jpg",
     ],
     category: "Móveis",
     availability: "available",
@@ -1054,7 +1059,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/KcVjz36j/3562331a-e6c7-4435-85e3-dd6a2a346929.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Potência: "250W",
       Voltagem: "110V",
@@ -1321,7 +1326,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/rFVNBytg/IMG-4014.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Potência: "1400W",
       Voltagem: "110V",
@@ -1378,6 +1383,39 @@ export const products: Product[] = [
         ownerComment:
           "Café sempre na temperatura ideal e com sabor perfeito. Muito prática.",
         username: "Carol",
+      },
+    ],
+  },
+  {
+    id: "34",
+    name: "Painel ripado Curupixá - 8 peças para montar",
+    description: "8 peças de painel ripado Curupixá 6x270cm, Premium Moldurama",
+    salePrice: 165,
+    references: [
+      {
+        price: 330,
+        link: "https://www.leroymerlin.com.br/painel-ripado-em-mdf-6x270cm-curupixa-premium-moldurama-4-pecas_91916475",
+        storeName: "Leroy Merlin (4 peças)",
+      },
+    ],
+    imageUrls: [
+      "https://cdn.leroymerlin.com.br/products/painel_ripado_madeira_mdf_curupixa_2,70mx1,5cmx6cm_moldurama_91916475_6cf2_600x600.jpg",
+      "https://cdn.leroymerlin.com.br/products/painel_ripado_madeira_mdf_curupixa_2,70mx1,5cmx6cm_moldurama_91916475_f8fe_600x600.jpg",
+      "https://cdn.leroymerlin.com.br/products/painel_ripado_madeira_mdf_curupixa_2,70mx1,5cmx6cm_moldurama_91916475_87fc_600x600.jpg",
+      "https://i.postimg.cc/Y0ggh1tw/IMG_4030.jpg",
+    ],
+    category: "Móveis",
+    availability: "available",
+    specifications: {
+      Comprimento: "270cm",
+      Largura: "6cm cada",
+      "Área total": "270cm x 40cm",
+    },
+    testimonials: [
+      {
+        ownerComment:
+          "Compramos as peças na Leroy Merlin para montar o painel mas acabamos não instalando pois preferimos o nosso painel do conjunto com rack. Guardamos no depósito para dar a você a oportunidade de montar e aproveitar a um preço de 2 conjuntos pelo preço de 1.",
+        username: "Mauro",
       },
     ],
   },
