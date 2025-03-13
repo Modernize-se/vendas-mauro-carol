@@ -937,7 +937,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/66CFCMYh/IMG-3967.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "reserved",
+    availability: "available",
     specifications: {
       Potência: "30W",
       "Duração da Bateria": "2 horas",
@@ -975,7 +975,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/VLRTVdyr/IMG-3965.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Tipo: "Sem fio",
       Função: "Aspira pó e água",
