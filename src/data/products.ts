@@ -150,7 +150,7 @@ export const products: Product[] = [
       "https://http2.mlstatic.com/D_NQ_NP_2X_681847-MLU77373839427_072024-F.webp",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Cor: "Preto",
       Capacidade: "30 litros",
@@ -435,7 +435,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/MGjzM9VF/78a7d66b-f4be-4768-a840-121d1ab11421.jpg",
     ],
     category: "Móveis",
-    availability: "reserved",
+    availability: "available",
     specifications: {
       Modelo: "Tóquio 3329",
       Cor: "Preto",
@@ -870,7 +870,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/VkkTQm17/f24d6b43-ae96-4aa2-8e89-21c25facacfa.jpg",
     ],
     category: "Utilidades Domésticas",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Material: "Aço",
       Dimensões:
@@ -1167,7 +1167,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/ZKXkrzgw/b038606a-db9d-4a8e-998c-1a7ea922bdfb.jpg",
     ],
     category: "Utilidades Domésticas",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Material: "Plástico BPA Free",
       Capacidade: "2,2L por organizador",
@@ -1366,7 +1366,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/YCVNL1Dy/IMG-4016.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Potência: "1500W",
       Capacidade: "0.8L",
