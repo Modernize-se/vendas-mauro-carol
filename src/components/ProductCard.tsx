@@ -25,8 +25,8 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
   const discount = calculateDiscount(product.salePrice, maxPrice);
 
   const availabilityIcon = {
-    sold: <ShoppingBag size={14} className="mr-1 text-accent" />,
-    reserved: <Clock size={14} className="mr-1 text-amber-500" />,
+    sold: <ShoppingBag size={14} className="mr-1 text-white" />,
+    reserved: <Clock size={14} className="mr-1 text-white" />,
     available: <CheckCircle size={14} className="mr-1 text-emerald-600" />,
   };
 
@@ -82,12 +82,16 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
           </div>
 
           {product.availability !== "available" && (
-            <div className="absolute inset-0 bg-background/70 backdrop-blur-sm flex items-center justify-center">
-              <p className="text-lg font-medium text-foreground/90">
-                {product.availability === "sold"
-                  ? "Produto Vendido"
-                  : "Produto Reservado"}
-              </p>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className={`absolute transform rotate-[-20deg] rounded-lg px-8 py-2 border-4 ${
+                  product.availability === "reserved"
+                    ? "border-amber-500 bg-amber-500/20 text-amber-600"
+                    : "border-red-500 bg-red-500/20 text-red-600"
+                } font-bold text-3xl uppercase tracking-wider shadow-lg`}
+              >
+                {product.availability === "reserved" ? "Reservado" : "Vendido"}
+              </div>
             </div>
           )}
         </div>
