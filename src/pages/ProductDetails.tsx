@@ -221,6 +221,7 @@ const ProductDetails = () => {
               <ImageGallery
                 images={product.imageUrls}
                 productName={product.name}
+                availability={product.availability}
               />
             </div>
 
