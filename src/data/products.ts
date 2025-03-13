@@ -175,9 +175,9 @@ export const products: Product[] = [
   },
   {
     id: "5",
-    name: "Sofá super confortável",
+    name: "Sofá 2 módulos reclinável e retrátil",
     description:
-      "Sofá cinza de suede veludo com 2,70m de largura, composto por 2 módulos de 1,20m e 2 braços de 15cm. Fizemos higienização nele em 26/02/2025, pois estava com alguns pontinhos que pareciam fungos. Os pontinhos sumiram, mas ainda ficaram algumas pequenas marcas de deterioração no tecido.",
+      "Sofá cinza de suede veludo com 2,70m de largura, composto por 2 módulos de 1,20m e 2 braços de 15cm. Possui um pequeno detalhe no tecido em um dos lados",
     salePrice: 5000.0,
     references: [],
     imageUrls: [
@@ -194,11 +194,15 @@ export const products: Product[] = [
       Width: "2.70m",
       Modules: "2 x 1.20m",
       Armrest: "2 x 15cm",
+      Comprimento: "Estendido: 180cm. Recolhido: 125cm",
+      Largura: "270cm",
+      Altura: "120cm (encosto na vertical)",
+      "Altura do apoio de braço": "60cm",
     },
     testimonials: [
       {
         ownerComment:
-          "Este sofá foi uma excelente compra que fizemos. Pagamos aproximadamente R$ 6.500 em uma loja de móveis de luxo na Teodoro Sampaio em março de 2023. Sempre deixamos ele esticado e perto da janela para pegar sol e ventilar. Logo que notamos que apareceram alguns pontinhos pretos, chamei uma empresa para higienizar e eles fizeram um excelente trabalho.",
+          "Este sofá foi uma excelente compra que fizemos. Pagamos aproximadamente R$ 6.500 em uma loja de móveis de luxo na Teodoro Sampaio em março de 2023. Sempre deixamos ele esticado e perto da janela para pegar sol e ventilar. Fizemos higienização nele em 26/02/2025, pois estava com alguns pontinhos que pareciam fungos. Os pontinhos sumiram, mas ainda ficaram algumas pequenas marcas de deterioração no tecido, conforme as imagens.",
         username: "Mauro",
       },
       {
@@ -212,7 +216,7 @@ export const products: Product[] = [
     id: "6",
     name: "Mesa de Jantar Acapulco ",
     description:
-      "Mesa de jantar modelo Acapulco com tampo de 180x90 cm na cor Off-White e base com design diferenciado em madeira natural.",
+      "Mesa de jantar modelo Acapulco com tampo de vidro de dimensões 184x90 cm na cor Off-White e base com design diferenciado em madeira natural.",
     salePrice: 2000.0,
     references: [
       {
@@ -228,9 +232,9 @@ export const products: Product[] = [
     category: "Móveis",
     availability: "available",
     specifications: {
-      Dimensões: "180x90 cm",
+      Dimensões: "AxLxP: 80 x 90 x 184 cm",
       "Cor do Tampo": "Off-white",
-      "Material dos Pés": "Madeira Natural",
+      "Material da base": "Madeira Natural",
     },
     testimonials: [
       {
@@ -269,6 +273,8 @@ export const products: Product[] = [
       Estofado: "Linho Cinza",
       "Material dos Pés": "Madeira Maciça",
       "Cor dos Pés": "Natural",
+      "Altura do assento": "48cm",
+      Dimensões: "AxLxP: 100 x 45 x 61 cm",
     },
     testimonials: [
       {
@@ -305,10 +311,11 @@ export const products: Product[] = [
     category: "Móveis",
     availability: "available",
     specifications: {
-      Comprimento: "1,90 m",
       Cor: "Off-white/Cedro",
       "Número de Portas": "4",
       Material: "MDF",
+      Dimensões:
+        "AxLxP: 79 x 180 x 38 cm. Cada pezinho ainda tem mais 5cm para os lados, totalizando 190cm de comprimento.",
     },
     testimonials: [
       {
@@ -327,7 +334,7 @@ export const products: Product[] = [
     name: "Rack com Painel para TV até 75 polegadas com LED Sublime",
     description:
       "Rack com painel para TV de até 75 polegadas, com iluminação LED, 220 cm de largura, modelo Gelius nas cores Off-white e Natural.",
-    salePrice: 1261.29,
+    salePrice: 1300,
     references: [
       {
         price: 2261.29,
@@ -347,7 +354,9 @@ export const products: Product[] = [
     category: "Móveis",
     availability: "available",
     specifications: {
-      Largura: "220 cm",
+      Largura: "220 cm (Rack e Painel)",
+      "Dimensões do Rack": "AxLxP: 50 x 220 x 42 cm",
+      "Dimensões do Painel": "AxLxP: 133 x 220 x 8 cm",
       "Capacidade para TV": "Até 75 polegadas",
       "Iluminação LED": "Sim",
       Cor: "Off-white/Natural",
@@ -390,6 +399,7 @@ export const products: Product[] = [
       Altura: "75 cm",
       Largura: "180 cm",
       Profundidade: "70 cm",
+      Dimensões: "AxLxP: 75 x 180 x 70 cm",
       Cor: "Carvalho",
       Material: "MDF",
     },
@@ -516,6 +526,8 @@ export const products: Product[] = [
       Material: "Tecido",
       Cor: "Cinza Escuro",
       Uso: "Banqueta e Puff Decorativo",
+      Dimensões: "AxLxP: 49 x 45 x 45 cm",
+      "Diâmetro do assento": "42cm",
     },
     testimonials: [
       {
@@ -553,7 +565,9 @@ export const products: Product[] = [
     specifications: {
       Tamanho: "Queen",
       "Profundidade Interna": "30 cm",
-      Dimensões: "AxLxP: 43 x 158 x 198 cm",
+      Dimensões:
+        "AxLxP: 47 x 158 x 198 cm. Altura do box (sem o pezinho): 41cm",
+      Medida: "Queen size",
       Mecanismo: "Pistão a gás",
       Material: "Linho Cinza",
     },
@@ -597,6 +611,7 @@ export const products: Product[] = [
       Modelo: "Estate Firm",
       Marca: "Stearns Foster",
       Dimensões: "AxLxP: 28 x 158 x 198 cm",
+      Medida: "Queen Size",
     },
     testimonials: [
       {
@@ -640,6 +655,8 @@ export const products: Product[] = [
       Conectividade: "Wi-Fi, Bluetooth",
       "Recursos Adicionais": "Comando de voz, Alexa integrada",
       Entradas: "3 HDMI, 2 USB",
+      Medida: '55"',
+      Dimensões: "AxLxP: 71 x 123 x 9 cm",
     },
     testimonials: [
       {
@@ -679,6 +696,8 @@ export const products: Product[] = [
       Conectividade: "Wi-Fi, Bluetooth",
       "Recursos Adicionais": "Google Assistente integrado",
       Entradas: "2 HDMI, 1 USB",
+      Medida: '32"',
+      Dimensões: "AxLxP: 42 x 72 x 8 cm",
     },
     testimonials: [
       {
@@ -735,7 +754,7 @@ export const products: Product[] = [
     id: "19",
     name: "Kit de Banheiro Preto",
     description:
-      "Kit de lavabo em vidro preto, composto por 5 peças. Possui avarias.",
+      "Kit de lavabo em vidro preto, composto por 5 peças. Possui um pequeno defeito no canto de uma das tampas.",
     salePrice: 200.0,
     references: [
       {
@@ -758,7 +777,7 @@ export const products: Product[] = [
       Material: "Vidro",
       Cor: "Preto",
       "Itens Inclusos":
-        "Porta-sabonete líquido, porta-escovas, porta-aromarizador, dois potes multiuso e lixo",
+        "Porta-sabonete líquido, porta-escovas, porta-aromatizador, porta-treco multiuso e lixeira",
     },
     testimonials: [
       {
@@ -778,7 +797,7 @@ export const products: Product[] = [
       {
         price: 79.9,
         link: "https://www.tokstok.com.br/bandeja-38-cm-x-24-cm-bambu-bamboo/p",
-        storeName: "Tok & Stok",
+        storeName: "Tok & Stok  - Bandeja grande",
       },
       {
         price: 154.9,
@@ -788,7 +807,7 @@ export const products: Product[] = [
       {
         price: 104.9,
         link: "https://www.leroymerlin.com.br/bandeja-para-banheiro-de-madeira-marrom-natural-bamboo-sensea_89830762",
-        storeName: "LeroyMerlin - Bandeja",
+        storeName: "LeroyMerlin - Bandeja pequena",
       },
       {
         price: 89.9,
@@ -797,8 +816,8 @@ export const products: Product[] = [
       },
       {
         price: 94.9,
-        storeName: "LeroyMerlin - Porta-objetos (cerâmica)",
         link: "https://www.leroymerlin.com.br/porta-objetos-de-bancada-para-banheiro-ceramica-madeira-clara-fudji-sensea_89830090",
+        storeName: "LeroyMerlin - Porta-objetos (cerâmica)",
       },
       {
         price: 178.42,
@@ -816,12 +835,12 @@ export const products: Product[] = [
       Material: "Cerâmica e Bambu",
       Cor: "Branco e Madeira Clara",
       "Itens Inclusos":
-        "Porta-sabonete líquido, porta-escovas, saboneteira, lixeira",
+        "Porta-sabonete líquido, porta-escovas, saboneteira, lixeira e kit com 2 bandejas",
     },
     testimonials: [
       {
         ownerComment:
-          "Colocamos este kit no nosso banheiro de visitas e a Carol diz que é muito bonito.",
+          "Colocamos este kit no nosso banheiro para impressionar as visitas e parece que deu certo. Todos elogiaram a decoração.",
         username: "Mauro",
       },
       {
@@ -924,7 +943,7 @@ export const products: Product[] = [
       "Capacidade da Bateria": "1800 mAh",
       "Modos de Limpeza": "Auto, Espiral, Borda",
       Sensores: "Obstáculos e antiqueda",
-      Dimensões: "11,5 cm (A) x 38,2 cm (L) x 30,7 cm (P)",
+      Dimensões: "AxLxP: 11,5 cm x 38,2 cm x 30,7 cm",
       Peso: "1,5 kg",
     },
     testimonials: [
@@ -999,9 +1018,10 @@ export const products: Product[] = [
     specifications: {
       Material: "Assento estofado e estrutura metálica",
       Cor: "Cinza",
-      Altura: "Ajustável de 60 cm a 80 cm",
+      "Altura do assento": "Ajustável de 60 cm a 80 cm",
       Base: "Cromada com apoio para os pés",
       "Peso Suportado": "Até 120 kg",
+      Dimensões: "Altura máxima: 106cm, diâmetro: 50cm",
     },
     testimonials: [
       {
@@ -1057,7 +1077,7 @@ export const products: Product[] = [
   },
   {
     id: "27",
-    name: "Piano Digital com Suporte",
+    name: "Piano Digital Casio CDP-S110 com Suporte",
     description:
       "Piano Digital Stage CDP-S110 BK compacto com 88 teclas e suporte dedicado. Ideal para estudantes e músicos profissionais. Acompanha suporte para Piano Digital, mas sem suporte de partitura.",
     salePrice: 2900.0,
@@ -1081,6 +1101,7 @@ export const products: Product[] = [
       Timbres: "10 sons integrados",
       Conectividade: "USB para host, entrada para pedal",
       Acessórios: "Suporte dedicado, pedal de sustain",
+      Dimensões: "AxLxP: 70 x 132 x 24 cm",
     },
     testimonials: [
       {
@@ -1110,7 +1131,7 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Material: "Estrutura de aço cromado com assento estofado em PU",
-      Dimensões: "Altura: 75 cm, Largura: 150 cm, Profundidade: 50 cm",
+      Dimensões: "AxLxP: 75 x 150 x 50 cm",
       "Peso Suportado": "14,2 kg",
       Cor: "Carvalho e Preto",
     },
@@ -1145,7 +1166,7 @@ export const products: Product[] = [
     specifications: {
       Material: "Plástico BPA Free",
       Capacidade: "2,2L por organizador",
-      Dimensões: "29 cm x 15 cm x 9 cm cada",
+      Dimensões: "AxLxP: 9 x 29 x 15cm",
       Cor: "Transparente/Branco",
     },
     testimonials: [
@@ -1158,15 +1179,15 @@ export const products: Product[] = [
   },
   {
     id: "29",
-    name: "Liquidificador",
+    name: "Liquidificador Arno PowerMix 550",
     description:
-      "Liquidificador com design moderno e funcionalidades avançadas.",
-    salePrice: 100.0,
+      "Liquidificador prático e funcional com 2 níveis de velocidade.",
+    salePrice: 50,
     references: [
       {
-        price: 400.0,
-        link: "",
-        storeName: "",
+        price: 100.0,
+        link: "https://www.amazon.com.br/Arno-LQ10-Liquidificador-Power-Preto/dp/B07R445FNM/ref=asc_df_B07R445FNM/?tag=googleshopp00-20&linkCode=df0&hvadid=709886750320&hvpos=&hvnetw=g&hvrand=15896182093808683000&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9195869&hvtargid=pla-956125898572&mcid=1c292080eef030da9e3765785a0940b1&language=pt_BR&gad_source=1&th=1",
+        storeName: "Amazon",
       },
     ],
     imageUrls: [
@@ -1177,10 +1198,11 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Potência: "550W",
+      Modelo: "Arno Powermix 550 LQ10",
+      Potência: "550W (110V)",
       Capacidade: "2L",
       Velocidades: "2 níveis",
-      Funções: "Smoothie, Triturar Gelo, pulsar",
+      Dimensões: "AxLxP: 39,4 x 20,3 x 18,5 cm",
     },
     testimonials: [
       {
@@ -1196,7 +1218,7 @@ export const products: Product[] = [
   },
   {
     id: "30",
-    name: "Máquina de lavar louças",
+    name: "Máquina de lavar louças Brastemp BLF10BR",
     description:
       "Máquina de lavar louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha.",
     salePrice: 3700.0,
@@ -1216,6 +1238,7 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "reserved",
     specifications: {
+      Modelo: "Brastemp BLF10BR",
       Capacidade: "10 serviços",
       "Programas de Lavagem": "6 programas, incluindo Eco, Intensivo e Rápido",
       "Eficiência Energética": "Classe A++",
@@ -1225,7 +1248,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Máquina muito silenciosa e lava muito bem. Mesmo cheia de louças sujas ele deixa todas elas limpinhas e brilhantes. Basta colocar um sabãozinho em pó e ela já identifica o nível de sujeira com o modo Smart Sensor.",
+          "Prezamos pela qualidade na hora da compra e acertamos em cheio. Máquina muito silenciosa e lava muito bem. Mesmo cheia de louças sujas ele deixa todas elas limpinhas e brilhantes. Basta colocar um sabãozinho em pó e ela já identifica o nível de sujeira com o modo Smart Sensor.",
         username: "Mauro",
       },
       {
@@ -1236,7 +1259,7 @@ export const products: Product[] = [
   },
   {
     id: "31",
-    name: "Geladeira",
+    name: "Geladeira Samsung BAROSA RL4353",
     description:
       "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior",
     salePrice: 6000,
@@ -1257,10 +1280,10 @@ export const products: Product[] = [
     category: "Eletrodomésticos",
     availability: "available",
     specifications: {
-      Dimenções: "Largura: 70cm, Altura: 185cm, Profundidade: 69cm",
       Voltagem: "110V",
       "Capacidade total": "435L - Freezer 132 L e Refrigerador 303 L",
       "Material das Lâminas": "Aço inoxidável",
+      Dimensões: "AxLxP: 185 x 70 x 69 cm",
       Acessórios:
         "Porta reversível, puxador embutido, all-around Cooling, rack para vinhos, iluminação LED e sensores.",
     },
@@ -1303,8 +1326,7 @@ export const products: Product[] = [
       Potência: "1400W",
       Voltagem: "110V",
       Material: "Air Fryer com painel digital e 9 receitas pré-programadas.",
-      Dimensões: "Altura: 32,3 cm, Largura: 28,9 cm, Profundidade: 39,3 cm",
-      "Peso Suportado": "3,2 L",
+      Dimensões: "AxLxP: 32,3 x 28,9 x 39,3 cm",
       Cor: "Cinza e Preto",
     },
     testimonials: [
@@ -1349,7 +1371,7 @@ export const products: Product[] = [
     testimonials: [
       {
         ownerComment:
-          "Cafeteira muito prática. Resolvi agora que vou dar umas 5 caixas de cápsulas de brinde pra quem levar",
+          "Cafeteira muito prática. Resolvi agora que vou dar umas 5 caixas de cápsulas de brinde pra quem levar. Sabores variados",
         username: "Mauro",
       },
       {
