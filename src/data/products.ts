@@ -937,7 +937,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/66CFCMYh/IMG-3967.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Potência: "30W",
       "Duração da Bateria": "2 horas",
