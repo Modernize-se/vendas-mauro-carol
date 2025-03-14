@@ -7,7 +7,7 @@ export const products: Product[] = [
     id: "1",
     name: "Lava e Seca Samsung 11 Kg ",
     description:
-      "Lava e seca Samsung de 11 Kg SmartThings Inox Look WD11T504DBX, acabamento inox look, conectividade SmartThings com 12 programas de lavagem.",
+      "Lava e seca Samsung de 11 Kg SmartThings Inox Look WD11T504DBX, acabamento inox look, conectividade SmartThings com 12 programas de lavagem. Atenção: só vamos conseguir disponibilizar a máquina a partir do dia 07/04/2025.",
     salePrice: 3000,
     references: [
       {
@@ -91,7 +91,7 @@ export const products: Product[] = [
     id: "3",
     name: "Cafeteira Oster Flavor Inox Programável",
     description:
-      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). Não recomendada para lava-louças.",
+      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). Não recomendada para lava-louças. Atenção: só vamos conseguir disponibilizar a cafeteira a partir do dia 07/04/2025.",
     salePrice: 200,
     references: [
       {
@@ -290,7 +290,7 @@ export const products: Product[] = [
   },
   {
     id: "8",
-    name: "Buffet Lizz ",
+    name: "Buffet Lizz",
     description:
       "Buffet Lizz com 1,90 m de comprimento nas cores Off-white e Cedro. Com porta xícaras instalado na parte superior para otimizar espaço.",
     salePrice: 779.9,
@@ -588,7 +588,7 @@ export const products: Product[] = [
     id: "15.1",
     name: "Colchão Estate Firm Stearns Foster",
     description:
-      "Colchão modelo Estate Firm com 28cm de altura, tecnologia Cross System, da marca Stearns Foster, nas dimensões 1,58x1,98m.",
+      "Colchão modelo Estate Firm com 28cm de altura, tecnologia Cross System, da marca Stearns Foster, nas dimensões 1,58x1,98m. Atenção: só vamos conseguir disponibilizar o colchão a partir do dia 09/04/2025.",
     salePrice: 1500,
     references: [
       {
@@ -627,7 +627,7 @@ export const products: Product[] = [
   },
   {
     id: "16",
-    name: 'Televisão Samsung 55" UHD 4K ',
+    name: 'Televisão Samsung 55" UHD 4K',
     description:
       "Smart TV Samsung de 55 polegadas com resolução 4K UHD, processador Crystal, conectividade Wi-Fi, comando de voz integrado.",
     salePrice: 2200,
@@ -1043,7 +1043,7 @@ export const products: Product[] = [
   },
   {
     id: "26",
-    name: "Blender Oster MyBlend ",
+    name: "Blender Oster MyBlend",
     description:
       "Liquidificador pessoal Blender Oster Myblend com 2 jarras portáteis, Preto 110V, 250W, BLSTPB-BBL. Produto ideal para preparar shakes e smoothies.",
     salePrice: 200.0,
@@ -1225,7 +1225,7 @@ export const products: Product[] = [
     id: "30",
     name: "Máquina de lavar louças Brastemp BLF10BR",
     description:
-      "Máquina de lavar louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha.",
+      "Máquina de lavar louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha. Atenção: só vamos conseguir disponibilizar a máquina a partir do dia 07/04/2025.",
     salePrice: 3700.0,
     references: [
       {
@@ -1266,7 +1266,7 @@ export const products: Product[] = [
     id: "31",
     name: "Geladeira Samsung BAROSA RL4353",
     description:
-      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior",
+      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior. Atenção: só vamos conseguir disponibilizar a geladeira a partir do dia 09/04/2025.",
     salePrice: 6000,
     references: [
       {
