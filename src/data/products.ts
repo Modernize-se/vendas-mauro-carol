@@ -22,7 +22,7 @@ export const products: Product[] = [
       "https://fastshopbr.vtexassets.com/arquivos/ids/245849/1-SGWD11TI-PRD-1500-2.jpg?v=638703083866600000",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Cor: "Inox",
       Capacidade: "11 kg",
@@ -1201,7 +1201,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/281RbSHq/eead0e82-5391-4f41-9f91-5aa1dbeaef28.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Modelo: "Arno Powermix 550 LQ10",
       Potência: "550W (110V)",
