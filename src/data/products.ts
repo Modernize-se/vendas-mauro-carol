@@ -1198,7 +1198,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/281RbSHq/eead0e82-5391-4f41-9f91-5aa1dbeaef28.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "reserved",
+    availability: "sold",
     specifications: {
       Modelo: "Arno Powermix 550 LQ10",
       Potência: "550W (110V)",
