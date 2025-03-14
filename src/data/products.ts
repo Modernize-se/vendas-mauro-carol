@@ -1091,9 +1091,9 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
+      "https://i.postimg.cc/1tn3PLBB/image.png",
       "https://http2.mlstatic.com/D_NQ_NP_2X_965503-MLB54102766402_032023-F.webp",
-      "https://i.postimg.cc/j5tPmdY2/IMG-3916.jpg",
-      "https://i.postimg.cc/rmjxkXqJ/IMG-3917.jpg",
+      "https://i.postimg.cc/jS2HPjSS/image.png",
     ],
     category: "Instrumentos Musicais",
     availability: "available",
