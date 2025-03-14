@@ -187,7 +187,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/Vk2FG8N0/IMG-3931.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Material: "Suede Veludo",
       Cor: "Cinza",
@@ -352,7 +352,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/nrwmX4j9/IMG-3910.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Largura: "220 cm (Rack e Painel)",
       "Dimensões do Rack": "AxLxP: 50 x 220 x 42 cm",
@@ -735,7 +735,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/B6H7cvcv/IMG-3960.jpg",
     ],
     category: "Utilidades Domésticas",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Material: "Acrílico",
       Cor: "Branco Perolado",
