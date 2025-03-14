@@ -309,7 +309,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/ZqkrPxfr/IMG-3923.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Cor: "Off-white/Cedro",
       "Número de Portas": "4",
@@ -1405,7 +1405,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/Y0ggh1tw/IMG_4030.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Comprimento: "270cm",
       Largura: "6cm cada",
