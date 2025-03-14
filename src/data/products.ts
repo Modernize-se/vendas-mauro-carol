@@ -689,7 +689,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/FKJTNK6x/IMG-3947.jpg",
     ],
     category: "Eletrônicos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Resolução: "HD",
       "Sistema Operacional": "Android TV",
