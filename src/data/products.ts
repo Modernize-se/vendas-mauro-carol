@@ -1357,7 +1357,7 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
-      "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/m/i/minime_preta_1_1.webp",
+      "https://i.postimg.cc/FHc9P2GX/image.png",
       "https://www.nescafe-dolcegusto.com.br/media/catalog/product/cache/d22af66f75f51f60e100631e2c10a99a/_/2/_2-mini-me-autom_tica-m_quina-de-caf_-preta-_110v_.webp",
       "https://i.postimg.cc/c4FB0qRW/IMG-4015.jpg",
       "https://i.postimg.cc/YCVNL1Dy/IMG-4016.jpg",
