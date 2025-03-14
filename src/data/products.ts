@@ -1366,7 +1366,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/YCVNL1Dy/IMG-4016.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "reserved",
+    availability: "available",
     specifications: {
       Potência: "1500W",
       Capacidade: "0.8L",
