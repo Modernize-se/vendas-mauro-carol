@@ -475,7 +475,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/13sWNX6h/IMG-4007.jpg",
     ],
     category: "Eletrônicos",
-    availability: "available",
+    availability: "sold",
     specifications: {
       Modelo: "P2210T",
       "Tamanho da Tela": "22 polegadas",
