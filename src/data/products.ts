@@ -191,9 +191,6 @@ export const products: Product[] = [
     specifications: {
       Material: "Suede Veludo",
       Cor: "Cinza",
-      Width: "2.70m",
-      Modules: "2 x 1.20m",
-      Armrest: "2 x 15cm",
       Comprimento: "Estendido: 180cm. Recolhido: 125cm",
       Largura: "270cm",
       Altura: "120cm (encosto na vertical)",
