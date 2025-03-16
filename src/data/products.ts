@@ -432,7 +432,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/MGjzM9VF/78a7d66b-f4be-4768-a840-121d1ab11421.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Modelo: "Tóquio 3329",
       Cor: "Preto",
