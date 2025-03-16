@@ -187,7 +187,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/Vk2FG8N0/IMG-3931.jpg",
     ],
     category: "Móveis",
-    availability: "reserved",
+    availability: "available",
     specifications: {
       Material: "Suede Veludo",
       Cor: "Cinza",
@@ -293,7 +293,7 @@ export const products: Product[] = [
     salePrice: 779.9,
     references: [
       {
-        price: 979.9,
+        price: 1110.52,
         link: "https://www.mobly.com.br/buffet-lizz-4-pt-off-white-e-cedro-190-cm-1188355.html",
         storeName: "Mobly",
       },
@@ -1352,7 +1352,7 @@ export const products: Product[] = [
     references: [
       {
         price: 429.9,
-        link: "https://www.nescafe-dolcegusto.com.br/mini-me-automatica-mquina-de-cafe-preta-110v?gad_source=1&gclid=Cj0KCQjwm7q-BhDRARIsACD6-fU4w92RPWPQk10KQq5fXxS3evxQSvUDH6_SJGJGYwJIBOcxzqksqkQaAo09EALw_wcB&gclsrc=aw.ds",
+        link: "https://www.nescafe-dolcegusto.com.br/maquinas-cafe/mini-me-automatica-maquina-de-cafe-preta-110v",
         storeName: "Nescafé-Dolce Gusto",
       },
     ],
