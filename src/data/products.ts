@@ -331,10 +331,10 @@ export const products: Product[] = [
     name: "Rack com Painel para TV até 75 polegadas com LED Sublime",
     description:
       "Rack com painel para TV de até 75 polegadas, com iluminação LED, 220 cm de largura, modelo Gelius nas cores Off-white e Natural.",
-    salePrice: 1300,
+    salePrice: 950,
     references: [
       {
-        price: 2261.29,
+        price: 1299.98,
         link: "https://www.madeiramadeira.com.br/rack-com-painel-para-tv-ate-75-polegadas-com-led-sublime-220-100-mdf-730597.html",
         storeName: "MadeiraMadeira",
       },
@@ -1413,6 +1413,47 @@ export const products: Product[] = [
         ownerComment:
           "Compramos as peças na Leroy Merlin para montar o painel mas acabamos não instalando pois preferimos o nosso painel do conjunto com rack. Guardamos no depósito para dar a você a oportunidade de montar e aproveitar a um preço de 2 conjuntos pelo preço de 1.",
         username: "Mauro",
+      },
+    ],
+  },
+  {
+    id: "35",
+    name: "Piano Digital Yamaha DGX-630",
+    description:
+      "Piano Digital Yamaha DGX-630 com banqueta, pedal de sustain e apoio de partitura. Teclado com 88 teclas com peso de piano, diversos timbres e funções de aprendizado.",
+    salePrice: 1200,
+    references: [
+      {
+        price: 1700.0,
+        link: "https://ba.olx.com.br/regiao-de-vitoria-da-conquista-e-barreiras/instrumentos-musicais/piano-teclado-digital-yamaha-portable-grand-dgx-620-1370629459",
+        storeName: "OLX",
+      },
+    ],
+    imageUrls: [
+      "https://i.postimg.cc/kXSk316K/IMG_4057.jpg",
+      "https://i.postimg.cc/pdW7jP0J/IMG_4058.jpg",
+      "https://media.guitarcenter.com/is/image/MMGS7/706176000000000-01-600x600.jpg",
+    ],
+    category: "Instrumentos Musicais",
+    availability: "available",
+    specifications: {
+      Teclas: "88 teclas com peso de piano",
+      Dimensões: "LxPxA: 139 x 45 x 79 cm",
+      Acessórios: "Banqueta, pedal de sustain e apoio de partitura",
+      Timbres: "Mais de 500 vozes instrumentais",
+      Polifonia: "64 notas",
+      "Funções Especiais": "Modo Dual, Split, Metrônomo, Gravador",
+    },
+    testimonials: [
+      {
+        ownerComment:
+          "Este foi o primeiro piano digital que ganhei, e é excelente para iniciantes. Aprendi muito sobre teoria musical e técnicas de piano por conta de todas as funcionalidades do piano através do display digital. Também é possível gravar músicas e reproduzir com centenas de timbres e acompanhamentos. Está com apenas sinais de uso, ótimo pra quem estiver começando e quiser um instrumento de qualidade.",
+        username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Piano digital completo, com ótimo peso nas teclas e som muito realista. Acompanha todos os acessórios necessários para começar a tocar imediatamente. O pedal de sustain e a banqueta estão em perfeito estado. O piano tem sinais de uso pois está sendo usado faz mais de 10 anos, mas foi muito bem conservado.",
+        username: "Carol",
       },
     ],
   },
