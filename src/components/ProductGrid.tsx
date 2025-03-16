@@ -84,6 +84,13 @@ const ProductGrid = ({ products }: ProductGridProps) => {
 
     // Apply sorting
     result.sort((a, b) => {
+      // First, sort by availability (available products first)
+      if (a.availability === "available" && b.availability !== "available")
+        return -1;
+      if (a.availability !== "available" && b.availability === "available")
+        return 1;
+
+      // Then apply the selected sort within each availability group
       switch (sort) {
         case "price-asc":
           return a.salePrice - b.salePrice;
