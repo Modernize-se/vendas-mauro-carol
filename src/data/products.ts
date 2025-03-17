@@ -1435,7 +1435,7 @@ export const products: Product[] = [
       "https://media.guitarcenter.com/is/image/MMGS7/706176000000000-01-600x600.jpg",
     ],
     category: "Instrumentos Musicais",
-    availability: "available",
+    availability: "sold",
     specifications: {
       Teclas: "88 teclas com peso de piano",
       Dimensões: "LxPxA: 139 x 45 x 79 cm",
