@@ -22,7 +22,7 @@ export const products: Product[] = [
       "https://fastshopbr.vtexassets.com/arquivos/ids/245849/1-SGWD11TI-PRD-1500-2.jpg?v=638703083866600000",
     ],
     category: "Eletrodomésticos",
-    availability: "reserved",
+    availability: "sold",
     specifications: {
       Cor: "Inox",
       Capacidade: "11 kg",
