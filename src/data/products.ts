@@ -1238,7 +1238,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/0yzf0Q9q/IMG-3937.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "reserved",
+    availability: "sold",
     specifications: {
       Modelo: "Brastemp BLF10BR",
       Capacidade: "10 serviços",
