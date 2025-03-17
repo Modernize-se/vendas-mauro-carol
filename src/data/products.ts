@@ -603,7 +603,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/PqFbFWym/IMG_4009.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Modelo: "Estate Firm",
       Marca: "Stearns Foster",
