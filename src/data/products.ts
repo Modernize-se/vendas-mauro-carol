@@ -178,7 +178,7 @@ export const products: Product[] = [
     name: "Sofá 2 módulos reclinável e retrátil",
     description:
       "Sofá cinza de suede veludo com 2,70m de largura, composto por 2 módulos de 1,20m e 2 braços de 15cm. Possui um pequeno detalhe no tecido em um dos lados",
-    salePrice: 5000.0,
+    salePrice: 4500.0,
     references: [],
     imageUrls: [
       "https://i.postimg.cc/15tcytnN/IMG-3928.jpg",
@@ -213,8 +213,8 @@ export const products: Product[] = [
     id: "6",
     name: "Mesa de Jantar Acapulco ",
     description:
-      "Mesa de jantar modelo Acapulco com tampo de vidro de dimensões 184x90 cm na cor Off-White e base com design diferenciado em madeira natural.",
-    salePrice: 2000.0,
+      "Mesa de jantar modelo Acapulco com tampo de vidro de dimensões 184x90 cm na cor Off-White e base com design diferenciado em madeira natural. LEVE A MESA + CADEIRAS POR R$2.800,00",
+    salePrice: 1800.0,
     references: [
       {
         price: 3000.0,
@@ -250,8 +250,8 @@ export const products: Product[] = [
     id: "7",
     name: "Conjunto de 6 cadeiras estofadas",
     description:
-      "6 cadeiras estofadas em linho cinza com pés de madeira na cor natural. Tecido impermeabilizado em março de 2023.",
-    salePrice: 2000.0,
+      "6 cadeiras estofadas em linho cinza com pés de madeira na cor natural. Tecido impermeabilizado em março de 2023. LEVE A MESA + CADEIRAS POR R$2.800,00",
+    salePrice: 1800.0,
     references: [
       {
         price: 2318.89,
@@ -378,7 +378,7 @@ export const products: Product[] = [
     name: "Mesa de Escritório Kuandra",
     description:
       "Mesa de escritório modelo Kuandra na cor Carvalho. Muito resistente, com estrutura de aço.",
-    salePrice: 460.0,
+    salePrice: 380.0,
     references: [
       {
         price: 589.46,
@@ -502,7 +502,7 @@ export const products: Product[] = [
     name: "Puff Banqueta Redondo Luxo",
     description:
       "Puff banqueta redondo de luxo, revestido em tecido cinza noturno. Vira mesa de centro.",
-    salePrice: 370,
+    salePrice: 330,
     references: [
       {
         price: 469.9,
@@ -544,7 +544,7 @@ export const products: Product[] = [
     name: "Cama Box Baú Bipartido Queen Star Flex",
     description:
       "Cama box baú bipartido tamanho queen. Pistão da linha Hotel, com baú blindado e profundidade interna de 30cm e altura de 48cm.",
-    salePrice: 2000,
+    salePrice: 1900,
     references: [
       {
         price: 2602.05,
@@ -997,8 +997,8 @@ export const products: Product[] = [
     id: "25",
     name: "Banqueta Giratória Milano",
     description:
-      "2 Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui avarias.",
-    salePrice: 250.0,
+      "Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui pequenas marcas no tecido nos cantos superiores. LEVE AS DUAS POR R$400,00",
+    salePrice: 220.0,
     references: [
       {
         price: 436.48,
@@ -1264,7 +1264,7 @@ export const products: Product[] = [
     name: "Geladeira Samsung BAROSA RL4353",
     description:
       "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior. Atenção: só vamos conseguir disponibilizar a geladeira a partir do dia 09/04/2025.",
-    salePrice: 6000,
+    salePrice: 5000,
     references: [
       {
         price: 6576.74,
@@ -1348,7 +1348,7 @@ export const products: Product[] = [
     name: "Cafeteira Dolce Gusto + Cápsulas",
     description:
       "Dolce Gusto Mini Me Preta 110v. Leve também 5 caixas de cápsulas de sabores variados.",
-    salePrice: 350,
+    salePrice: 320,
     references: [
       {
         price: 429.9,
