@@ -251,7 +251,7 @@ export const products: Product[] = [
     name: "Conjunto de 6 cadeiras estofadas",
     description:
       "6 cadeiras estofadas em linho cinza com pés de madeira na cor natural. Tecido impermeabilizado em março de 2023. LEVE A MESA + CADEIRAS POR R$2.800,00",
-    salePrice: 1800.0,
+    salePrice: 1600.0,
     references: [
       {
         price: 2318.89,
@@ -306,7 +306,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/ZqkrPxfr/IMG-3923.jpg",
     ],
     category: "Móveis",
-    availability: "reserved",
+    availability: "sold",
     specifications: {
       Cor: "Off-white/Cedro",
       "Número de Portas": "4",
@@ -1402,7 +1402,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/Y0ggh1tw/IMG_4030.jpg",
     ],
     category: "Móveis",
-    availability: "reserved",
+    availability: "sold",
     specifications: {
       Comprimento: "270cm",
       Largura: "6cm cada",
