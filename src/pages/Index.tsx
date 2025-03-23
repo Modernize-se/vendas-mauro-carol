@@ -204,18 +204,23 @@ const Index = () => {
               <div className="w-12 h-12 bg-industrial-steel/10 rounded-full flex items-center justify-center mr-4">
                 <Home size={24} className="text-industrial-steel" />
               </div>
-              <h3 className="text-xl font-medium">Retirada no Local</h3>
+              <h3 className="text-xl font-medium">
+                Entrega por aplicativo de mudanças ou retirada no Local
+              </h3>
             </div>
-            <p className="text-muted-foreground mb-4">
-              Todos os itens deverão ser retirados em nosso apartamento, que
+            <p className="text-muted-foreground mb-2">
+              Todos os itens poderão ser retirados em nosso apartamento, que
               fica na região do Morumbi, próximo ao estádio, em São Paulo - SP,
               ou a combinar.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground mb-2">
+              Também podemos combinar entrega por aplicativo de entregas
+              (Lalamove, etc), que para itens grandes geralmente sai por volta
+              de R$100 para a Grande São Paulo.
+            </p>
+            <p className="text-muted-foreground mb-2">
               Vamos passar todas as informações e tirar qualquer dúvida via
-              WhatsApp após confirmação do interesse de compra. Não temos como
-              realizar entregas por correio ou transportadora, mas podemos
-              combinar a melhor maneira de entregar o produto.
+              WhatsApp após confirmação do interesse de compra.
             </p>
           </div>
         </section>

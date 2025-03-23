@@ -998,7 +998,7 @@ export const products: Product[] = [
     name: "Banqueta Giratória Milano",
     description:
       "Banquetas giratórias Milano com design moderno e assento estofado em cinza. Ideal para cozinhas americanas e áreas de convivência. Possui pequenas marcas no tecido nos cantos superiores. LEVE AS DUAS POR R$400,00",
-    salePrice: 220.0,
+    salePrice: 150.0,
     references: [
       {
         price: 436.48,
