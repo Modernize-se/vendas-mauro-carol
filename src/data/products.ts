@@ -65,7 +65,7 @@ export const products: Product[] = [
       "https://electrolux.vtexassets.com/arquivos/ids/267948-1200-auto?v=638751551991930000&width=1200&height=auto&aspect=true",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Cor: "Cinza",
       Voltagem: "Bivolt",
