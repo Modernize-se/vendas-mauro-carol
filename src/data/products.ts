@@ -349,7 +349,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/nrwmX4j9/IMG-3910.jpg",
     ],
     category: "Móveis",
-    availability: "reserved",
+    availability: "sold",
     specifications: {
       Largura: "220 cm (Rack e Painel)",
       "Dimensões do Rack": "AxLxP: 50 x 220 x 42 cm",
