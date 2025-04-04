@@ -213,12 +213,12 @@ export const products: Product[] = [
     id: "6",
     name: "Mesa de Jantar Acapulco ",
     description:
-      "Mesa de jantar modelo Acapulco com tampo de vidro de dimensões 184x90 cm na cor Off-White e base com design diferenciado em madeira natural. LEVE A MESA + CADEIRAS POR R$2.800,00",
-    salePrice: 1800.0,
+      "Mesa de jantar modelo Acapulco com tampo de vidro de dimensões 184x90 cm na cor Off-White e base com design diferenciado em madeira natural. LEVE A MESA + CADEIRAS POR R$2.500,00",
+    salePrice: 1500.0,
     references: [
       {
-        price: 3000.0,
-        link: "https://www.mobellomoveis.com.br/compra-exclusiva-adriana-mesa-natasha-com-tampo-fendi-personalizado",
+        price: 5142.8,
+        link: "https://www.mobellomoveis.com.br/mesa-natasha-base-ripada-de-madeira-macica-imbuia-tampo-com-vidro-4mm-off-white",
         storeName: "Mobello Móveis",
       },
     ],
@@ -247,15 +247,63 @@ export const products: Product[] = [
     ],
   },
   {
+    id: "6.5",
+    name: "Conjunto Mesa de Jantar Acapulco + 6 Cadeiras",
+    description:
+      "Conjunto completo de mesa de jantar com 6 cadeiras. Mesa modelo Acapulco com tampo de vidro de dimensões 184x90 cm na cor Off-White e base com design diferenciado em madeira natural. Acompanha 6 cadeiras estofadas em linho cinza com pés de madeira na cor natural, tecido impermeabilizado em março de 2023.",
+    salePrice: 2800.0,
+    references: [
+      {
+        price: 5242.8,
+        link: "https://www.mobellomoveis.com.br/mesa-natasha-base-ripada-de-madeira-macica-imbuia-tampo-com-vidro-4mm-off-white",
+        storeName: "Mobello Móveis (Mesa similar)",
+      },
+      {
+        price: 1783.77,
+        link: "https://www.maislardecor.com.br/kit-com-6-cadeiras-maiara-madeira-macica-estofadas-para-mesa-de-jantar-linho-cinza-claro",
+        storeName: "Mais Lar Decor (Cadeiras similares)",
+      },
+    ],
+    imageUrls: [
+      "https://i.postimg.cc/YqbnxZgQ/IMG-3949.jpg",
+      "https://i.postimg.cc/x1Z6wm6C/IMG-3950.jpg",
+      "https://i.postimg.cc/2SyH9GFM/IMG-3951.jpg",
+    ],
+    category: "Móveis",
+    availability: "available",
+    specifications: {
+      "Dimensões da Mesa": "AxLxP: 80 x 90 x 184 cm",
+      "Cor do Tampo": "Off-white",
+      "Material da base": "Madeira Natural",
+      "Estofado das Cadeiras": "Linho Cinza",
+      "Material dos Pés das Cadeiras": "Madeira Maciça",
+      "Cor dos Pés das Cadeiras": "Natural",
+      "Altura do assento das Cadeiras": "48cm",
+      "Dimensões das Cadeiras": "AxLxP: 100 x 45 x 61 cm",
+    },
+    testimonials: [
+      {
+        ownerComment:
+          "Conjunto completo em excelente estado. A mesa está sem arranhões ou marcas de uso, pois sempre usamos proteção e não comemos nela frequentemente. As cadeiras também estão bem conservadas, com o tecido impermeabilizado em março de 2023.",
+        username: "Mauro",
+      },
+      {
+        ownerComment:
+          "Conjunto elegante e funcional. A combinação da mesa com as cadeiras cria um ambiente acolhedor e sofisticado.",
+        username: "Carol",
+      },
+    ],
+  },
+  {
     id: "7",
     name: "Conjunto de 6 cadeiras estofadas",
     description:
-      "6 cadeiras estofadas em linho cinza com pés de madeira na cor natural. Tecido impermeabilizado em março de 2023. LEVE A MESA + CADEIRAS POR R$2.800,00",
-    salePrice: 1600.0,
+      "6 cadeiras estofadas em linho cinza com pés de madeira na cor natural. Tecido impermeabilizado em março de 2023. LEVE A MESA + CADEIRAS POR R$2.500,00",
+    salePrice: 1500.0,
     references: [
       {
-        price: 2318.89,
-        link: "https://www.maislardecor.com.br/kit-com-6-cadeiras-daniela-madeira-macica-estofada-para-mesa-de-jantar-detalhe-de-madeira-nas-costas-linho-cinza-claro?utm_source=google&utm_medium=Shopping&utm_campaign=kit-com-6-cadeiras-daniela-madeira-macica-estofada-para-mesa-de-jantar-detalhe-de-madeira-nas-costas-linho-cinza-claro&inStock&gad_source=4&gclid=CjwKCAiAw5W-BhAhEiwApv4goBVNgv9RalY1XUN_2xqh9xA8-CUiAOrV2Dw5LzCWG0bXQV0luIXRGxoCzEUQAvD_BwE#derivacao=81",
+        price: 1783.77,
+        link: "https://www.maislardecor.com.br/kit-com-6-cadeiras-maiara-madeira-macica-estofadas-para-mesa-de-jantar-linho-cinza-claro",
         storeName: "Mais Lar Decor (produto similar)",
       },
     ],
@@ -499,9 +547,9 @@ export const products: Product[] = [
   },
   {
     id: "14",
-    name: "Puff Banqueta Redondo Luxo",
+    name: "Puff-Banqueta Redondo reversível",
     description:
-      "Puff banqueta redondo de luxo, revestido em tecido cinza noturno. Vira mesa de centro.",
+      "Puff banqueta redondo, revestido em tecido cinza noturno. Vira mesa de centro.",
     salePrice: 330,
     references: [
       {
@@ -1016,7 +1064,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/XYWKBDZ1/IMG_4034.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Material: "Assento estofado e estrutura metálica",
       Cor: "Cinza",
@@ -1263,7 +1311,7 @@ export const products: Product[] = [
     id: "31",
     name: "Geladeira Samsung BAROSA RL4353",
     description:
-      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversíveis. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior. Atenção: só vamos conseguir disponibilizar a geladeira a partir do dia 09/04/2025.",
+      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversível. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior. Atenção: só vamos conseguir disponibilizar a geladeira a partir do dia 09/04/2025.",
     salePrice: 5000,
     references: [
       {
@@ -1273,10 +1321,10 @@ export const products: Product[] = [
       },
     ],
     imageUrls: [
+      "https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg",
       "https://images.samsung.com/is/image/samsung/p6pim/br/rl4353rbasl-bz/gallery/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-537712356?$684_547_JPG$",
       "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-frontangleopensilver-192805607?$684_547_JPG$",
       "https://images.samsung.com/is/image/samsung/br-bottom-freezer-rl4353rbasl-rl4353rbasl-bz-topanglesilver-192805610?$684_547_JPG$",
-      "https://i.postimg.cc/D0fQJfxH/IMG-3932.jpg",
       "https://i.postimg.cc/HL59FhJZ/IMG-3934.jpg",
     ],
     category: "Eletrodomésticos",
