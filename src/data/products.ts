@@ -7,7 +7,7 @@ export const products: Product[] = [
     id: "1",
     name: "Lava e Seca Samsung 11 Kg ",
     description:
-      "Lava e seca Samsung de 11 Kg SmartThings Inox Look WD11T504DBX, acabamento inox look, conectividade SmartThings com 12 programas de lavagem. Atenção: só vamos conseguir disponibilizar a máquina a partir do dia 07/04/2025.",
+      "Lava e seca Samsung de 11 Kg SmartThings Inox Look WD11T504DBX, acabamento inox look, conectividade SmartThings com 12 programas de lavagem.",
     salePrice: 3000,
     references: [
       {
@@ -91,7 +91,7 @@ export const products: Product[] = [
     id: "3",
     name: "Cafeteira Oster Flavor Inox Programável",
     description:
-      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). Não recomendada para lava-louças. Atenção: só vamos conseguir disponibilizar a cafeteira a partir do dia 07/04/2025.",
+      "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). Não recomendada para lava-louças.",
     salePrice: 200,
     references: [
       {
@@ -633,7 +633,7 @@ export const products: Product[] = [
     id: "15.1",
     name: "Colchão Estate Firm Stearns Foster",
     description:
-      "Colchão modelo Estate Firm com 28cm de altura, tecnologia Cross System, da marca Stearns Foster, nas dimensões 1,58x1,98m. Atenção: só vamos conseguir disponibilizar o colchão a partir do dia 09/04/2025.",
+      "Colchão modelo Estate Firm com 28cm de altura, tecnologia Cross System, da marca Stearns Foster, nas dimensões 1,58x1,98m.",
     salePrice: 1500,
     references: [
       {
@@ -1270,7 +1270,7 @@ export const products: Product[] = [
     id: "30",
     name: "Máquina de lavar louças Brastemp BLF10BR",
     description:
-      "Máquina de lavar louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha. Atenção: só vamos conseguir disponibilizar a máquina a partir do dia 07/04/2025.",
+      "Máquina de lavar louças eficiente e moderna, ideal para facilitar o dia a dia na cozinha.",
     salePrice: 3700.0,
     references: [
       {
@@ -1311,7 +1311,7 @@ export const products: Product[] = [
     id: "31",
     name: "Geladeira Samsung BAROSA RL4353",
     description:
-      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversível. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior. Atenção: só vamos conseguir disponibilizar a geladeira a partir do dia 09/04/2025.",
+      "Geladeira Duplex Inverse BAROSA RL4353 com Smart Sensor para manter a temperatura, rack para Vinho e porta reversível. Ou seja: se adapta ao design da cozinha possibilitando abrir de ambos os lados. Freezer com 4 gavetas na parte inferior.",
     salePrice: 5000,
     references: [
       {
