@@ -107,7 +107,7 @@ export const products: Product[] = [
       "https://m.media-amazon.com/images/I/51-UxSIhoAL._AC_SL1000_.jpg",
     ],
     category: "Eletrodomésticos",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Cor: "Inox",
       Potência: "900W",
