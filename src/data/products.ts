@@ -429,7 +429,7 @@ export const products: Product[] = [
     salePrice: 380.0,
     references: [
       {
-        price: 589.46,
+        price: 625.46,
         link: "https://www.mobly.com.br/mesa-de-escritorio-kuandra-carvalho-e-preta-1003996.html",
         storeName: "Mobly",
       },
@@ -442,11 +442,11 @@ export const products: Product[] = [
     availability: "available",
     specifications: {
       Altura: "75 cm",
-      Largura: "180 cm",
-      Profundidade: "70 cm",
-      Dimensões: "AxLxP: 75 x 180 x 70 cm",
+      Comprimento: "180 cm",
+      Largura: "70 cm",
       Cor: "Carvalho",
-      Material: "MDF",
+      Material:
+        "Estrutura em aço com acabamento em pintura epóxi e tampo em MDP 30mm com acabamento em BP acetinado",
     },
     testimonials: [
       {
@@ -1168,7 +1168,7 @@ export const products: Product[] = [
     salePrice: 260.0,
     references: [
       {
-        price: 310.45,
+        price: 301.45,
         link: "https://www.mobly.com.br/mesa-de-escritorio-studio-carvalho-150-cm-801435.html?custom_campaign=search_escritorio&custom_source=google&custom_medium=cpc&gad_source=1&gclid=CjwKCAiAw5W-BhAhEiwApv4goOYs7kEooB18PkGiwd7vfYkqydTUwtPQ3C5KJEf5MHFrNo3FgBBV5RoCYhAQAvD_BwE",
         storeName: "Mobly",
       },
@@ -1180,8 +1180,10 @@ export const products: Product[] = [
     category: "Móveis",
     availability: "available",
     specifications: {
-      Material: "Estrutura de aço cromado com assento estofado em PU",
-      Dimensões: "AxLxP: 75 x 150 x 50 cm",
+      Material: "Estrutura em aço, tampo em MDP e acabamento epóxi texturizado",
+      Altura: "75 cm",
+      Comprimento: "150 cm",
+      Largura: "50 cm",
       "Peso Suportado": "14,2 kg",
       Cor: "Carvalho e Preto",
     },
