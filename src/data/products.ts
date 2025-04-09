@@ -92,7 +92,7 @@ export const products: Product[] = [
     name: "Cafeteira Oster Flavor Inox Programável",
     description:
       "Cafeteira Oster Flavor programável, prateada, com timer digital e jarra de vidro resistente. Capacidade para até 36 xícaras pequenas (1,8L). Não recomendada para lava-louças.",
-    salePrice: 200,
+    salePrice: 150,
     references: [
       {
         price: 354.49,
@@ -819,7 +819,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/J795MhRL/IMG_4036.jpg",
     ],
     category: "Utilidades Domésticas",
-    availability: "available",
+    availability: "sold",
     specifications: {
       Material: "Vidro",
       Cor: "Preto",
@@ -1396,10 +1396,10 @@ export const products: Product[] = [
     name: "Cafeteira Dolce Gusto + Cápsulas",
     description:
       "Dolce Gusto Mini Me Preta 110v. Leve também 5 caixas de cápsulas de sabores variados.",
-    salePrice: 320,
+    salePrice: 200,
     references: [
       {
-        price: 429.9,
+        price: 399.9,
         link: "https://www.nescafe-dolcegusto.com.br/maquinas-cafe/mini-me-automatica-maquina-de-cafe-preta-110v",
         storeName: "Nescafé-Dolce Gusto",
       },
