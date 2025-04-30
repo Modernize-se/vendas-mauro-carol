@@ -565,7 +565,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/hvGx4yjq/IMG-3915.jpg",
     ],
     category: "Móveis",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Formato: "Redondo",
       Material: "Tecido",
@@ -948,7 +948,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/5ymPTkrd/IMG-3953.jpg",
     ],
     category: "Utilidades Domésticas",
-    availability: "available",
+    availability: "sold",
     specifications: {
       Material: "Alumínio",
       Dimensões:
@@ -1144,7 +1144,7 @@ export const products: Product[] = [
       "https://i.postimg.cc/jS2HPjSS/image.png",
     ],
     category: "Instrumentos Musicais",
-    availability: "available",
+    availability: "reserved",
     specifications: {
       Teclas: "88 teclas com ação de martelo escalonado",
       Polifonia: "64 vozes",
